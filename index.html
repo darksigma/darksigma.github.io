@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% if paginator.page != 1 %}
+    <span class="pagenum"> Page {{ paginator.page }} </span>
+{% endif %}
+
+{% for post in paginator.posts %}
+<div class="post">
+  <a class="post-link" href="{{ post.url }}">
+    <h1>{{ post.title }}</h1></a>
+    <span class="date">{{ post.date | date_to_long_string }}</span>
+    <p>{{post.content | truncate: 300}}</p>
+    <p>
+      <a class="btn-read" href="{{ post.url }}">CONTINUE READING</a>
+    </p>
+  
+</div>
+{% endfor %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a class="btn-pagination left" href="{{ paginator.previous_page_path }}" class="previous">PREVIOUS</a>
+  {% else %}
+    <span class="previous"></span>
+  {% endif %}
+  <!-- <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span> -->
+  {% if paginator.next_page %}
+    <a class="btn-pagination right" href="{{ paginator.next_page_path }}" class="next">NEXT</a>
+  {% else %}
+    <span class="next"></span>
+  {% endif %}
+</div>
