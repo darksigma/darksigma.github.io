@@ -3,12 +3,14 @@
  <div class="footer">
  	<div class="content">
  		<div class= "post">
+ 			<a class="post-link" href="{{ page.previous.url }}">
  			<span class="date">READ NEXT</span>
  	<h1>{{ page.previous.title }}</h1>
     <!-- <span class="date">{{ page.date | date_to_long_string }}</span> -->
     <p>{{page.previous.content | truncate: 300}}</p>
     <p>
       <a class="btn-read" href="{{ page.previous.url }}">CONTINUE READING</a>
+  </a>
   </div>
 </div>
  </div>

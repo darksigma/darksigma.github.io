@@ -139,7 +139,7 @@ h1 {
 	font-size: 36px;
 	color: #4A4A4A;
 	margin-bottom: 3px;
-	transition: all ease-in 0.3;
+	transition: all ease-in 0.3s;
 }
 
 h1:hover {
