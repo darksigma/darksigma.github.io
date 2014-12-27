@@ -18,4 +18,7 @@ As expected, we were told that we were way too early when we showed up on the pr
 
 At 10:15 we promptly returned to Medium to scout out the hackerspace. We found a sweet room with a table, a couch, and a huge television screen that we staked out for ourselves, and began to chill, chat, and meet other teams while we waited for the hackathon to officially start.
 
-*This article is cross-posted on Medium [here](https://medium.com/hackathon-adventures/greylock-hackfest-medium-e9b6cc2e82a4)*
+<div style="text-align: center;font-family:lato,san serif">
+<br/>
+<span style='font-size:12px'><i>This article is cross-posted on Medium <a href='https://medium.com/hackathon-adventures/greylock-hackfest-medium-e9b6cc2e82a4' target='_blank'>here</a></i></span>
+</div>
