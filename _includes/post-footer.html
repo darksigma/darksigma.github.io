@@ -2,6 +2,7 @@
  </div>
  <div class="footer">
  	<div class="content">
+ 		{% if page.previous != nil %}
  		<div class= "post">
  			<a class="post-link" href="{{ page.previous.url }}">
  				<span class="date">READ NEXT</span>
@@ -12,7 +13,8 @@
 			      <a class="btn-read" href="{{ page.previous.url }}">CONTINUE READING</a>
   				</p>
   			</a>
-  </div>
+  		</div>
+  		{% endif %}
 <br/>
 <center><span style="font-family:Lato,sans-serif;color:#cccccc">© 2014 Nikhil Buduma. All rights reserved.</span></center>
 </div>
