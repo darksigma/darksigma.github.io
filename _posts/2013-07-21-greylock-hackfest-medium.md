@@ -25,9 +25,6 @@ At noon, the organizers officially declared that we could begin working, and we 
 
 During the hack session, Kevin never hesitated to entertain the team, even if it meant sacrificing an hour or two to build a silly web app displaying a chicken dancing to the song “Heads will Roll” by the Yeah Yeah Yeahs ft. A-Trak. That song is now stuck in my head. Thanks Kevin.
 
-<div align="center>
-</div>
-
 To the objective reader, the above paragraphs might make it seem like everything during the hackathon went smoothly. And while it’s true that we may have had it better than some other teams (who were frantically searching for Arduinos and Android wear at 2 AM or had to deal with their Kinect killing their Windows device drivers), our conference room was still pretty close to the definition of chaos. K’Nex pieces, scraps of test paper, and food wrappers (thank you Greylock for all of the amazing food!) lay all over the place. Our whiteboard was completely covered in random diagrams as I tried to bash out some perspective geometry. We had to switch from a cURL interface to a web socket system when we realized that our iOS application wasn’t communicating with our server fast enough and was leaking memory. And at 9 AM, just 2 hours before the deadline, we had to email the nice folk at Firebase to ask for help with integrating a persistence layer into our system for implementing real-time document annotations. Thankfully they came on over to help us with it in person!
 
 Finally at noon today, we had a finished product that worked really well. We demoed it to a couple of people, and they were pretty impressed with what we had put together. We had the chance to practice our presentation a couple of times, and I think it’s pretty accurate to say that we felt like we were on top of our game.
@@ -61,7 +58,9 @@ We made the top 10 with a nonexistent demo. It was just unreal.
 I quickly ran over to Julie and asked if our presentation could be delayed until later so that we could wait for Kevin to come back. And as soon as he did, we decided to record ourselves performing a demo in our room just in case the WiFi hated us again. I've linked the video here, but there's no sound:
 
 <div align="center">
+<br/>
 <iframe width="560" height="315" src="//www.youtube.com/embed/Q5a451II2R4" frameborder="0" allowfullscreen></iframe>
+<br/>
 </div>
 
 When our turn came up, the four of us walked up in front of over 150 people, quickly set up, and knocked it out the park. The videos got our point across with little extra effort, the live demo worked pretty darn well, and none of us forgot any of our talking points. We even had some extra time to talk about the impacts of the technology in education as a dirt-cheap replacement of the iPad as well as our future vision of sharing whole physical whiteboards in addition to just pieces of paper.
