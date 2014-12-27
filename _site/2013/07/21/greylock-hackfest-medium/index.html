@@ -54,6 +54,10 @@ By the way, I also find it kind of amusing that I’m making my first post on Me
 
 <p>At 10:15 we promptly returned to Medium to scout out the hackerspace. We found a sweet room with a table, a couch, and a huge television screen that we staked out for ourselves, and began to chill, chat, and meet other teams while we waited for the hackathon to officially start.</p>
 
+<p><img src="/img/postimg01.jpeg" title="Early Version" alt="Early Version" /></p>
+
+<h6>An early version of our iOS application detects pieces of papers, highlights the edges in red, and the vertices in green</h6>
+
 <p>At noon, the organizers officially declared that we could begin working, and we took off immediately. Anish and I began chugging away at the computer vision pieces of the project, building a hybrid C++/Objective C iOS application. Using some pretty sophisticated tools from the OpenCV library, we were able to detect rectangles representing pieces of papers and reverse the perspective warping to generate readable output (for those of you technical people, we ended up using a bilateral filter, Canny edge detection, Graham scan convex hull finding, and polygonal contour approximations). Meanwhile, Shelby built out a front-end using AngularJS (Kevin and I prefer React, but we tried our best to help troubleshoot during those rare instances late into the night/morning when Shelby couldn’t figure something out), and Kevin built out our server in Node in addition to implementing some client-side computer vision in pure JavaScipt (specifically, the stroke width transform).</p>
 
 <p>During the hack session, Kevin never hesitated to entertain the team, even if it meant sacrificing an hour or two to build a silly web app displaying a chicken dancing to the song “Heads will Roll” by the Yeah Yeah Yeahs ft. A-Trak. That song is now stuck in my head. Thanks Kevin.</p>
@@ -115,12 +119,15 @@ By the way, I also find it kind of amusing that I’m making my first post on Me
  <div class="footer">
  	<div class="content">
  		<div class= "post">
- 			<span class="date">READ NEXT</span>
- 	<h1>Hack the North 5</h1>
-    <!-- <span class="date">21 July 2013</span> -->
-    <p><p>As of writing this post I’ve gone approximately 36 hours without sleeping after attending my first serious hackathon, Greylock Hackfest @ Medium. As you can probably guess, I’m pretty exhausted, but I want to put everything down in writing before I forget it. I hope you’ll forgive me if I veer...</p>
-    <p>
-      <a class="btn-read" href="/2013/07/16/hackthenorth/">CONTINUE READING</a>
+ 			<a class="post-link" href="/2013/07/16/hackthenorth/">
+ 				<span class="date">READ NEXT</span>
+ 				<h1>Hack the North 5</h1>
+ 				<!-- <span class="date">21 July 2013</span> -->
+			    <p><p>As of writing this post I’ve gone approximately 36 hours without sleeping after attending my first serious hackathon, Greylock Hackfest @ Medium. As you can probably guess, I’m pretty exhausted, but I want to put everything down in writing before I forget it. I hope you’ll forgive me if I veer...</p>
+			    <p>
+			      <a class="btn-read" href="/2013/07/16/hackthenorth/">CONTINUE READING</a>
+  				</p>
+  			</a>
   </div>
 <br/>
 <center><span style="font-family:Lato,sans-serif;color:#cccccc">© 2014 Nikhil Buduma. All rights reserved.</span></center>

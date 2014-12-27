@@ -18,6 +18,9 @@ As expected, we were told that we were way too early when we showed up on the pr
 
 At 10:15 we promptly returned to Medium to scout out the hackerspace. We found a sweet room with a table, a couch, and a huge television screen that we staked out for ourselves, and began to chill, chat, and meet other teams while we waited for the hackathon to officially start.
 
+![Early Version](/img/postimg01.jpeg "Early Version")
+###### An early version of our iOS application detects pieces of papers, highlights the edges in red, and the vertices in green
+
 At noon, the organizers officially declared that we could begin working, and we took off immediately. Anish and I began chugging away at the computer vision pieces of the project, building a hybrid C++/Objective C iOS application. Using some pretty sophisticated tools from the OpenCV library, we were able to detect rectangles representing pieces of papers and reverse the perspective warping to generate readable output (for those of you technical people, we ended up using a bilateral filter, Canny edge detection, Graham scan convex hull finding, and polygonal contour approximations). Meanwhile, Shelby built out a front-end using AngularJS (Kevin and I prefer React, but we tried our best to help troubleshoot during those rare instances late into the night/morning when Shelby couldn’t figure something out), and Kevin built out our server in Node in addition to implementing some client-side computer vision in pure JavaScipt (specifically, the stroke width transform).
 
 During the hack session, Kevin never hesitated to entertain the team, even if it meant sacrificing an hour or two to build a silly web app displaying a chicken dancing to the song “Heads will Roll” by the Yeah Yeah Yeahs ft. A-Trak. That song is now stuck in my head. Thanks Kevin.
