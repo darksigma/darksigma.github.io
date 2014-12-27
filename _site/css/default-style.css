@@ -242,6 +242,10 @@ p {
 		/*display: none;*/
 	}
 
+	.hide {
+		display: none;
+	}
+
 	.topbar {
 		height: 80px;
 		background-color: white;

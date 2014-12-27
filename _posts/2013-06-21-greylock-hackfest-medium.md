@@ -1,5 +1,5 @@
 ---
-title: Greylock Hackfest @Medium!
+title: Greylock Hackfest @ Medium!
 layout: post-default
 ---
 
@@ -17,3 +17,5 @@ On the day of the hackathon, I made my way to Anish’s place at around 8:30 in 
 As expected, we were told that we were way too early when we showed up on the premises, but Julie (the awesome person from Greylock who was basically running the whole show) told us that we could get first dibs on claiming space for our team, so we were pretty excited. With an iPhone stand built from K’Nex in hand, we all crossed the street to wait at a crowded San Francisco coffee shop while passersby stared curiously at our contraption.
 
 At 10:15 we promptly returned to Medium to scout out the hackerspace. We found a sweet room with a table, a couch, and a huge television screen that we staked out for ourselves, and began to chill, chat, and meet other teams while we waited for the hackathon to officially start.
+
+*This article is cross-posted on Medium [here](https://medium.com/hackathon-adventures/greylock-hackfest-medium-e9b6cc2e82a4)*
