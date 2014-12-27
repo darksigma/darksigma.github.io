@@ -416,8 +416,9 @@ p {
 	.post {
 		border-bottom: 1px solid #979797;
 		padding: 0;
+		padding-bottom: 20px;
 		width: 100%;
-		margin-bottom: 50px;
+		margin-bottom: 30px;
 	}
 
 	p {
