@@ -74,7 +74,7 @@ Cancer has a highly altered molecular phenotype compared to the normal somatic c
 ![Cancer Kill-Switch](/img/cancer_circuit.png "Cancer Kill-Switch")
 ###### A concept cancer-targeting scheme adapted from Xie et al., 2011
 
-After thinking about how one would construct such a circuit and consulting the literature, I put together the scheme depicted in the illustration above. It’s somewhat similar to the module developed by the Weiss group, but their paper, published in Science, takes additional, very necessary steps to prevent leakage of the apoptosis inducer. I omit these components because they distract from the core idea and refer interested readers to the <a href="http://www.sciencemag.org/content/333/6047/1307.short">original article</a> for the full design.
+After thinking about how one would construct such a circuit and consulting the literature, I put together the scheme depicted in the illustration above. It’s somewhat similar to the module developed by the Weiss group, but their paper, published in Science, takes additional, very necessary steps to prevent leakage of the apoptosis inducer. I omit these components because they distract from the core idea and refer interested readers to the <a target="_blank" href="http://www.sciencemag.org/content/333/6047/1307.short">original article</a> for the full design.
 
 ### Conclusions
 This is really just the tip of the proverbial iceberg in a field so cutting-edge that it’s changing every single day. I would love to keep writing, but it’s nearly 3 AM and I’d probably bore you if I went any longer. But if I haven’t put you to sleep yet and you’d like to talk more, please email me at nkbuduma@gmail.com! I love hearing new ideas ❤
