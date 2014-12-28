@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nikhil Buduma</title>
+    <description>Nikhil&#39;s Blog</description>
+    <link>http://nikhilbuduma.com</link>
+    <atom:link href="http://nikhilbuduma.com/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>The Cell... Reimagined</title>
+        <description>&lt;p&gt;I’ve been obsessed with biology ever since I was a kid. It started all the way back from the time when I had to make regular visits to the cardiologist — one of the side effects of being born with a serious heart defect. My heart defect has (thankfully) since recovered, but those visits had a lasting impression on me. I’d always be interrogating my cardiologist when I walked into his office, pointing to his nifty model of the human heart and asking him question after question. And as I grew up, biology remained to consume a large portion of my active curiosity and imagination.&lt;/p&gt;
+
+&lt;p&gt;But after coming to MIT, I began to become slightly frustrated with with the approach towards traditional biological research. I had worked in biomedical research laboratories since the age of 14 and served as the lab manager for a microbiology research group at San Jose State University, so I had been exposed to a huge volume of research while in high school. Through all my experiences, I found that traditional biologists treated the cell like a black box, resulting in a rather standard operating procedure:&lt;/p&gt;
+
+&lt;p&gt;1) We perturbed the system in certain ways
+&lt;br/&gt;2) We measured some output
+&lt;br/&gt;3) We made inferences based on the observations&lt;/p&gt;
+
+&lt;p&gt;And while this process has been fruitful over the past few decades, this meta-perspective left me wondering if there was a different way of approaching biological systems.&lt;/p&gt;
+
+&lt;h3&gt;Engineering Biology&lt;/h3&gt;
+
+&lt;p&gt;Evolution has always tackled biological systems in a very unique way. Instead of inference, evolution uses induction. Evolution uses the cell as an engine for natural creation, and this realization prompted me to wonder whether we could take the same approach.&lt;/p&gt;
+
+&lt;p&gt;Just as silicon became the major vehicle of creation and production in the 20th century, I believe that the cell will soon become the major vehicle of creation and production in the 21st. But this shift in approach will entail significant challenges.&lt;/p&gt;
+
+&lt;p&gt;The story of computer systems is one of forward engineering — a human-controlled developmental path. We have the blueprint. Our specifications and standards can be clearly written down and comprehended. We built and control every piece. We understand it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/cell_computer.jpeg&quot; title=&quot;The Cell as a Computer&quot; alt=&quot;The Cell as a Computer&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;Image provided by the MIT Synthetic Biology Group&lt;/h6&gt;
+
+&lt;p&gt;Engineering the cell is a completely different cookie. The evolutionary path is barely understood. We are only beginning to understand the blueprint — the specifications and standards are still shrouded in mystery. It’s a beast we have yet to tame.&lt;/p&gt;
+
+&lt;p&gt;But I posit that, maybe, it isn’t necessary to completely understand the cell in order to engineer it. And, maybe, an engineer’s approach to the cell will help us put together pieces of the puzzle we wouldn’t have been able to understand otherwise.&lt;/p&gt;
+
+&lt;h3&gt;Biological Abstractions&lt;/h3&gt;
+
+&lt;p&gt;Borrowing generously from the fields of electrical engineering and computer science, I argue that redesigning biology requires the design of appropriate biological abstractions that simplify the engineering process.&lt;/p&gt;
+
+&lt;p&gt;For those new to the field, I present here a simplified view of a low-level genetic unit — a singular gene and corresponding regulatory elements:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/gene.png&quot; title=&quot;The Genetic Unit&quot; alt=&quot;The Genetic Unit&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;A basic unit, consisting of a promoter, protein-coding region (gene), and termination sequence&lt;/h6&gt;
+
+&lt;p&gt;This unit consists of a protein-coding region, which produces biological activity when transcribed by RNA polymerase. The transcription is regulated by a promoter region, which binds to activators and repressors which control the accessibility of the gene to RNA polymerase. Finally, a terminator immediately follows the protein-coding region to trigger RNA polymerase to complete transcription and fall off of the DNA strand.&lt;/p&gt;
+
+&lt;p&gt;Such building blocks could form the form the foundation of more complex “genetic circuits.” Consider for example, a programming language in which a compiler takes high level descriptions of genetic circuits and turns them into low level instructions For instance, one could imagine a series of two linked units, A and B, where the protein product of unit A binds to the promoter of unit B, thus modulating its expression. The figure below shows how one would implement the high level instruction IPTG → NOT → GREEN.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/programming_example.png&quot; title=&quot;Java Lib&quot; alt=&quot;Java Lib&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;A Java library, specialized compiler, and optimization routine that illustrates biological abstraction&lt;/h6&gt;
+
+&lt;p&gt;Each of the symbols IPTG, NOT, and GREEN, correspond to specific pieces that are linked in series as described. The IPTG module consists of two genetic units, one that constitutively expresses the protein LacI (a protein inhibited by the small chemical IPTG). LacI inhibits the transcription of A from the second genetic unit of the module. The result is that in the presence of IPTG, protein A is produced. The NOT module constitutively produces protein B, but it’s expression is inhibited when protein A (the product of the previous module) binds to its promoter region. And lastly, the GREEN module expresses GFP when protein B is bound to its promoter. The result? In the presence of IPTG, protein A is no longer expressed, the level of protein B rises, and consequently, GFP is produced.&lt;/p&gt;
+
+&lt;p&gt;But clearly, this is a little verbose, and just as modern computer language compilers optimize the translation of high level code to low level instructions, an optimization routine would be able to determine that we could remove the NOT module altogether, and exchange the GREEN module’s promoter with the NOT module’s promoter so that protein A inhibits the expression of GFP. Operationally, the result is the same, but the system is stabler, and we have reduced the propagation and contamination delays (extending the EE/CS analogies). Finally, the build process would result in the automated engineering of a cell line housing this construct, enabling the full translation of code to functional genetic circuit.&lt;/p&gt;
+
+&lt;p&gt;By leveraging the inference techniques that have been explored for decades, testing new parts and modules, and evaluating putative circuits through whole cell model computational models (such as the one released by the Covert Lab at Stanford University), we may soon be able to reliably build complex genetic circuits to perform arbitrary computation.&lt;/p&gt;
+
+&lt;h3&gt;Next-Generation Biosensors&lt;/h3&gt;
+
+&lt;p&gt;Probably one of the most interesting applications of a biological programming language is the ability to build custom biosensors. Cells have specialized in sensing and responding to their environments over billions of years, making them particularly versatile at transducing environmental signals. As a result, biosensors have the potential to outperform conventional chemical tests for applications such as pollutant detection, disease diagnosis, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/biosensor.png&quot; title=&quot;Biosensor&quot; alt=&quot;Biosensor&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;Concept probiotic biosensor for monitoring colon health&lt;/h6&gt;
+
+&lt;p&gt;Biosensors traditionally consist of two basic modules: a receptor module for recognizing compounds and a transducer module for reporting the signal. In a future where biological parts are plentiful, this division of labor makes it relatively painless for an engineer to make increasingly complex biosensors. For instance, an engineer could load a single cell line with orthogonal receptor and transducer module pairs, endowing it with specificity for more than one signal.&lt;/p&gt;
+
+&lt;p&gt;One could imagine using the above strategy to engineer yeast to monitor the health of the GI tract. For example, the yeast could express a receptor for a colon cancer biomarker. Upon ligand binding, the yeast upregulates an enzyme that produces a visible, colored pigment. This pigment would then be excreted and observed in the patient’s stool (as a technical side remark, the illustrated example implements trans-activating and cis-repressing riboswitches to prevent steady-state leakage in the absence of biomarker). One could imagine utilizing orthogonality to enable the same yeast to also recognize infections by bacteria, viruses, and multicellular parasites.&lt;/p&gt;
+
+&lt;h3&gt;Attacking Cancer with Viruses&lt;/h3&gt;
+
+&lt;p&gt;Another, rather intriguing, possibility of biological reprogramming is the ability to program cells to die. Apoptosis, biologically programmed cell death, is a hugely important process during normal development and homeostatic maintenance. Being able to induce cells to selectively undergo apoptosis brings up a number of ethical concerns. For instance, a malicious agent could potentially generate super-viruses by loading virus particles with a genetic “kill-switch” circuit.&lt;/p&gt;
+
+&lt;p&gt;But if we are able to overcome the ethical hurdles of reprogramming death, this approach may open up a vastly different method of combatting (and, in a future world where we can genetically modify human zygotes, even preventing) cancer.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/cancer.png&quot; title=&quot;Cancer&quot; alt=&quot;Cancer&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cancer has a highly altered molecular phenotype compared to the normal somatic cell. Consequently, if we could engineer a “kill-switch” circuit that detects cancerous deviations from the normal molecular phenotype (such as the expression of micro RNAs) and trigger apoptosis when the cell becomes cancerous, we could destroy the tumor before it even has the chance to grow and metastasize. We could load our “kill-switch” into a adenovirus specific to the cancer’s tissue of origin and inject the adenovirus into the patient’s bloodstream.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/cancer_circuit.png&quot; title=&quot;Cancer Kill-Switch&quot; alt=&quot;Cancer Kill-Switch&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;A concept cancer-targeting scheme adapted from Xie et al., 2011&lt;/h6&gt;
+
+&lt;p&gt;After thinking about how one would construct such a circuit and consulting the literature, I put together the scheme depicted in the illustration above. It’s somewhat similar to the module developed by the Weiss group, but their paper, published in Science, takes additional, very necessary steps to prevent leakage of the apoptosis inducer. I omit these components because they distract from the core idea and refer interested readers to the &lt;a target=&quot;_blank&quot; href=&quot;http://www.sciencemag.org/content/333/6047/1307.short&quot;&gt;original article&lt;/a&gt; for the full design.&lt;/p&gt;
+
+&lt;h3&gt;Conclusions&lt;/h3&gt;
+
+&lt;p&gt;This is really just the tip of the proverbial iceberg in a field so cutting-edge that it’s changing every single day. I would love to keep writing, but it’s nearly 3 AM and I’d probably bore you if I went any longer. But if I haven’t put you to sleep yet and you’d like to talk more, please email me at nkbuduma@gmail.com! I love hearing new ideas ❤&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center;font-family:lato,san serif&quot;&gt;
+&lt;br/&gt;
+&lt;span style=&#39;font-size:12px&#39;&gt;&lt;i&gt;This article is cross-posted on Medium &lt;a href=&#39;https://medium.com/@nikhilbuduma/the-cell-reimagined-474e53460d6f&#39; target=&#39;_blank&#39;&gt;here&lt;/a&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 27 Dec 2014 00:00:00 -0800</pubDate>
+        <link>http://nikhilbuduma.com//2014/12/27/the-cell-reimagined/</link>
+        <guid isPermaLink="true">http://nikhilbuduma.com//2014/12/27/the-cell-reimagined/</guid>
+      </item>
+    
+      <item>
+        <title>Greylock Hackfest @ Medium!</title>
+        <description>&lt;p&gt;As of writing this post I’ve gone approximately 36 hours without sleeping after attending my first serious hackathon, Greylock Hackfest @ Medium. As you can probably guess, I’m pretty exhausted, but I want to put everything down in writing before I forget it. I hope you’ll forgive me if I veer off topic.
+By the way, I also find it kind of amusing that I’m making my first post on Medium after attending the hackathon they hosted this weekend.&lt;/p&gt;
+
+&lt;h3&gt;The Idea — HyperInk&lt;/h3&gt;
+
+&lt;p&gt;Late Thursday night, we got together to brainstorm for the hackathon. Thinking of any idea was actually pretty difficult. We knew we wanted to create something more than just your typical web application. We wanted to build something cool, something that would connect the physical world with the digital one. A rather ambitious undertaking for a 23 hour project, but as my teammate Kevin Kwok (@antimatter) would say, #YOLO.&lt;/p&gt;
+
+&lt;h3&gt;Let the Hacking Begin&lt;/h3&gt;
+
+&lt;p&gt;On the day of the hackathon, I made my way to Anish’s place at around 8:30 in the morning so Shelby could pick us up. Kevin was already in San Francisco, having partied with some Dropbox guys the night before, so we agreed to meet up at Medium HQ around 9:30 — a whole hour before the doors even officially opened. I guess we were pretty excited.&lt;/p&gt;
+
+&lt;p&gt;As expected, we were told that we were way too early when we showed up on the premises, but Julie (the awesome person from Greylock who was basically running the whole show) told us that we could get first dibs on claiming space for our team, so we were pretty excited. With an iPhone stand built from K’Nex in hand, we all crossed the street to wait at a crowded San Francisco coffee shop while passersby stared curiously at our contraption.&lt;/p&gt;
+
+&lt;p&gt;At 10:15 we promptly returned to Medium to scout out the hackerspace. We found a sweet room with a table, a couch, and a huge television screen that we staked out for ourselves, and began to chill, chat, and meet other teams while we waited for the hackathon to officially start.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/postimg01.jpeg&quot; title=&quot;Early Version&quot; alt=&quot;Early Version&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;An early version of our iOS application detects pieces of papers, highlights the edges in red, and the vertices in green&lt;/h6&gt;
+
+&lt;p&gt;At noon, the organizers officially declared that we could begin working, and we took off immediately. Anish and I began chugging away at the computer vision pieces of the project, building a hybrid C++/Objective C iOS application. Using some pretty sophisticated tools from the OpenCV library, we were able to detect rectangles representing pieces of papers and reverse the perspective warping to generate readable output (for those of you technical people, we ended up using a bilateral filter, Canny edge detection, Graham scan convex hull finding, and polygonal contour approximations). Meanwhile, Shelby built out a front-end using AngularJS (Kevin and I prefer React, but we tried our best to help troubleshoot during those rare instances late into the night/morning when Shelby couldn’t figure something out), and Kevin built out our server in Node in addition to implementing some client-side computer vision in pure JavaScipt (specifically, the stroke width transform).&lt;/p&gt;
+
+&lt;p&gt;During the hack session, Kevin never hesitated to entertain the team, even if it meant sacrificing an hour or two to build a silly web app displaying a chicken dancing to the song “Heads will Roll” by the Yeah Yeah Yeahs ft. A-Trak. That song is now stuck in my head. Thanks Kevin.&lt;/p&gt;
+
+&lt;p&gt;To the objective reader, the above paragraphs might make it seem like everything during the hackathon went smoothly. And while it’s true that we may have had it better than some other teams (who were frantically searching for Arduinos and Android wear at 2 AM or had to deal with their Kinect killing their Windows device drivers), our conference room was still pretty close to the definition of chaos. K’Nex pieces, scraps of test paper, and food wrappers (thank you Greylock for all of the amazing food!) lay all over the place. Our whiteboard was completely covered in random diagrams as I tried to bash out some perspective geometry. We had to switch from a cURL interface to a web socket system when we realized that our iOS application wasn’t communicating with our server fast enough and was leaking memory. And at 9 AM, just 2 hours before the deadline, we had to email the nice folk at Firebase to ask for help with integrating a persistence layer into our system for implementing real-time document annotations. Thankfully they came on over to help us with it in person!&lt;/p&gt;
+
+&lt;p&gt;Finally at noon today, we had a finished product that worked really well. We demoed it to a couple of people, and they were pretty impressed with what we had put together. We had the chance to practice our presentation a couple of times, and I think it’s pretty accurate to say that we felt like we were on top of our game.&lt;/p&gt;
+
+&lt;h3&gt;The Real Roller Coaster&lt;/h3&gt;
+
+&lt;p&gt;Multiple computers, iPhone, and K’Nex setup in hand, the four of us walked into the presentation room ready to go for the first round. As I introduced ourselves, and began to describe our hack, Anish, Kevin, and Shelby began to everything ready for the demo.&lt;/p&gt;
+
+&lt;p&gt;Except it didn’t work.&lt;/p&gt;
+
+&lt;p&gt;Immediately the four of us went into panic mode under the hood and watched in despair as our computers failed to stably connect to the WiFi. Without a working demo, we did the best to describe what we built. Anish showed them the iPhone application, which could detect the paper on a table but was only able to send a single frame to a server. Finally one of the judges interrupted and told us that we were out of the time. The judges asked us a couple of questions, and we answered them, but we were completely demoralized. At the end of our train wreck of a demo, we walked out with our heads hanging low.&lt;/p&gt;
+
+&lt;p&gt;When we got back to our conference room, Anish sat down really quietly and sadly stared down at his iPhone. Kevin wandered around the hackerspace for a bit and then left for his parents’ hotel. Shelby was clearly disappointed but still tried her best to cheer us all up. I couldn’t really see what I looked like, but I’m certain I looked terrible because I sure felt like it.&lt;/p&gt;
+
+&lt;p&gt;We were certain that we didn’t make it to the next stage of competition after that debacle. We had built something we were all really proud of, but at that moment, it felt like the collective 92 hours of figurative blood, sweat, and tears had all gone to waste.&lt;/p&gt;
+
+&lt;p&gt;At around 3:30 PM, the participants all gathered together to watch as the top 10 hacks would be called up to the stage one by one to demo their projects. Despite our low spirits, Anish and I decided to watch. At the very least, we’d learn a thing or two from the seasoned veterans that we may be able to put to use at our next hackathon. After listening to a pitch for a video sharing app that randomizes the background song and a demo of a twist on IFTTT that was based on hardware components instead of third party software APIs, Anish and I decided that we were too exhausted to keep listening, so we began to walk back to our conference room and rest.&lt;/p&gt;
+
+&lt;p&gt;But as we began to turn into the hallway, we heard something so unexpected that we both instinctually turned our heads.&lt;/p&gt;
+
+&lt;p&gt;“All right! Come on up CopyCat! And after that we will Hyper_Ink come on up and demo their project — congratulations on being selected as one of the top 10 hacks of the Hackfest!”&lt;/p&gt;
+
+&lt;p&gt;Oh. My. God.&lt;/p&gt;
+
+&lt;h3&gt;The Time is Now&lt;/h3&gt;
+
+&lt;p&gt;Anish and I couldn’t believe our ears. Immediately, we ran back to our conference room and woke up a sleeping Shelby (she had a terrible migraine after staying up all night). We called up Kevin and told him to get back to Medium as fast as we could.&lt;/p&gt;
+
+&lt;p&gt;We made the top 10 with a nonexistent demo. It was just unreal.&lt;/p&gt;
+
+&lt;p&gt;I quickly ran over to Julie and asked if our presentation could be delayed until later so that we could wait for Kevin to come back. And as soon as he did, we decided to record ourselves performing a demo in our room just in case the WiFi hated us again. I&#39;ve linked the video here, but there&#39;s no sound:&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;
+&lt;br/&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/Q5a451II2R4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;When our turn came up, the four of us walked up in front of over 150 people, quickly set up, and knocked it out the park. The videos got our point across with little extra effort, the live demo worked pretty darn well, and none of us forgot any of our talking points. We even had some extra time to talk about the impacts of the technology in education as a dirt-cheap replacement of the iPad as well as our future vision of sharing whole physical whiteboards in addition to just pieces of paper.&lt;/p&gt;
+
+&lt;p&gt;When we finished, we were greeted with cheers, high-fives, and congratulations. The four of us felt like we were on top of the world.&lt;/p&gt;
+
+&lt;h3&gt;Going Home&lt;/h3&gt;
+
+&lt;p&gt;Although we didn’t win one of the top three prizes, making it to the finals was amazing — especially given that it was only our first serious hackathon. Smiles on our faces, Shelby, Anish, and I drove back in merry spirits.&lt;/p&gt;
+
+&lt;p&gt;We made many new friends, had an unforgettable time, and built something that we were really proud of, all at the same time. I could go on and on talking about how awesome the hackathon was and how grateful I am for the team who put it together, but I think the weekend is best summed up by something I said to Shelby and Anish on the way back home:&lt;/p&gt;
+
+&lt;p&gt;“Wow! This was one of the best summers of the weekend!”&lt;/p&gt;
+
+&lt;p&gt;I need some sleep.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center;font-family:lato,san serif&quot;&gt;
+&lt;br/&gt;
+&lt;span style=&#39;font-size:12px&#39;&gt;&lt;i&gt;This article is cross-posted on Medium &lt;a href=&#39;https://medium.com/hackathon-adventures/greylock-hackfest-medium-e9b6cc2e82a4&#39; target=&#39;_blank&#39;&gt;here&lt;/a&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 21 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://nikhilbuduma.com//2014/07/21/greylock-hackfest-medium/</link>
+        <guid isPermaLink="true">http://nikhilbuduma.com//2014/07/21/greylock-hackfest-medium/</guid>
+      </item>
+    
+      <item>
+        <title>CEE Capitol Hill Luncheon Remarks</title>
+        <description>&lt;p&gt;Probably one of the most formative experiences of my time in high school was participating in the USA Biology Olympiad, a contest sponsored by the Center for Excellence and Education. For those who may not be familiar with the format of the competition, the Olympiad is a series of examinations that culminates in a 2-week National Finals camp held at Purdue University where, the U.S. team for the international competition is decided. Every single year, approximately 10,000 students participate nationwide, and only 4 are lucky enough to move onto the International Biology Olympiad.&lt;/p&gt;
+
+&lt;p&gt;I participated in the Biology Olympiad during all four years of my high school career. My sophomore year, I qualified to the National Finals. And during my my junior and senior years, I had the honor of attending the international Olympiad in Singapore (2012) and Switzerland (2013). After working with the program for over 5 years, I can say without hesitation that being able to interact with world class mentors and some of the smartest students in the world has been an amazing experience.&lt;/p&gt;
+
+&lt;p&gt;As a result, when I was asked to speak in Washington, D.C., about the program and it&#39;s impact on high school education, I was ecstatic. There were over a hundred people attendance - donors, CEE staff, and politicians (including Rep. Mike Honda!) - and I was humbled to be presenting alongside people as impressive as Jud Bowman, the CEO of Appia, and Dr. Nancy Hsia Akerman from the Stratospheric Protection Division of the EPA.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/Honda_Buduma_Chaskin.jpg&quot; title=&quot;Picture with Rep. Mike Honda and Mel Chaskin&quot; alt=&quot;Picture with Rep. Mike Honda and Mel Chaskin&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;Hanging out with Rep. Mike Honda and Mel Chaskin, CEO of Vangaurd Research&lt;/h6&gt;
+
+&lt;p&gt;If you&#39;re interested in the content of the luncheon, the CEE published a newsletter about the event &lt;a href=&#39;http://www.cee.org/sites/default/files/newsletters/cee_fall_2014.pdf&#39; target=&#39;_blank&#39;&gt;here&lt;/a&gt;. I wanted to take this opportunity to share my remarks at the luncheon:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;Almost precisely 3 years ago, I opened up an email that would completely change my life. That email was an invitation to participate in the 2011 USA Biology Olympiad National Finals, a 2 week long camp where the top 20 high school students in the nation come together to explore the life sciences on an unbelievably deep level and compete for a spot on the 4-person Team USA at the International Olympiad. Now, if someone had told me back then that this would be the single most important email I would open during my high school career, my younger self probably would have dismissed them in disbelief. But in retrospect, being invited to the National Finals for the first time my sophomore year opened so many doors that it’s impossible for me to imagine what the past three years of my life would’ve been like otherwise.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I think one of the most valuable aspects of the biology Olympiad is the community built around it. Learning is never a purely individual pursuit, it’s highly cooperative, dynamic, and inter-disciplinary. At the national level, the Olympiad brings together people who are deeply passionate about biology, but at the same time come from vastly different cultural and academic backgrounds.  Surrounded by a team of world class peers, researchers, and mentors, I’ve learned more over the cumulative 6 weeks I spent at the National Finals than I learned in 4 years of school.  I can confidently say that the rigor of the Olympiad is unmatched by any other high school program in the country. And the fact that the U.S. team has brought home 4 gold medals not one, not two, but three years in a row is a testament to that fact. But, in addition to just helping me build a strong knowledge base, the program has also taught me to ask insightful questions and empowered me with the toolset necessary to design my own experiments and discover the answers. In fact, using everything I’ve learned through the Olympiad, I’ve been able to conduct independent research projects on topics ranging from low cost screening techniques for pharmaceutical products to improving the composition of the whooping cough vaccine.  And the beneficial effects of the Olympiad don’t just stop at the highest level of competition. Through my personal experiences, I’ve found that the community spirit trickles all the way down to the school level. After bringing the biology Olympiad to my high school, more and more people interested in biology began to study together, and as a result, the science program at my high school has strengthened significantly.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;On an even broader level, participating at the International level gave me an eye-opening glimpse of the world beyond my immediate community. I will never forget learning some basic Arabic from a boy representing the United Arab Emirates, discussing the issues of segregation and racial discrimination with the team from South Africa, and hearing the life story of a budding biologist from Iran, who had kept her love of science a secret from her family in fear that they would not accept her. I will never forget the nights we spent in the common area, passing around a Tupperware container of exotic plant specimen most of us had never seen before. And of course, I will never forget standing in front a huge crowd to announce my teammate&#39;s birthday the night after the practical exam and hearing the room burst into a surprisingly harmonious ensemble of the song &quot;Happy Birthday&quot; sung simultaneously in at least twenty different languages.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You see, for me, and for tens of thousands of students all over the nation, the U.S.A Biology Olympiad has been a life-changing experience. It’s programs like these that inspire students to take their education to the next level, tackle some of the society’s most important problems, and engage the world in ways as citizens of a global community. None of this would be possible without the Center for Excellence and Education, who have organized such an amazing program, Ms. Kathy Frame and Dr. Clark Gedney, who have made the USA Biology Olympiad the spectacular success it is today, and all of you whose support is crucial to the success of the Olympiad and its ability to foster the education of future generations of students.  Thank you.&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;For anybody in high school looking to learn more biology, I&#39;d highly recommend participating in the USA Biology Olympiad. It&#39;s had a hugely positive impact on my life and the lives of all my friends who have gone through the program. I hope the donors in the audience got the message and continue to support the USA Biology Olympiad. I know Rep. Mike Honda gets it ;)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/fistbump.jpg&quot; title=&quot;Fist Bump&quot; alt=&quot;Fist Bump&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 01 May 2014 00:00:00 -0700</pubDate>
+        <link>http://nikhilbuduma.com//2014/05/01/speaking-at-the-cee-congressional-luncheon/</link>
+        <guid isPermaLink="true">http://nikhilbuduma.com//2014/05/01/speaking-at-the-cee-congressional-luncheon/</guid>
+      </item>
+    
+  </channel>
+</rss>
