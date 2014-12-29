@@ -102,6 +102,114 @@
       </item>
     
       <item>
+        <title>Hacking the North</title>
+        <description>&lt;p&gt;When I first heard about Hack the North at the University of Waterloo, I was immediately on board. Basically free flights to and from Canada, a roof over my head while I&#39;m there, unlimited free food (including poutine), and 36 hours of high energy hacking. It was an irresistable opportunity.&lt;/p&gt;
+
+&lt;h3&gt;The Rejection Letter&lt;/h3&gt;
+
+&lt;p&gt;I decided to apply as a team with two of my close friends from MIT, Anish and Shelby. The three of us were now addicted to the high-octane energy of the hackathon scene. We even had an idea for a project. We were going to build a Google glass application that would take live video feed and create a searchable archive of your life experiences. You&#39;d never have to worry about seeing a flyer in the hallway and then forgetting the phone number or email. Or you could quickly find and extract your friend&#39;s great joke from lunch for your Medium post. It was going to be awesome!&lt;/p&gt;
+
+&lt;p&gt;But then decision emails trickled out, and my excitement slowly faded into dejection:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;Hold on a little longer… You’ve been waitlisted! We received an overwhelming 2500+ applicants this year and unfortunately due to our venue&#39;s space limitations, we are unable to offer you an immediate spot at the event...&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Darn. Well that&#39;s a bummer. The three of us were really looking forward to flying up to Canada. And I had never been before either.&lt;/p&gt;
+
+&lt;p&gt;Then something strange happened. Anish pinged the group chat on Facebook, excited about being accepted to the hackathon. Shelby was in too. Confused, I sent an email to the organizing team about the situation, and by the next day, I received a reply. There had been a mix-up due to the volume of people who had applied.&lt;/p&gt;
+
+&lt;p&gt;I was in after all!&lt;/p&gt;
+
+&lt;h3&gt;An Unexpected Journey&lt;/h3&gt;
+
+&lt;p&gt;This section might make this sound like this is going to be something out of a Hobbit movie, but seriously, I would have never guessed that getting to and from a hackathon could ever be as exciting as the hackathon itself.&lt;/p&gt;
+
+&lt;p&gt;My itinerary from Boston to Waterloo seemed like nothing out of the ordinary. A connection through LaGuardia Airport in New York en route to Toronto, followed by a bus organized by Hack the North down to the UWaterloo campus.&lt;/p&gt;
+
+&lt;p&gt;But then things started to get interesting in New York. I located the gate of my connected flight immediately after landing, even though I was starving from not having eaten at all that day, set my stuff down, and got my passport cleared. And then, after doing what any responsible traveler ought to do, I bought a meal at from the restaurant closest to the gate. As I&#39;m finishing up my meal and it&#39;s just about time to board, a United Airways representative announces, &quot;This flight has been cancelled due to mechanical problems.&quot;&lt;/p&gt;
+
+&lt;p&gt;Wait what?&lt;/p&gt;
+
+&lt;p&gt;Immediately people begin to line up to get their flights rescheduled, but I knew that I&#39;d be late if I waited and would most definitely get stranded at the Toronto airport if I didn&#39;t play this smart. I needed to get on the next flight to Toronto.&lt;/p&gt;
+
+&lt;p&gt;I intercepted one of the United representatives and asked him to put me on the next flight that left the airport, whether it was a United flight or some other carrier. He resisted, but after arguing for 5 minutes, he finally gave in. He printed a new ticket and handed it to me. The flight was scheduled to board in 10 minutes, and to depart in 25. It was also in a different terminal, approximately a mile away, so I&#39;d have to go through security again.&lt;/p&gt;
+
+&lt;p&gt;The shuttle wasn&#39;t going to get me there on time, so I grabbed my stuff and bolted. Pretty sure that was the fastest mile I&#39;ve ever run in my life.&lt;/p&gt;
+
+&lt;p&gt;(As a sidenote, the way back was also one hell of a trip. Anish and I got stranded in Philadelphia because our first leg was so delayed that we missed our connection. We spent the night at some substandard hotel, struggling to find something to eat. They didn&#39;t even give us meal vouchers. Never flying United again.)&lt;/p&gt;
+
+&lt;h3&gt;In Canada at Last&lt;/h3&gt;
+
+&lt;p&gt;Right before I boarded my plane, I shot off an email to the Hack the North team letting them know my situation, and asking them to wait for me just in case something went wrong. Thankfully, they got the memo, so someone was waiting for me when I arrived at the airport in Toronto at the wrong terminal. We were both relieved that the bus hadn&#39;t yet arrived before we got to the right spot. And what do you know? There was Shelby!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/timhortons.jpg&quot; title=&quot;Tim Hortons&quot; alt=&quot;Tim Hortons&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;Shameless selfies at the airport Tim Hortons&lt;/h6&gt;
+
+&lt;p&gt;Intrigued by the lengendary stories of the coffee shop chain Tim Hortons, we decided to give the place a try. We got a maple flavored donut from the little shop in the terminal, which turned out to be pretty darn good. Finally, after waiting for another hour (I guess traffic&#39;s pretty bad in Canada?), the bus finally arrived!&lt;/p&gt;
+
+&lt;h3&gt;Rounding out the Remembrall Team&lt;/h3&gt;
+
+&lt;p&gt;We all realized that the scope of Remembrall (what we decided to call our project) was probably going to be beyond what the three of us could handle on our own. We&#39;d have to put together a Google glass application, a nontrivial server-side infrastructure for audio and video processing, and a web interface that allowed you to perform some pretty sophisticated search operations to select video clips and compose journal entries. So we found Moaaz from UWaterloo through the Hack the North Facebook group to join our team.&lt;/p&gt;
+
+&lt;p&gt;After the four of us finally found each other on campus and met up with one of my good old friends from the biology Olympiad (we both competed in Singapore in 2012, except she was on Team Canada), we scoped out a hacker space for ourselves on the second floor of the engineering building. We filled it up with sofa chairs that we found scattered across the floor. It even had this great adjoining empty hallway where my teammates could sleep if they were ever tired. I, of course, wouldn&#39;t need it. As they say, sleep is for the weak.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/sleeping.jpg&quot; title=&quot;Sleeping&quot; alt=&quot;Sleeping&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;Some random person, definitely not me, sleeping in the hallway&lt;/h6&gt;
+
+&lt;p&gt;Er... ok fine. You got me there&lt;/p&gt;
+
+&lt;h3&gt;Rekognize the Opportunity and Hustle&lt;/h3&gt;
+
+&lt;p&gt;Over the course of 36 hours, we slowly built our project from the ground up. But one of the roadblocks we hit early on during the weekend seemed like it was going to spell the end for Remembrall. One of the major components of the project was analyzing the video feed streamed from our Google glass and performing image recognition on a per frame basis. We quickly realized that implementing our own recognition system was probably going to be too time consuming, so I spent some time scouring the web for an API we could leverage. It wasn&#39;t too long before I found Rekognition, which gave us exactly what we were looking for. Excitedly, I showed this to my team.&lt;/p&gt;
+
+&lt;p&gt;But then the harsh reality of economics hit me. If we were going to do real time video processing, even at a measly rate of a single frame per second, we&#39;d have to make over 3,000 API calls just to analyze an hour of video. That was (at the time) beyond what we could get out of the free tier of the service, so we needed another plan of action.&lt;/p&gt;
+
+&lt;p&gt;Out of desperation, I decided to try the &quot;Chat with us!&quot; feature on the Rekognition website. I don&#39;t know what I was thinking. It was 3 AM, and no sane person would expect a reply from a startup&#39;s customer service at such a late hour. And even if they did see the message, there was a slim chance we&#39;d get what we wanted.&lt;/p&gt;
+
+&lt;p&gt;But by some miracle, someone did respond, and they also upgraded my account to the pro service free of charge. I chucked a Hail Mary, and the unthinkable happened. I guess the moral of the story is to never be afraid to pick up the darn phone, because you never know what will happen unless you try.&lt;/p&gt;
+
+&lt;h3&gt;Round One Begins&lt;/h3&gt;
+
+&lt;p&gt;By the end of 36 hours we were in good shape. After wrangling with the Google Glass SDK and (ab)using the Wit.ai API, Anish was able to get the Google Glass application and audio to text components working. I recorded a significant amount of video footage, integrated the image/concept recognition components, and got elastic search to work on the back end. And finally, Shelby and Moaaz were able to get the web interface to work beautifully.&lt;/p&gt;
+
+&lt;p&gt;When were greeted by our judging panel for round one, we were ready to give the beast a test run. And it went amazingly. So amazingly that we were interrupted halfway through the presentation by one of the judges, who exclaimed that Remembrall was one of the most impressive hackathon demos she had seen. Fist bumps flew through the air as we walked out of the first round.&lt;/p&gt;
+
+&lt;p&gt;This is why we do what we do. To build things that bring magic to life.&lt;/p&gt;
+
+&lt;h3&gt;The Closing&lt;/h3&gt;
+
+&lt;p&gt;We ended up being selected as one of the top 10 teams of the hackathon and presented our demo on stage! If you&#39;d like to watch our presentation, you can find it right here! We also have a &lt;a target=&quot;_blank&quot; href=&quot;http://remembrall.me&quot;&gt;website&lt;/a&gt; for the project, which is still a work in progress.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;
+&lt;br/&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/XHwZ8Hd22YQ&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;We also ended up winning the Thiel Fellowship sponsorship prize, which meant an Oculus Rift DK2 for each of us in addition to a fully paid trip to Las Vegas for the Thiel Summit!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/oculus.jpg&quot; title=&quot;Oculus&quot; alt=&quot;Oculus&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;New Oculus Rift DK2&#39;s!&lt;/h6&gt;
+
+&lt;p&gt;The weekend was over, but we left in high spirits. Thank you for throwing this hackathon, Hack the North. I know when I look back on my college experience later in life, this is one of the things I&#39;ll fondly remember.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center;font-family:lato,san serif&quot;&gt;
+&lt;br/&gt;
+&lt;span style=&#39;font-size:12px&#39;&gt;&lt;i&gt;Thanks to &lt;a href=&#39;https://medium.com/@davefontenot&#39; target=&#39;_blank&#39;&gt;Dave Fontenot&lt;/a&gt; for encouraging me to finish this!&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+
+
+</description>
+        <pubDate>Mon, 22 Sep 2014 00:00:00 -0700</pubDate>
+        <link>http://nikhilbuduma.com//2014/09/22/Hacking-the-North/</link>
+        <guid isPermaLink="true">http://nikhilbuduma.com//2014/09/22/Hacking-the-North/</guid>
+      </item>
+    
+      <item>
         <title>Greylock Hackfest @ Medium!</title>
         <description>&lt;p&gt;As of writing this post I’ve gone approximately 36 hours without sleeping after attending my first serious hackathon, Greylock Hackfest @ Medium. As you can probably guess, I’m pretty exhausted, but I want to put everything down in writing before I forget it. I hope you’ll forgive me if I veer off topic.
 By the way, I also find it kind of amusing that I’m making my first post on Medium after attending the hackathon they hosted this weekend.&lt;/p&gt;
