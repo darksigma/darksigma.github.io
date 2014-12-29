@@ -3,8 +3,8 @@
   <channel>
     <title>Nikhil Buduma</title>
     <description>Nikhil&#39;s Blog</description>
-    <link>http://localhost:4000</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://nikhilbuduma.com</link>
+    <atom:link href="http://nikhilbuduma.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>The Cell... Reimagined</title>
@@ -96,9 +96,9 @@
 &lt;/div&gt;
 
 </description>
-        <pubDate>Sat, 27 Dec 2014 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000//2014/12/27/the-cell-reimagined/</link>
-        <guid isPermaLink="true">http://localhost:4000//2014/12/27/the-cell-reimagined/</guid>
+        <pubDate>Sat, 27 Dec 2014 00:00:00 -0800</pubDate>
+        <link>http://nikhilbuduma.com//2014/12/27/the-cell-reimagined/</link>
+        <guid isPermaLink="true">http://nikhilbuduma.com//2014/12/27/the-cell-reimagined/</guid>
       </item>
     
       <item>
@@ -293,9 +293,9 @@ By the way, I also find it kind of amusing that I’m making my first post on Me
 &lt;/div&gt;
 
 </description>
-        <pubDate>Mon, 21 Jul 2014 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//2014/07/21/greylock-hackfest-medium/</link>
-        <guid isPermaLink="true">http://localhost:4000//2014/07/21/greylock-hackfest-medium/</guid>
+        <pubDate>Mon, 21 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://nikhilbuduma.com//2014/07/21/greylock-hackfest-medium/</link>
+        <guid isPermaLink="true">http://nikhilbuduma.com//2014/07/21/greylock-hackfest-medium/</guid>
       </item>
     
       <item>
@@ -324,9 +324,9 @@ By the way, I also find it kind of amusing that I’m making my first post on Me
 
 &lt;p&gt;&lt;img src=&quot;/img/fistbump.jpg&quot; title=&quot;Fist Bump&quot; alt=&quot;Fist Bump&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Thu, 01 May 2014 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000//2014/05/01/speaking-at-the-cee-congressional-luncheon/</link>
-        <guid isPermaLink="true">http://localhost:4000//2014/05/01/speaking-at-the-cee-congressional-luncheon/</guid>
+        <pubDate>Thu, 01 May 2014 00:00:00 -0700</pubDate>
+        <link>http://nikhilbuduma.com//2014/05/01/speaking-at-the-cee-congressional-luncheon/</link>
+        <guid isPermaLink="true">http://nikhilbuduma.com//2014/05/01/speaking-at-the-cee-congressional-luncheon/</guid>
       </item>
     
   </channel>
