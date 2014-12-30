@@ -29,7 +29,7 @@ You could imagine trying to devise a set of rules to distinguish each individual
 
 In this case, we have difficulty differentiating zeroes from sixes. We could establish some sort of cutoff, but how would you decide the cutoff in the first place? As you can see, it quickly becomes quite complicated to compile a list of heuristics (i.e., rules and guesses) that accurately classifies handwritten digits.    
 
-And there are so many more classes of problems that fall into this category. Recognizing objects, understanding concepts, comprehending speech. We don't know how what program to write because we still don't know how it's done by our own brains. And even if we did have a good idea about how to do it, the program might be horrendously complicated. 
+And there are so many more classes of problems that fall into this category. Recognizing objects, understanding concepts, comprehending speech. We don't know what program to write because we still don't know how it's done by our own brains. And even if we did have a good idea about how to do it, the program might be horrendously complicated. 
 
 So instead of trying to write a program, we try to develop an algorithm that a computer can use to look at hundreds or thousands of examples (and the correct answers), and then the computer uses that experience to solve the same problem in new situations. Essentially, our goal is to teach the computer to solve by example, very similar to how we might teach a young child to distinguish a cat from a dog. 
 
