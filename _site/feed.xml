@@ -26,7 +26,7 @@
 
 &lt;h3&gt;Simulating a Recursive Neural Network&lt;/h3&gt;
 
-&lt;p&gt;Now that we understand how a RNN is structured, we can discuss how it&#39;s able to simulate a sequence of events. Let&#39;s consider a neat toy example of a recursive neural net acting like an timer module.&lt;/p&gt;
+&lt;p&gt;Now that we understand how a RNN is structured, we can discuss how it&#39;s able to simulate a sequence of events. Let&#39;s consider a neat toy example of a recursive neural net acting like an timer module, a classic example designed by Herbert Jaeger (his original manuscript can be found &lt;a target=&#39;_blank&#39; href=&#39;http://www.pdx.edu/sites/www.pdx.edu.sysc/files/Jaeger_TrainingRNNsTutorial.2005.pdf&#39;&gt;&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/timer_ex.png&quot; title=&quot;Timer RNN input/output&quot; alt=&quot;Timer RNN input/output&quot; /&gt;&lt;/p&gt;
 
@@ -78,7 +78,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/img/rnn_error_surface.png&quot; title=&quot;Error Surface&quot; alt=&quot;Error Surface&quot; /&gt;&lt;/p&gt;
 
-&lt;h6&gt;The problematic error surface of a simple RNN (image from: Pascanu et al.)&lt;/h6&gt;
+&lt;h6&gt;The problematic error surface of a simple RNN (image from: &lt;a target=&#39;_blank&#39; href=&#39;http://arxiv.org/pdf/1211.5063v2.pdf&#39;&gt;Pascanu et al.&lt;/a&gt;)&lt;/h6&gt;
 
 &lt;p&gt;Now, let&#39;s say we started at the red star (using a random initialization of weights). You&#39;ll notice that as we use gradient descent, we get closer and closer to the local minimum on the surface. But suddenly, when we slightly overreach the valley and hit the cliff, we are presented with a massive gradient in the opposite direction. This forces us to bounce extremely far away from the local minimum. And once we&#39;re in nowhere land, we quickly find that the gradients are so vanishingly small that coming close again will take a seemingly endless amount of time. This issue is called the problem of &lt;em&gt;exploding and vanishing gradients&lt;/em&gt;. You can imagine perhaps controlling this issue by rescaling gradients to never exceed a maximal magnitude (see the dotted path after hitting the cliff), but this approach still doesn&#39;t perform spectacularly well, especially in more complex RNNs. For a more mathematical treatment of this issue, check out this &lt;a target=&#39;_blank&#39; href=&#39;http://arxiv.org/pdf/1211.5063v2.pdf&#39;&gt;paper&lt;/a&gt;.&lt;/p&gt;
 

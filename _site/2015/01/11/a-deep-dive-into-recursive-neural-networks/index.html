@@ -69,7 +69,7 @@
 
 <h3>Simulating a Recursive Neural Network</h3>
 
-<p>Now that we understand how a RNN is structured, we can discuss how it's able to simulate a sequence of events. Let's consider a neat toy example of a recursive neural net acting like an timer module.</p>
+<p>Now that we understand how a RNN is structured, we can discuss how it's able to simulate a sequence of events. Let's consider a neat toy example of a recursive neural net acting like an timer module, a classic example designed by Herbert Jaeger (his original manuscript can be found <a target='_blank' href='http://www.pdx.edu/sites/www.pdx.edu.sysc/files/Jaeger_TrainingRNNsTutorial.2005.pdf'></a>).</p>
 
 <p><img src="/img/timer_ex.png" title="Timer RNN input/output" alt="Timer RNN input/output" /></p>
 
@@ -121,7 +121,7 @@
 
 <p><img src="/img/rnn_error_surface.png" title="Error Surface" alt="Error Surface" /></p>
 
-<h6>The problematic error surface of a simple RNN (image from: Pascanu et al.)</h6>
+<h6>The problematic error surface of a simple RNN (image from: <a target='_blank' href='http://arxiv.org/pdf/1211.5063v2.pdf'>Pascanu et al.</a>)</h6>
 
 <p>Now, let's say we started at the red star (using a random initialization of weights). You'll notice that as we use gradient descent, we get closer and closer to the local minimum on the surface. But suddenly, when we slightly overreach the valley and hit the cliff, we are presented with a massive gradient in the opposite direction. This forces us to bounce extremely far away from the local minimum. And once we're in nowhere land, we quickly find that the gradients are so vanishingly small that coming close again will take a seemingly endless amount of time. This issue is called the problem of <em>exploding and vanishing gradients</em>. You can imagine perhaps controlling this issue by rescaling gradients to never exceed a maximal magnitude (see the dotted path after hitting the cliff), but this approach still doesn't perform spectacularly well, especially in more complex RNNs. For a more mathematical treatment of this issue, check out this <a target='_blank' href='http://arxiv.org/pdf/1211.5063v2.pdf'>paper</a>.</p>
 
