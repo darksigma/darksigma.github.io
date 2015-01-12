@@ -20,7 +20,7 @@ There are a lot of pretty challenging technical difficulties that arise when tra
 
 ### Simulating a Recursive Neural Network
 
-Now that we understand how a RNN is structured, we can discuss how it's able to simulate a sequence of events. Let's consider a neat toy example of a recursive neural net acting like an timer module, a classic example designed by Herbert Jaeger (his original manuscript can be found <a target='_blank' href='http://www.pdx.edu/sites/www.pdx.edu.sysc/files/Jaeger_TrainingRNNsTutorial.2005.pdf'></a>).  
+Now that we understand how a RNN is structured, we can discuss how it's able to simulate a sequence of events. Let's consider a neat toy example of a recursive neural net acting like an timer module, a classic example designed by Herbert Jaeger (his original manuscript can be found <a target='_blank' href='http://www.pdx.edu/sites/www.pdx.edu.sysc/files/Jaeger_TrainingRNNsTutorial.2005.pdf'>here</a>).  
 
 ![Timer RNN input/output](/img/timer_ex.png "Timer RNN input/output")
 ###### A simple example of how a perfect RNN would simulate a timer
