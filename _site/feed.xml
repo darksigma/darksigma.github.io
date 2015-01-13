@@ -7,26 +7,26 @@
     <atom:link href="http://nikhilbuduma.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>A Deep Dive into Recursive Neural Nets</title>
+        <title>A Deep Dive into Recurrent Neural Nets</title>
         <description>&lt;p&gt;Last time, we talked about the traditional feed-forward neural net and concepts that form the basis of deep learning. These ideas are extremely powerful! We saw how feed-forward convolutional neural networks have set records on many difficult tasks including handwritten digit recognition and object classification. And even today, feed-forward neural networks consistently outperform virtually all other approaches to solving classification tasks.&lt;/p&gt;
 
 &lt;p&gt;And yet, despite their well celebrated successes, most experts would agree that feed-forward neural nets are still rather limited in what they can achieve. Why? Because the task of &quot;classification&quot; is only one small component of the incredible computational power of the human brain. We&#39;re wired not only to recognize individual instances but to also analyze entire sequences of inputs. These sequences are ultra rich in information, have complex time dependencies, and can be of arbitrary length. For example, vision, motor control, speech, and comprehension all require us to process high-dimensional inputs as they change over time. This is something that feed-forward nets are incredibly poor at modeling.&lt;/p&gt;
 
-&lt;h3&gt;What is a Recursive Neural Net?&lt;/h3&gt;
+&lt;h3&gt;What is a Recurrent Neural Net?&lt;/h3&gt;
 
-&lt;p&gt;One quite promising solution to tackling the problem of learning sequences of information is the recursive neural network (RNN). RNNs are built on the same computational unit as the feed forward neural net, but differ in the architecture of how these neurons are connected to one another. Feed forward neural networks were organized in layers, where information flowed unidirectionally from input units to output units. There were no undirected cycles in the connectivity patterns. Although neurons in the brain do contain undirected cycles as well as connections within layers, we chose to impose these restrictions to simplify the training process at the expense of computational versatility. Thus, to create more powerful compuational systems, we allow RNNs to break these artificially imposed rules. RNNs do not have to be organized in layers and directed cycles are allowed. In fact, neurons are actually allowed to be connected to themselves.&lt;/p&gt;
+&lt;p&gt;One quite promising solution to tackling the problem of learning sequences of information is the recurrent neural network (RNN). RNNs are built on the same computational unit as the feed forward neural net, but differ in the architecture of how these neurons are connected to one another. Feed forward neural networks were organized in layers, where information flowed unidirectionally from input units to output units. There were no undirected cycles in the connectivity patterns. Although neurons in the brain do contain undirected cycles as well as connections within layers, we chose to impose these restrictions to simplify the training process at the expense of computational versatility. Thus, to create more powerful compuational systems, we allow RNNs to break these artificially imposed rules. RNNs do not have to be organized in layers and directed cycles are allowed. In fact, neurons are actually allowed to be connected to themselves.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/rnn_ex.png&quot; title=&quot;Example Recursive Neural Net&quot; alt=&quot;Example Recursive Neural Net&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/rnn_ex.png&quot; title=&quot;Example Recurrent Neural Net&quot; alt=&quot;Example Recurrent Neural Net&quot; /&gt;&lt;/p&gt;
 
 &lt;h6&gt;An example schematic of a RNN with directed cycles and self connectivities&lt;/h6&gt;
 
 &lt;p&gt;The RNN consists of a bunch of input units, labeled &lt;script type=&quot;math/tex&quot;&gt;u_1,...,u_K&lt;/script&gt; and output units, labeled &lt;script type=&quot;math/tex&quot;&gt;y_1,...,y_L&lt;/script&gt;. There are also the hidden units &lt;script type=&quot;math/tex&quot;&gt;x_1,...x_N&lt;/script&gt;, which do most of the interesting work. You&#39;ll notice that the illustration shows a unidirectional flow of information from the input units to the hidden units as well as another unidirectional flow of information from the hidden units to the output units. In some cases, RNNs break the latter restriction with connections leading from the output units back to the hidden units. These are called &quot;backprojections,&quot; and don&#39;t make the analysis of RNNs too much more complicated. The same techniques we will discuss here will also apply to RNNs with backprojections.&lt;/p&gt;
 
-&lt;p&gt;There are a lot of pretty challenging technical difficulties that arise when training recursive neural networks, and it&#39;s still a very active area of research. Hopefully by the end of this article, we&#39;ll have a solid understanding of how RNNs work and some of the results that have been achieved!&lt;/p&gt;
+&lt;p&gt;There are a lot of pretty challenging technical difficulties that arise when training recurrent neural networks, and it&#39;s still a very active area of research. Hopefully by the end of this article, we&#39;ll have a solid understanding of how RNNs work and some of the results that have been achieved!&lt;/p&gt;
 
-&lt;h3&gt;Simulating a Recursive Neural Network&lt;/h3&gt;
+&lt;h3&gt;Simulating a Recurrent Neural Network&lt;/h3&gt;
 
-&lt;p&gt;Now that we understand how a RNN is structured, we can discuss how it&#39;s able to simulate a sequence of events. Let&#39;s consider a neat toy example of a recursive neural net acting like an timer module, a classic example designed by Herbert Jaeger (his original manuscript can be found &lt;a target=&#39;_blank&#39; href=&#39;http://www.pdx.edu/sites/www.pdx.edu.sysc/files/Jaeger_TrainingRNNsTutorial.2005.pdf&#39;&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Now that we understand how a RNN is structured, we can discuss how it&#39;s able to simulate a sequence of events. Let&#39;s consider a neat toy example of a recurrent neural net acting like an timer module, a classic example designed by Herbert Jaeger (his original manuscript can be found &lt;a target=&#39;_blank&#39; href=&#39;http://www.pdx.edu/sites/www.pdx.edu.sysc/files/Jaeger_TrainingRNNsTutorial.2005.pdf&#39;&gt;here&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/timer_ex.png&quot; title=&quot;Timer RNN input/output&quot; alt=&quot;Timer RNN input/output&quot; /&gt;&lt;/p&gt;
 
@@ -54,7 +54,7 @@
 
 &lt;p&gt;Great, now we understand what a RNN is and how it works, but how do we train a RNN in the first place to achieve all of these spectacular feats? Specifically, how do we determine the weights that are on each of the connections? And how do we choose the initial activities of all of the hidden units? Our first instinct might be to use backpropagation directly, after all it worked quite well when we used it on feed forward neural nets.&lt;/p&gt;
 
-&lt;p&gt;The problem with using backpropagation here is that we have cyclical dependencies. In feed forward nets, when we calculated the error derivatives with respect to the weights in one layer, we could express them completely in terms of the error derivatives from the layer above. In a recursive neural network, we don&#39;t have this nice layering because the neurons do not form a directed acyclic graph. Trying to backpropagate through a RNN could force us to try to express an error derivative in terms of itself, which doesn&#39;t make for easy analysis.&lt;/p&gt;
+&lt;p&gt;The problem with using backpropagation here is that we have cyclical dependencies. In feed forward nets, when we calculated the error derivatives with respect to the weights in one layer, we could express them completely in terms of the error derivatives from the layer above. In a recurrent neural network, we don&#39;t have this nice layering because the neurons do not form a directed acyclic graph. Trying to backpropagate through a RNN could force us to try to express an error derivative in terms of itself, which doesn&#39;t make for easy analysis.&lt;/p&gt;
 
 &lt;p&gt;So how can we use backpropagation for RNNs, if at all? The answer lies in employing a clever transformation, where we convert our RNN into a new structure that&#39;s essentially a feed-forward neural network! We call this strategy &quot;unrolling&quot; the RNN through time, and an example can be seen in the figure below (with only one input/output per time step to simplify the illustration):&lt;/p&gt;
 
@@ -126,8 +126,8 @@
 &lt;p&gt;RNNs are pretty powerful stuff, and I&#39;m quite excited to see what comes out of this area of active research over the next few years. If any of these topics that I briefly touched upon in the previous paragraph seem interesting, shoot me an email at nkbuduma@gmail.com! I can write another blog post exploring other approaches to RNNs. Thanks for all of the support and I hope you enjoy this article ❤&lt;/p&gt;
 </description>
         <pubDate>Sun, 11 Jan 2015 00:00:00 -0800</pubDate>
-        <link>http://nikhilbuduma.com//2015/01/11/a-deep-dive-into-recursive-neural-networks/</link>
-        <guid isPermaLink="true">http://nikhilbuduma.com//2015/01/11/a-deep-dive-into-recursive-neural-networks/</guid>
+        <link>http://nikhilbuduma.com//2015/01/11/a-deep-dive-into-recurrent-neural-networks/</link>
+        <guid isPermaLink="true">http://nikhilbuduma.com//2015/01/11/a-deep-dive-into-recurrent-neural-networks/</guid>
       </item>
     
       <item>
