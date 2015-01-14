@@ -1,6 +1,7 @@
 ---
 title: A Deep Dive into Recurrent Neural Nets
 layout: post-default
+redirect_from: "/2015/01/11/a-deep-dive-into-recursive-neural-networks/"
 ---
 
 Last time, we talked about the traditional feed-forward neural net and concepts that form the basis of deep learning. These ideas are extremely powerful! We saw how feed-forward convolutional neural networks have set records on many difficult tasks including handwritten digit recognition and object classification. And even today, feed-forward neural networks consistently outperform virtually all other approaches to solving classification tasks.
