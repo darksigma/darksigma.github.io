@@ -7,6 +7,57 @@
     <atom:link href="http://nikhilbuduma.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Genetics as a Social Network - A Data Scientist&#39;s Perspective</title>
+        <description>&lt;p&gt;Data science and biology have never really mixed well. And in retrospect, it’s pretty understandable why. Biology and medicine have their own lingua franca, which makes for a pretty steep learning curve. People who thrive at this intersection not only have to be in tune with the fundamentals of biochemistry and genetics, but also need to be mathematically adept and strong algorithmic thinkers.&lt;/p&gt;
+
+&lt;h3&gt;The Data Science and Biology Divide&lt;/h3&gt;
+
+&lt;p&gt;For decades, we’ve gotten away with computer scientists sticking with computers and biologists sticking with genetics. But things are rapidly changing, and there’s a growing need for people who can bring a data-driven approach to medicine.  The advent of modern high-throughput biotechnology has brought upon a data deluge that has completely changed the field’s landscape. For example, a binary alignment file for a single human genome could easily amount to hundreds of gigabytes or terabytes of raw data.  Without data science, we risk missing out on valuable insights that could fundamentally change how we deliver medicine.&lt;/p&gt;
+
+&lt;p&gt;Modern genetics is a clear example of where data science is already beginning to make huge impacts on our understanding of biology. Traditional biologists have nearly always approached biological systems from a highly simplified, focused perspective. We’ve tried to analyze single genes at a time, often isolated from the larger context in which they exist: protein A upregulates protein B which downregulates protein C. That’s all there was to it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/simple_pathway.png&quot; title=&quot;Simple Pathway&quot; alt=&quot;Simple Pathway&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;How biologists used to think about biochemical pathways&lt;/h6&gt;
+
+&lt;h3&gt;The Social Graph of Genetics&lt;/h3&gt;
+
+&lt;p&gt;But in reality, genetics is much more complicated than that. A single protein could have its expression be modulated by tens of upstream regulators (called transcription factors). And in turn, the same protein could affect the expression of hundreds of other proteins. In a sense, you can think about a cell’s genetics as a huge social network. The fact that protein A directly regulates protein B is analogous to person A following person B on Twitter.  So, quite surprisingly, the same techniques you might use to analyze a user’s Twitter network to get them to click an advertisement are also applicable to analyzing a cell’s regulatory network to diagnose disease and design new therapies.&lt;/p&gt;
+
+&lt;p&gt;But how exactly do we interrogate these relationships? How do we even know that protein A regulates protein B in a particular cell type? This is where high-throughput biotechnology comes in. Over the past couple of years, researchers have pioneered a technique called &lt;a href=&#39;http://www.nature.com/nature/journal/v489/n7414/full/nature11212.html&#39; target=&#39;_blank&#39;&gt;DNAse hypersensitivity&lt;/a&gt;, which helps us infer these key relationships. In addition to having a region that directly codes for a protein, a gene also has a number of upstream sequences that are bound by regulatory proteins that control its expression. Essentially, the DNase hypersensitivity technique takes advantage of the fact that DNA, for the most part, is packaged very tightly except around these very specific regulatory sequences. As a result, when the DNA is exposed to a DNA digesting enzyme, it is mostly cut at these loosely-packed and exposed regions. The only exception is the small tract of nucleotides that are directly bound to a regulatory protein. These nucleotides are protected from digestion, resulting in a very clear &lt;em&gt;transcription factor footprint&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/hypersensitivity.png&quot; title=&quot;DNAse Hypersensitivity&quot; alt=&quot;DNAse Hypersensitivity&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;Histogram showing frequency of DNAse digestion at each location, with a characteristic hypersensitivity site (green) and corresponding transcription factor footprint (red)&lt;/h6&gt;
+
+&lt;p&gt;We can then take the DNA sequences of the transcription factor footprints associated with each gene and predict the proteins bound to these regulatory regions using a database such as &lt;a href=&#39;http://www.gene-regulation.com/pub/databases.html&#39; target=&#39;blank&#39;&gt;TRANSFAC&lt;/a&gt;. This &lt;a target=&#39;_blank&#39; href=&#39;http://www.cell.com/cell/abstract/S0092-8674(12)00639-3&#39;&gt;procedure&lt;/a&gt; enables us to reconstruct the genetic regulatory networks at play in every cell type in the body:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/gene_network_recon.png&quot; title=&quot;Network Construction&quot; alt=&quot;Network Construction&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;Algorithmically generating a cell&#39;s regulatory genetic network from footprint data. Figure borrowed from &lt;a target=&#39;_blank&#39; href=&#39;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3679407/&#39;&gt;Neph et al.&lt;/a&gt;&lt;/h6&gt;
+
+&lt;h3&gt;Applications of Regulatory Network Reconstruction&lt;/h3&gt;
+
+&lt;p&gt;This has a huge number of important applications. For example, this data could be used to understand the foundational differences that differentiate difference cell types. Concretely, this could very significantly inform drug development by allowing researchers to predict how a drug for Alzheimer’s, for example, might have side-effects on the patient’s heart or kidney.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/cell_type_network_comp.png&quot; title=&quot;Cell Specific Networks&quot; alt=&quot;Cell Specific Networks&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;Comparing the regulatory networks in various cell types in the human body. Figure borrowed from &lt;a target=&#39;_blank&#39; href=&#39;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3679407/&#39;&gt;Neph et al.&lt;/a&gt;&lt;/h6&gt;
+
+&lt;p&gt;Moreover, my current research involves constructing these networks to compare humans to laboratory model organisms such as mice, rats, and chimpanzees. These comparative models could help us figure out why certain drugs work well in animal studies but fail miserable in clinical trials. Every single year, approximately 95% of drugs fail to obtain approval, and understanding these contextual differences could potentially save billions of dollars in wasted resources.&lt;/p&gt;
+
+&lt;h3&gt;Conclusions&lt;/h3&gt;
+
+&lt;p&gt;With petabytes of data being produced every single year, biology and medicine need data science now more than ever before. Undoubtedly, data will shape the future in ways that we can only begin to imagine.&lt;/p&gt;
+
+&lt;p&gt;If you want to talk about how to hack biology and medicine with data, please shoot me a line at nkbuduma@gmail.com! I&#39;m always open to discussing cool ideas ❤&lt;/p&gt;
+</description>
+        <pubDate>Sun, 18 Jan 2015 00:00:00 -0800</pubDate>
+        <link>http://nikhilbuduma.com//2015/01/18/genetics-as-a-social-network/</link>
+        <guid isPermaLink="true">http://nikhilbuduma.com//2015/01/18/genetics-as-a-social-network/</guid>
+      </item>
+    
+      <item>
         <title>A Deep Dive into Recurrent Neural Nets</title>
         <description>&lt;p&gt;Last time, we talked about the traditional feed-forward neural net and concepts that form the basis of deep learning. These ideas are extremely powerful! We saw how feed-forward convolutional neural networks have set records on many difficult tasks including handwritten digit recognition and object classification. And even today, feed-forward neural networks consistently outperform virtually all other approaches to solving classification tasks.&lt;/p&gt;
 
