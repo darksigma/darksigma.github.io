@@ -51,6 +51,14 @@
 &lt;p&gt;With petabytes of data being produced every single year, biology and medicine need data science now more than ever before. Undoubtedly, data will shape the future in ways that we can only begin to imagine.&lt;/p&gt;
 
 &lt;p&gt;If you want to talk about how to hack biology and medicine with data, please shoot me a line at nkbuduma@gmail.com! I&#39;m always open to discussing cool ideas ❤&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center;font-family:lato,san serif&quot;&gt;
+&lt;br/&gt;
+&lt;span style=&#39;font-size:12px&#39;&gt;&lt;i&gt;This article is cross-posted on KDNuggets &lt;a href=&#39;http://www.kdnuggets.com/2015/01/genetics-as-social-network-data-scientist-perspective.html&#39; target=&#39;_blank&#39;&gt;here&lt;/a&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 18 Jan 2015 00:00:00 -0800</pubDate>
         <link>http://nikhilbuduma.com//2015/01/18/genetics-as-a-social-network/</link>
@@ -296,7 +304,7 @@
 
 &lt;p&gt;In practice at each step of moving perpendicular to the contour, we need to determine how far we want to walk before recalculating our new direction. This distance needs to depend on the steepness of the surface. Why? The closer we are to the minimum, the shorter we want to step forward. We know we are close to the minimum, because the surface is a lot flatter, so we can use the steepness as an indicator of how close we are to the minimum. We multiply this measure of steepness with a pre-determined constant factor &lt;script type=&quot;math/tex&quot;&gt;\epsilon&lt;/script&gt;, the &lt;em&gt;learning rate&lt;/em&gt;. Picking the learning rate is a hard problem. If we pick a learning rate that&#39;s too small, we risk taking too long during the training process. If we pick a learning rate that&#39;s too big, we&#39;ll mostly likely start diverging away from the minimum (this pretty easy to visualize). Modern training algorithms adapt the learning rate to overcome this difficult challenge.&lt;/p&gt;
 
-&lt;p&gt;For those who are interested, putting all the pieces results in what is called the &lt;em&gt;delta rule&lt;/em&gt; for training the linear neuron. The delta rule states that given a learning rate &lt;script type=&quot;math/tex&quot;&gt;\epsilon&lt;/script&gt;, we ought to change the weight &lt;script type=&quot;math/tex&quot;&gt;w_k&lt;/script&gt; at each iteration of training by &lt;script type=&quot;math/tex&quot;&gt;\Delta w_k = \sum_i \epsilon x_k(t^{(i)} - y^{(i)})&lt;/script&gt;. Deriving this formula is left as an exercise for the experienced reader. For a hint, study our derivation for a sigmoidal neuron in the next section.&lt;/p&gt;
+&lt;p&gt;For those who are interested, putting all the pieces results in what is called the &lt;em&gt;delta rule&lt;/em&gt; for training the linear neuron. The delta rule states that given a learning rate &lt;script type=&quot;math/tex&quot;&gt;\epsilon&lt;/script&gt;, we ought to change the weight &lt;script type=&quot;math/tex&quot;&gt;w_k&lt;/script&gt; at each iteration of training by &lt;script type=&quot;math/tex&quot;&gt;\Delta w_k = \sum_i \epsilon x_k^{(i)}(t^{(i)} - y^{(i)})&lt;/script&gt;. Deriving this formula is left as an exercise for the experienced reader. For a hint, study our derivation for a sigmoidal neuron in the next section.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately, just taking the path of steepest descent doesn&#39;t always do the trick when we have nonlinear neurons. The error surface can get complicated and there could be multiple local minimum. As a result, using this procedure could potentially get us to a bad local minimum that isn&#39;t the global minimum. As a result, in practice, training neural nets involves a modification of gradient descent called &lt;em&gt;stochastic gradient descent&lt;/em&gt;, that tries to use randomization and noise to find the global minimum with high probability on a complex error surface.&lt;/p&gt;
 

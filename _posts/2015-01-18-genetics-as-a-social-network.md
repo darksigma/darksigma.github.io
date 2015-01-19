@@ -41,4 +41,9 @@ Moreover, my current research involves constructing these networks to compare hu
 
 With petabytes of data being produced every single year, biology and medicine need data science now more than ever before. Undoubtedly, data will shape the future in ways that we can only begin to imagine. 
 
-If you want to talk about how to hack biology and medicine with data, please shoot me a line at nkbuduma@gmail.com! I'm always open to discussing cool ideas ❤ 
+If you want to talk about how to hack biology and medicine with data, please shoot me a line at nkbuduma@gmail.com! I'm always open to discussing cool ideas ❤
+
+<div style="text-align: center;font-family:lato,san serif">
+<br/>
+<span style='font-size:12px'><i>This article is cross-posted on KDNuggets <a href='http://www.kdnuggets.com/2015/01/genetics-as-social-network-data-scientist-perspective.html' target='_blank'>here</a></i></span>
+</div> 
