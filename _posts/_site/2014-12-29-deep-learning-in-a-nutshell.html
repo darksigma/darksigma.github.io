@@ -1,0 +1,230 @@
+<p>Deep learning. Neural networks. Backpropagation. Over the past year or two, I’ve heard these buzz words being tossed around a lot, and it’s something that has definitely seized my curiosity recently. Deep learning is an area of active research these days, and if you’ve kept up with the field of computer science, I’m sure you’ve come across at least some of these terms at least once. </p>
+
+<p>Deep learning can be an indimidating concept, but it’s becoming increasingly important these days. Google’s already making huge strides in the space with the <a target="_blank" href="http://www.wired.com/2014/07/google_brain/">Google Brain project</a> and its recent acquisition of the London-based deep learning startup <a target="blank" href="http://deepmind.com/">DeepMind</a>. Moreover, deep learning methods are beating out traditional machine learning approaches on virtually every single metric.</p>
+
+<p>So what exactly is deep learning? How does it work? And most importantly, why should you even care?</p>
+
+<h3 id="note-to-the-reader">Note to the Reader</h3>
+
+<p>If you’re new to computer science, and you’ve followed me up till this point, please stick with me. Certain optional sections of this article may get a little math heavy (marked with a *), but I want to make this subject accessible to everyone, computer science major or not. In fact, if you are reading through this article and, at any point, you find yourself confused about the material, please email me. I will make whatever edits and clarifications that are necessary to make the article clearer. </p>
+
+<h3 id="what-is-machine-learning">What is Machine Learning?</h3>
+
+<p>Before we dive into deep learning, I want to take a step back and talk a little bit about the broader field of “machine learning” and what it means when we say that we’re programming machines to <em>learn</em>. </p>
+
+<p>Sometimes we encounter problems for which it’s really hard to write a computer program to solve. For example, let’s say we wanted to program a computer to recognize hand-written digits:</p>
+
+<p><img src="/img/mnist.gif" alt="Handwritten Digits" title="Handwritten Digits" />
+###### Image Provided by the MNIST handwritten database</p>
+
+<p>You could imagine trying to devise a set of rules to distinguish each individual digit. Zeros, for instance, are basically one closed loop. But what if the person didn’t perfectly close the loop. Or what if the right top of the loop closes below where the left top of the loop starts?</p>
+
+<p><img src="/img/zero.png" alt="Handwritten Zero or Six" title="Handwritten Zero or Six" />
+###### A zero that’s difficult to distinguish from a six algorithmically</p>
+
+<p>In this case, we have difficulty differentiating zeroes from sixes. We could establish some sort of cutoff, but how would you decide the cutoff in the first place? As you can see, it quickly becomes quite complicated to compile a list of heuristics (i.e., rules and guesses) that accurately classifies handwritten digits.    </p>
+
+<p>And there are so many more classes of problems that fall into this category. Recognizing objects, understanding concepts, comprehending speech. We don’t know what program to write because we still don’t know how it’s done by our own brains. And even if we did have a good idea about how to do it, the program might be horrendously complicated. </p>
+
+<p>So instead of trying to write a program, we try to develop an algorithm that a computer can use to look at hundreds or thousands of examples (and the correct answers), and then the computer uses that experience to solve the same problem in new situations. Essentially, our goal is to teach the computer to solve by example, very similar to how we might teach a young child to distinguish a cat from a dog. </p>
+
+<p>Over the past few decades, computer scientists have developed a number of algorithms that try to allow computers to learn to solve problems through examples. Deep learning, which was first theorized in the early 80’s (and perhaps even earlier), is one paradigm for performing machine learning. And because of a flurry of modern research, deep learning is again on the rise because it’s been shown to be quite good at teaching computers to do what our brains can do naturally.</p>
+
+<p>One of the big challenges with traditional machine learning models is a process called <em>feature extraction</em>. Specifically, the programmer needs to tell the computer what kinds of things it should be looking for that will be informative in making a decision. Feeding the algorithm raw data rarely ever works, so feature extraction is a critical part of the traditional machine learning workflow. This places a huge burden on the programmer, and the algorithm’s effectiveness relies heavily on how insightful the programmer is. For complex problems such as object recognition or handwriting recognition, this is a huge challenge.</p>
+
+<p>Deep learning is one of the only methods by which we can circumvent the challenges of feature extraction. This is because deep learning models are capable of learning to focus on the right features by themselves, requiring little guidance from the programmer. This makes deep learning an extremely powerful tool for modern machine learning. </p>
+
+<h3 id="a-first-look-at-neural-networks">A First Look at Neural Networks</h3>
+
+<p>Deep learning is a form of machine learning that uses a model of computing that’s very much inspired by the structure of the brain. Hence we call this model a <em>neural network</em>. The basic foundational unit of a neural network is the <em>neuron</em>, which is actually conceptually quite simple. </p>
+
+<p><img src="/img/neuron.png" alt="Neuron" title="Neuron" />
+###### Schematic for a neuron in a neural net</p>
+
+<p>Each neuron has a set of inputs, each of which is given a specific weight. The neuron computes some function on these weighted inputs. A linear neuron takes a linear combination of the weighted inputs. A sigmoidal neuron does something a little more complicated:</p>
+
+<p><img src="/img/sigmoid.png" alt="Sigmoid" title="Sigmoid" />
+###### The function of a sigmoidal neuron</p>
+
+<p>It feeds the weighted sum of the inputs into the <em>logistic function</em>. The logistic function returns a value between 0 and 1. When the weighted sum is very negative, the return value is very close to 0. When the weighted sum is very large and positive, the return value is very close to 1. For the more mathematically inclined, the logistic function is a good choice because it has a nice looking derivative, which makes learning a simpler process. But technical details aside, whatever function the neuron uses, the value it computes is transmitted to other neurons as its output. In practice, sigmoidal neurons are used much more often than linear neurons because they enable much more versatile learning algorithms compared to linear neurons.  </p>
+
+<p>A neural network comes about when we start hooking up neurons to each other, to the input data, and to the “outlets,” which correspond to the network’s answer to the learning problem. To make this structure easier to visualize, I’ve included a simple example of a neural net below. We let <script type="math/tex">w_{i,j}^{(k)}</script> be the weight of the link connecting the <script type="math/tex">i^{th}</script> neuron in the <script type="math/tex">k^{th}</script> layer with the <script type="math/tex">j^{th}</script> neuron in the <script type="math/tex">k+1^{st}</script> layer: </p>
+
+<p><img src="/img/neuralnetexample.png" alt="Neural Net" title="Neural Net" />
+###### An example of a neural net with 3 layers and 3 neurons per layer</p>
+
+<p>Similar to how neurons are generally organized in layers in the human brain, neurons in neural nets are often organized in layers as well, where neurons on the bottom layer receive signals from the inputs, where neurons in the top layers have their outlets connected to the “answer,” and where are usually no connections between neurons in the same layer (although this is an optional restriction, more complex connectivities require more involved mathematical analysis). We also note that in this example, there are no connections that lead from a neuron in a higher layer to a neuron in a lower layer (i.e., no directed cycles). These neural networks are called <em>feed-forward</em> neural networks as opposed to their counterparts, which are called <em>recursive</em> neural networks (again these are much more complicated to analyze and train). For the sake of simplicity, we focus only on feed-forward networks throughout this discussion. Here’s a set of some more important notes to keep in mind:</p>
+
+<p>1) Although every layer has the same number of neurons in this example, this is not necessary.</p>
+
+<p>2) It is not required that a neuron has its outlet connected to the inputs of every neuron in the next layer. In fact, selecting which neurons to connect to which other neurons in the next layer is an art that comes from experience. Allowing maximal connectivity will more often than not result in <em>overfitting</em>, a concept which we will discusss in more depth later.</p>
+
+<p>3) The inputs and outputs are <em>vectorized</em> representations. For example, you might imagine a neural network where the inputs are the individual pixel RGB values in an image represented as a vector. The last layer might have 2 neurons which correspond to the answer to our problem: <script type="math/tex">[0, 1]</script> if the image contains a dog, <script type="math/tex">[1, 0]</script> if the image contains a cat, <script type="math/tex">[0, 0]</script> if it contains neither, and <script type="math/tex">[1, 1]</script> if it contains both.</p>
+
+<p>4) The layers of neurons that lie sandwiched between the first layer of neurons (input layer) and the last layer of neurons (output layer), are called <em>hidden layers</em>. This is because this is where most of the magic is happening when the neural net tries to solve problems. Taking a look at the activities of hidden layers can tell you a lot about the features the network has learned to extract from the data. </p>
+
+<h3 id="training-a-single-neuron">Training a Single Neuron</h3>
+
+<p>Well okay, things are starting to get interesting, but we’re still missing a big chunk of the picture. We know how a neural net can compute answers from inputs, but we’ve been assuming that we know what weights to use to begin with. Finding out what those weights should be is the hard part of the problem, and that’s done through a process called <em>training</em>. During training, we show the neural net a large number of training examples and iteratively modify the weights to minimize the errors we make on the training examples. </p>
+
+<p>Let’s start off with a toy example involving a single linear neuron to motivate the process. Every day you grab lunch in the dining hall where your meal consists completely of burgers, fries, and soda. You buy some number of servings of each item. You want to be able to predict how much your meal will cost you, but you don’t know the prices of each individual item. The only thing the cashier will tell you is the total price of the meal. </p>
+
+<p>How do we solve this problem? Well, we could begin by being smart about picking our training cases, right? For one meal we could buy only a single serving of burgers, for another we could only buy a single serving of fries, and then for our last meal we could buy a single serving of soda. In general, choosing smart training cases is a very good idea. There’s lots of research that shows that by engineering a clever training set, you can make your neural net a lot more effective. The issue with this approach is that in real situations, this rarely ever gets you even 10% of the way to the solution. For example, what’s the analog of this strategy in image recognition?</p>
+
+<p>Let’s try to motivate a solution that works in general. Take a look at the single neuron we want to train:</p>
+
+<p><img src="/img/dininghallneuron.png" alt="Dining Hall Neuron" title="Dining Hall Neuron" />
+###### The neuron we want to train for the Dining Hall Problem</p>
+
+<p>Let’s say we have a bunch of training examples. Then we can calculate what the neural network will output on the <script type="math/tex">i^{th}</script> training example using the simple formula in the diagram. We want to train the neuron so that we pick the optimal weights possible - the weights that minimize the errors we make on the training examples. In this case, let’s say we want to minimize the square error over all of the training examples that we encounter. More formally, if we know that <script type="math/tex">t^{(i)}</script> is the true answer for the <script type="math/tex">i^{th}</script> training example and <script type="math/tex">y^{(i)}</script> is the value computed by the neural network, we want to minimize the value of the error function <script type="math/tex">E</script>:</p>
+
+<script type="math/tex; mode=display">E =\frac{1}{2}\sum_{i}(t^{(i)} - y^{(i)})^2</script>
+
+<p>Now at this point you might be thinking, wait up… Why do we need to bother ourselves with this error function nonsense when we have a bunch of variables (weights) and we have a set of equations (one for each training example)? Couldn’t we just solve this problem by setting up a system of linear system of equations? That would automaically give us an error of zero assuming that we have a consistent set of training examples, right? </p>
+
+<p>That’s a smart observation, but the insight unfortunately doesn’t generalize well. Remember that although we’re using a linear neuron here, linear neurons aren’t used very much in practice because they’re constrained in what they can learn. And the moment you start using nonlinear neurons like the sigmoidal neurons we talked about, we can no longer set up a system of linear equations!</p>
+
+<p>So maybe we can use an iterative approach instead that generalizes to nonlinear examples. Let’s try to visualize how we might minimize the squared error over all of the training examples by simplifying the problem. Let’s say we’re dealing with a linear neuron with only two inputs (and thus only two weights, <script type="math/tex">w_1</script> and <script type="math/tex">w_2</script>). Then we can imagine a 3-dimensional space where the horizontal dimensions correspond to the weights <script type="math/tex">w_1</script> and <script type="math/tex">w_2</script>, and there is one vertical dimension that corresponds to the value of the error function <script type="math/tex">E</script>. So in this space, points in the horizontal plane correspond to different settings of the weights, and the height at those points corresponds to the error that we’re incurring, summed over all training cases. If we consider the errors we make over all possible weights, we get a surface in this 3-dimensional space, in particular a quadratic bowl:</p>
+
+<p><img src="/img/quadraticerror3d.png" alt="Quadratic Error Surface" title="Quadratic Error Surface" />
+###### The quadratic error surface for a linear neuron</p>
+
+<p>We can also conveniently visualize this surface as a set of elliptical contours, where the minimum error is at the center of the ellipses:</p>
+
+<p><img src="/img/errorcontours.png" alt="Contour Error Surface" title="Counter Error Surface" />
+###### Visualizing the error surface as a set of contours</p>
+
+<p>So now let’s say we find ourselves somewhere on the horizontal plane (by picking a random initialization for the weights). How would we get ourselves to the point on the horizontal plane with the smallest error value? One strategy is to always move perpendicularly to the contour lines. Take a look, for instance, at the path denoted by the red arrows. Quite clearly, you can see that following this strategy will eventually get us to the point of minimum error. </p>
+
+<p>What’s particularly interesting is that moving perpendicularly to the contour lines is equivalent to taking the path of steepest descent down the parabolic bowl. This is a pretty amazing result from calculus, and it gives us the name of this general strategy for training neural nets: <em>gradient descent</em>.</p>
+
+<h3 id="learning-rates-and-the-delta-rule">Learning Rates and the Delta Rule</h3>
+
+<p>In practice at each step of moving perpendicular to the contour, we need to determine how far we want to walk before recalculating our new direction. This distance needs to depend on the steepness of the surface. Why? The closer we are to the minimum, the shorter we want to step forward. We know we are close to the minimum, because the surface is a lot flatter, so we can use the steepness as an indicator of how close we are to the minimum. We multiply this measure of steepness with a pre-determined constant factor <script type="math/tex">\epsilon</script>, the <em>learning rate</em>. Picking the learning rate is a hard problem. If we pick a learning rate that’s too small, we risk taking too long during the training process. If we pick a learning rate that’s too big, we’ll mostly likely start diverging away from the minimum (this pretty easy to visualize). Modern training algorithms adapt the learning rate to overcome this difficult challenge. </p>
+
+<p>For those who are interested, putting all the pieces results in what is called the <em>delta rule</em> for training the linear neuron. The delta rule states that given a learning rate <script type="math/tex">\epsilon</script>, we ought to change the weight <script type="math/tex">w_k</script> at each iteration of training by <script type="math/tex">\Delta w_k = \sum_i \epsilon x_k^{(i)}(t^{(i)} - y^{(i)})</script>. Deriving this formula is left as an exercise for the experienced reader. For a hint, study our derivation for a sigmoidal neuron in the next section.</p>
+
+<p>Unfortunately, just taking the path of steepest descent doesn’t always do the trick when we have nonlinear neurons. The error surface can get complicated and there could be multiple local minimum. As a result, using this procedure could potentially get us to a bad local minimum that isn’t the global minimum. As a result, in practice, training neural nets involves a modification of gradient descent called <em>stochastic gradient descent</em>, that tries to use randomization and noise to find the global minimum with high probability on a complex error surface.</p>
+
+<h3 id="moving-onto-the-sigmoidal-neuron-">Moving onto the Sigmoidal Neuron *</h3>
+
+<p>This section and the next will get a little heavy with the math, so just be forewarned. If you’re not comfortable with multivariate calculus, feel free to skip them and move onto the remaining sections. Otherwise, let’s just dive right into it!</p>
+
+<p>Let’s recall the mechanism by which logistic neurons compute their output value from their inputs:</p>
+
+<script type="math/tex;mode=display">
+	z = \sum_k w_kx_k
+</script>
+
+<script type="math/tex;mode=display">
+	y = \frac{1}{1+e^{-z}}
+</script>
+
+<p>The neuron computes the weighted sum of its inputs, the <em>logit</em>, <script type="math/tex">z</script>. It then feeds <script type="math/tex">z</script> into the input function to compute <script type="math/tex">y</script>, its final output. These functions have very nice derivatives, which makes learning easy! For learning, we want to compute the gradient of the error function with respect to the weights. To do so, we start by taking the derivative of the logit, <script type="math/tex">z</script>, with respect to the inputs and the weights. By linearity of the logit:</p>
+
+<script type="math/tex;mode=display">
+	\frac{\partial z}{\partial w_k} = x_k
+</script>
+
+<script type="math/tex;mode=display">
+	\frac{\partial z}{\partial x_k} = w_k
+</script>
+
+<p>Also, quite surprisingly, the derivative of the output with respect to the logit is quite simple if you express it in terms of the output. Verifying this is left as an exercise for the reader:</p>
+
+<script type="math/tex;mode=display">
+	\frac{dy}{dz} = y(1-y)
+</script>
+
+<p>We then use the chain rule to get the derivative of the output with respect to each weight:</p>
+
+<script type="math/tex;mode=display">
+	\frac{\partial y}{\partial w_k} = \frac{\partial z}{\partial w_k} \frac{dy}{dz} = x_ky(1-y)
+</script>
+
+<p>Putting all of this together, we can now compute the derivative of the error function with respect to each weight:</p>
+
+<script type="math/tex;mode=display">
+	\frac{\partial E}{\partial w_k} = \sum_i \frac{\partial y^{(i)}}{\partial w_k} \frac{\partial E}{\partial y^{(i)}} = -\sum_i x_k^{(i)}y^{(i)}\left(1-y^{(i)}\right)\left(t^{(i)} - y^{(i)}\right)
+</script>
+
+<p>Thus, the final rule for modifying the weights becomes:</p>
+
+<script type="math/tex;mode=display">
+	\Delta w_k = \sum_i \epsilon x_k^{(i)}y^{(i)}\left(1-y^{(i)}\right)\left(t^{(i)} - y^{(i)}\right)
+</script>
+
+<p>As you may notice, the new modification rule is just like the delta rule, except with extra multiplicative terms included to account for the logistic component of the sigmoidal neuron. </p>
+
+<h3 id="the-backpropagation-algorithm-">The Backpropagation Algorithm *</h3>
+
+<p>Now we’re finally ready to tackle the problem of training multilayer neural networks (instead of just single neurons). So what’s the idea behind backpropagation? We don’t know what the hidden units ought to be doing, but what we can do is compute how fast the error changes as we change a hidden activity. Essentially we’ll be trying to find the path of steepest descent!</p>
+
+<p>Each hidden unit can affect many output units. Thus, we’ll have to combine many separate effects on the error in an informative way. Our strategy will be one of dynamic programming. Once we have the error derivatives for one layer of hidden units, we’ll use them to compute the error derivatives for the activites of the layer below. And once we find the error derivatives for the activities of the hidden units, it’s quite easy to get the error derivatives for the weights leading into a hidden unit. We’ll redefine some notation for ease of discussion and refer to the following diagram: </p>
+
+<p><img src="/img/backprop.png" alt="Backpropagation Diagram" title="Backpropagation Diagram" />
+###### Reference diagram for the derivation of the backpropagation algorithm</p>
+
+<p>The subscript we use will refer to the layer of the neuron. The symbol <script type="math/tex">y</script> will refer to the activity of a neuron, as usual. Similarly the symbol <script type="math/tex">z</script> will refer to the logit of a neuron. We start by taking a look at the base case of the dynamic programming problem, the error function derivatives at the output layer:</p>
+
+<script type="math/tex;mode=display">
+	E = \frac{1}{2} \sum_{j \in output} \left(t_j - y_j\right)^2
+	\implies
+	\frac{\partial E}{\partial y_j} = -(t_j - y_j)
+</script>
+
+<p>Now we tackle the inductive step. Let’s presume we have the error derivatives for layer <script type="math/tex">j</script>. We now aim to calculate the error derivatives for the layer below it, layer <script type="math/tex">i</script>. To do so, we must accumulate information for how the output of a neuron in layer <script type="math/tex">i</script> affects the logits of every neuron in layer <script type="math/tex">j</script>. This can be done as follows, using the fact that the partial derivative of the logit with respect to the incoming output data from the layer beneath is merely the weight of the connection <script type="math/tex">w_{ij}</script>:</p>
+
+<script type="math/tex;mode=display">
+	\frac{\partial E}{\partial y_i} = \sum_j \frac{dz_j}{dy_i} \frac{\partial E}{\partial z_j} = \sum_j w_{ij} \frac{\partial E}{\partial z_j}
+</script>
+
+<p>Now we can use the following to complete the inductive step:</p>
+
+<script type="math/tex;mode=display">
+	\frac{\partial E}{\partial z_j} = \frac{dy_j}{dx_j} \frac{\partial E}{\partial y_j} = y_j(1-y_j) \frac{\partial E}{\partial y_j}
+</script>
+
+<p>Combining these two together, we can finally express the partial derivatives of layer <script type="math/tex">i</script> in terms of the partial derivatives of layer <script type="math/tex">j</script>.</p>
+
+<script type="math/tex;mode=display">
+	\frac{\partial E}{\partial y_i} = \sum_j w_{ij} y_j (1-y_j) \frac{\partial E}{\partial y_j}
+</script>
+
+<p>Then once we’ve gone through the whole dynamic programming routine, having filled up the table appropriately with all of our partial derivatives (of the error function with respect to the hidden unit activities), we can then determine how the error changes with respect to the weights. This gives us how to modify the weights after each training example:</p>
+
+<script type="math/tex;mode=display">
+	\frac{\partial E}{\partial w_{ij}} = \frac{\partial z_j}{\partial w_{ij}} \frac{\partial E}{\partial z_j} = y_iy_j(1-y_j)\frac{\partial E}{\partial y_j}
+</script>
+
+<p>In order to do backpropagation with batching of training examples, we merely sum up the partial derivatives over all the training examples in the batch. This gives us the following modification formula:</p>
+
+<script type="math/tex;mode=display">
+	\Delta w_{ij} = -\sum_{batch}\epsilon y_iy_j(1-y_j)\frac{\partial E}{\partial y_j}
+</script>
+
+<p>We have succeeded in deriving the backpropagation algorithm for a feed-forward neural net utilizing sigmoidal neurons!</p>
+
+<h3 id="the-problem-of-overfitting">The Problem of Overfitting</h3>
+
+<p>Now let’s say you decide you’re very excited about deep learning and so you want to try to train a neural network of your own to identify objects in an image. You know this is a complicated problem so you use a huge neural network (let’s say 20 layers) and you have 1,000 training examples. You train your neural network using the algorithm we describe, but something’s clearly wrong. Your neural net performs virtually perfectly on your training examples, but when you put it in practice, it performs very poorly! What’s going on here?</p>
+
+<p>The problem we’ve encountered is called <em>overfitting</em>, and it happens when you have way too many parameters in your model and not enough training data. To visualize this, let’s consider the figure below, where you want to fit a model to the data points: </p>
+
+<p><img src="/img/overfitting.png" alt="Overfitting" title="Overfitting" />
+###### An example that illustrates the concept of overfitting</p>
+
+<p>Which curve would you trust? The line which gets almost no training example exactly? Or the complicated curve that hits every single point in the training set? Most likely you would trust the linear fit instead of the complicated curve because it seems less contrived. This situation is analagous to the neural network we trained. We have way too many parameters, over 100 trillion trillion (or 100 septillion) parameters. It’s no wonder that we’re overfitting!</p>
+
+<p>So how do we prevent overfitting? The two simplest ways are:</p>
+
+<p>1) Limit the connectivities of neurons in your model. Architecting a good neural network requires a lot of experience and intuition, and it boils down to giving your model freedom to discover relationships while also constraining it so it doesn’t overfit.</p>
+
+<p>2) Adding more training examples! Often times you can cleverly add amplify your existing training set (changing illumination, applying shifts and other transformations, etc.). </p>
+
+<p>There are more sophisticated methods of training that try to directly solve overfitting such as including a dropout layers/neurons, but these methods are beyond the scope of this article</p>
+
+<h3 id="conclusions">Conclusions</h3>
+
+<p>We’ve covered a lot of ground, but there’s still a lot more that’s going on in deep learning research. In future articles, I will probably talk more about different kinds of neural architectures (convolutional networks, soft max layers, etc.). I’ll probably also write an article about how to train your own neural network using some of the awesome open source libraries out there, such as Caffe (which allows you to GPU accelerate the training of neural networks). Those of you who are interested in pursuing deep learning further, please get in touch! I love talking about new ideas and projects ❤  </p>
+

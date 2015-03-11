@@ -1,0 +1,78 @@
+<p>As of writing this post I’ve gone approximately 36 hours without sleeping after attending my first serious hackathon, Greylock Hackfest @ Medium. As you can probably guess, I’m pretty exhausted, but I want to put everything down in writing before I forget it. I hope you’ll forgive me if I veer off topic.
+By the way, I also find it kind of amusing that I’m making my first post on Medium after attending the hackathon they hosted this weekend.</p>
+
+<h3 id="the-ideahyperink">The Idea — HyperInk</h3>
+
+<p>Late Thursday night, we got together to brainstorm for the hackathon. Thinking of any idea was actually pretty difficult. We knew we wanted to create something more than just your typical web application. We wanted to build something cool, something that would connect the physical world with the digital one. A rather ambitious undertaking for a 23 hour project, but as my teammate Kevin Kwok (@antimatter) would say, #YOLO.</p>
+
+<h3 id="let-the-hacking-begin">Let the Hacking Begin</h3>
+
+<p>On the day of the hackathon, I made my way to Anish’s place at around 8:30 in the morning so Shelby could pick us up. Kevin was already in San Francisco, having partied with some Dropbox guys the night before, so we agreed to meet up at Medium HQ around 9:30 — a whole hour before the doors even officially opened. I guess we were pretty excited.</p>
+
+<p>As expected, we were told that we were way too early when we showed up on the premises, but Julie (the awesome person from Greylock who was basically running the whole show) told us that we could get first dibs on claiming space for our team, so we were pretty excited. With an iPhone stand built from K’Nex in hand, we all crossed the street to wait at a crowded San Francisco coffee shop while passersby stared curiously at our contraption.</p>
+
+<p>At 10:15 we promptly returned to Medium to scout out the hackerspace. We found a sweet room with a table, a couch, and a huge television screen that we staked out for ourselves, and began to chill, chat, and meet other teams while we waited for the hackathon to officially start.</p>
+
+<p><img src="/img/postimg01.jpeg" alt="Early Version" title="Early Version" />
+###### An early version of our iOS application detects pieces of papers, highlights the edges in red, and the vertices in green</p>
+
+<p>At noon, the organizers officially declared that we could begin working, and we took off immediately. Anish and I began chugging away at the computer vision pieces of the project, building a hybrid C++/Objective C iOS application. Using some pretty sophisticated tools from the OpenCV library, we were able to detect rectangles representing pieces of papers and reverse the perspective warping to generate readable output (for those of you technical people, we ended up using a bilateral filter, Canny edge detection, Graham scan convex hull finding, and polygonal contour approximations). Meanwhile, Shelby built out a front-end using AngularJS (Kevin and I prefer React, but we tried our best to help troubleshoot during those rare instances late into the night/morning when Shelby couldn’t figure something out), and Kevin built out our server in Node in addition to implementing some client-side computer vision in pure JavaScipt (specifically, the stroke width transform).</p>
+
+<p>During the hack session, Kevin never hesitated to entertain the team, even if it meant sacrificing an hour or two to build a silly web app displaying a chicken dancing to the song “Heads will Roll” by the Yeah Yeah Yeahs ft. A-Trak. That song is now stuck in my head. Thanks Kevin.</p>
+
+<p>To the objective reader, the above paragraphs might make it seem like everything during the hackathon went smoothly. And while it’s true that we may have had it better than some other teams (who were frantically searching for Arduinos and Android wear at 2 AM or had to deal with their Kinect killing their Windows device drivers), our conference room was still pretty close to the definition of chaos. K’Nex pieces, scraps of test paper, and food wrappers (thank you Greylock for all of the amazing food!) lay all over the place. Our whiteboard was completely covered in random diagrams as I tried to bash out some perspective geometry. We had to switch from a cURL interface to a web socket system when we realized that our iOS application wasn’t communicating with our server fast enough and was leaking memory. And at 9 AM, just 2 hours before the deadline, we had to email the nice folk at Firebase to ask for help with integrating a persistence layer into our system for implementing real-time document annotations. Thankfully they came on over to help us with it in person!</p>
+
+<p>Finally at noon today, we had a finished product that worked really well. We demoed it to a couple of people, and they were pretty impressed with what we had put together. We had the chance to practice our presentation a couple of times, and I think it’s pretty accurate to say that we felt like we were on top of our game.</p>
+
+<h3 id="the-real-roller-coaster">The Real Roller Coaster</h3>
+
+<p>Multiple computers, iPhone, and K’Nex setup in hand, the four of us walked into the presentation room ready to go for the first round. As I introduced ourselves, and began to describe our hack, Anish, Kevin, and Shelby began to everything ready for the demo.</p>
+
+<p>Except it didn’t work.</p>
+
+<p>Immediately the four of us went into panic mode under the hood and watched in despair as our computers failed to stably connect to the WiFi. Without a working demo, we did the best to describe what we built. Anish showed them the iPhone application, which could detect the paper on a table but was only able to send a single frame to a server. Finally one of the judges interrupted and told us that we were out of the time. The judges asked us a couple of questions, and we answered them, but we were completely demoralized. At the end of our train wreck of a demo, we walked out with our heads hanging low.</p>
+
+<p>When we got back to our conference room, Anish sat down really quietly and sadly stared down at his iPhone. Kevin wandered around the hackerspace for a bit and then left for his parents’ hotel. Shelby was clearly disappointed but still tried her best to cheer us all up. I couldn’t really see what I looked like, but I’m certain I looked terrible because I sure felt like it.</p>
+
+<p>We were certain that we didn’t make it to the next stage of competition after that debacle. We had built something we were all really proud of, but at that moment, it felt like the collective 92 hours of figurative blood, sweat, and tears had all gone to waste.</p>
+
+<p>At around 3:30 PM, the participants all gathered together to watch as the top 10 hacks would be called up to the stage one by one to demo their projects. Despite our low spirits, Anish and I decided to watch. At the very least, we’d learn a thing or two from the seasoned veterans that we may be able to put to use at our next hackathon. After listening to a pitch for a video sharing app that randomizes the background song and a demo of a twist on IFTTT that was based on hardware components instead of third party software APIs, Anish and I decided that we were too exhausted to keep listening, so we began to walk back to our conference room and rest.</p>
+
+<p>But as we began to turn into the hallway, we heard something so unexpected that we both instinctually turned our heads.</p>
+
+<p>“All right! Come on up CopyCat! And after that we will Hyper_Ink come on up and demo their project — congratulations on being selected as one of the top 10 hacks of the Hackfest!”</p>
+
+<p>Oh. My. God.</p>
+
+<h3 id="the-time-is-now">The Time is Now</h3>
+
+<p>Anish and I couldn’t believe our ears. Immediately, we ran back to our conference room and woke up a sleeping Shelby (she had a terrible migraine after staying up all night). We called up Kevin and told him to get back to Medium as fast as we could.</p>
+
+<p>We made the top 10 with a nonexistent demo. It was just unreal.</p>
+
+<p>I quickly ran over to Julie and asked if our presentation could be delayed until later so that we could wait for Kevin to come back. And as soon as he did, we decided to record ourselves performing a demo in our room just in case the WiFi hated us again. I’ve linked the video here, but there’s no sound:</p>
+
+<div align="center">
+<br />
+<iframe width="560" height="315" src="//www.youtube.com/embed/Q5a451II2R4" frameborder="0" allowfullscreen=""></iframe>
+<br />
+</div>
+
+<p>When our turn came up, the four of us walked up in front of over 150 people, quickly set up, and knocked it out the park. The videos got our point across with little extra effort, the live demo worked pretty darn well, and none of us forgot any of our talking points. We even had some extra time to talk about the impacts of the technology in education as a dirt-cheap replacement of the iPad as well as our future vision of sharing whole physical whiteboards in addition to just pieces of paper.</p>
+
+<p>When we finished, we were greeted with cheers, high-fives, and congratulations. The four of us felt like we were on top of the world.</p>
+
+<h3 id="going-home">Going Home</h3>
+
+<p>Although we didn’t win one of the top three prizes, making it to the finals was amazing — especially given that it was only our first serious hackathon. Smiles on our faces, Shelby, Anish, and I drove back in merry spirits.</p>
+
+<p>We made many new friends, had an unforgettable time, and built something that we were really proud of, all at the same time. I could go on and on talking about how awesome the hackathon was and how grateful I am for the team who put it together, but I think the weekend is best summed up by something I said to Shelby and Anish on the way back home:</p>
+
+<p>“Wow! This was one of the best summers of the weekend!”</p>
+
+<p>I need some sleep.</p>
+
+<div style="text-align: center;font-family:lato,san serif">
+<br />
+<span style="font-size:12px"><i>This article is cross-posted on Medium <a href="https://medium.com/hackathon-adventures/greylock-hackfest-medium-e9b6cc2e82a4" target="_blank">here</a></i></span>
+</div>

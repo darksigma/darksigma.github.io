@@ -7,6 +7,83 @@
     <atom:link href="http://nikhilbuduma.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>The Curse of Dimensionality and the Autoencoder</title>
+        <description>&lt;p&gt;Let&#39;s say you&#39;re working on a cool image processing project, and your goal is to build an algorithm that analyzes faces for emotions. It takes in a 256 pixel by 256 pixel grayscale image as its input and spits out an emotion as an answer. For example, if you passed in the following image, you&#39;d expect the algorithm to label it as &quot;happy.&quot;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/happy_man.jpg&quot; title=&quot;A picture of a happy man&quot; alt=&quot;Happy Man&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;A greyscale input image of a happy man&lt;/h6&gt;
+
+&lt;p&gt;Now this is all well and good, but before we&#39;re satisfied with this approach, let&#39;s take a step back and think about what this really means. A 256 by 256 grayscale image corresponds to an input vector of over 65,000 dimensions! In other words, we&#39;re trying to solve a problem in a 65,000-dimensional space. That&#39;s not a particularly easy thing to do, even for a computer! Not only are large inputs annoying to store, move around, and compute with, but they also give rise to some pretty serious tractability concerns.&lt;/p&gt;
+
+&lt;h3&gt;Dimensionality is Exponentially Worse&lt;/h3&gt;
+
+&lt;p&gt;Let&#39;s get a rough idea of how the difficulty of a machine learning problem increases as the dimensionality increases. According to a &lt;a href=&#39;http://www-personal.umich.edu/~jizhu/jizhu/wuke/Stone-AoS82.pdf&#39; target=&#39;_blank&#39;&gt;study&lt;/a&gt; by C.J. Stone in 1982, the time it takes to fit a model (specifically a nonparametric regression) to your data is at best proportional to &lt;script type=&#39;math/tex&#39;&gt;m^{-p/(2p+d)}&lt;/script&gt;, where &lt;script type=&#39;math/tex&#39;&gt;m&lt;/script&gt; is the number of data points, &lt;script type=&#39;math/tex&#39;&gt;d&lt;/script&gt; is the dimensionality of the data, and &lt;script type=&#39;math/tex&#39;&gt;p&lt;/script&gt; is a parameter that depends on the model we are using (specifically, we are assuming that the regression function is &lt;script type=&#39;math/tex&#39;&gt;p&lt;/script&gt; times differentiable). In a nutshell, this relation implies that we need exponentially more training examples was we increase the dimensionality of our inputs.&lt;/p&gt;
+
+&lt;p&gt;We can observe this graphically by considering a simple example, borrowed from Gutierrez-Osuna. Our learning algorithm divides the feature space uniformly into bins and plot all of our training examples. We then assign each bin a label based on the predominant class that&#39;s found in that bin. Finally, for each new example that we want to classify, we just need to figure out the bin the example falls into and the label associated with that bin!&lt;/p&gt;
+
+&lt;p&gt;In our toy problem, we begin by choosing a single feature (one-dimensional inputs) and divide the space into 3 simple bins:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/1d_dimensionality.png&quot; title=&quot;1D Example&quot; alt=&quot;1D example&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;A simple example involving one-dimensional inputs&lt;/h6&gt;
+
+&lt;p&gt;Understandably, we notice there&#39;s too much overlap between classes, so we decide to add another feature to improve separability. But we notice that if we keep the same number of samples, we get a 2D scatter plot that&#39;s really sparse, and it&#39;s really hard to ascertain any meaningful relationships without increasing the number of samples. If we move onto 3-dimensional inputs, it becomes even worse. Now we&#39;re trying to fill even more &lt;script type=&#39;math/tex&#39;&gt;3^{3} = 27&lt;/script&gt; bins with the same number of examples. The scatter plot is nearly empty!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/dimension_sparsity.png&quot; title=&quot;MoaD Example&quot; alt=&quot;MoaD example&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;Sparsity becomes exponentially worse as dimension increases&lt;/h6&gt;
+
+&lt;p&gt;Of important note is that this is NOT an issue that can be easily solved by more effective computing or improved hardware! For many machine learning tasks, collecting training examples is the most time consuming part, so this mathematical result forces us to be careful about the dimensions we choose to analyze. If we are able to express our inputs in few enough dimensions, we might be able to turn an unfeasible problem into a feasible one!&lt;/p&gt;
+
+&lt;h3&gt;Manual Feature Selection&lt;/h3&gt;
+
+&lt;p&gt;Going back to the original problem of classifying facial expressions, it&#39;s quite clear that we don&#39;t need all 65,000 dimensions to classify an image. Specifically, there are certain key &lt;em&gt;features&lt;/em&gt; that our brain automatically uses to detect emotion quickly. For example, the curve of the person&#39;s lips, the extent his brow is furrowed, and the shape of his eyes all help us determine that the man in the picture is feeling happy. It turns out that these features can be conveniently summarized by looking at the relative positioning of various &lt;em&gt;facial keypoints&lt;/em&gt;, and the distances between them.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/facial_keypoints.png&quot; title=&quot;Facial Keypoints&quot; alt=&quot;Facial Keypoints&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;The key features of human facial expression&lt;/h6&gt;
+
+&lt;p&gt;Obviously, this allows us to significantly reduce the dimensionality of our input (from 65,000 to about 60), but there are some limitations! Hand selection of features can take years and years of research to optimize. For many problems, the features that matter are not easy to express. For example, it becomes very difficult to select features for generalized object recognition, where the algorithm needs to tell apart birds, from faces, from cars, etc. So how do we extract the most information-rich dimensions from our inputs? This is answered by a field of machine learning that is called unsupervised learning. In the next section, we will be discussing the autoencoder, a unsupervised learning technique pioneered by Geoffrey Hinton that is based on neural networks. We&#39;ll briefly talk about how the autoencoder works and how it compares to traditional linear approaches such as principal component analysis (PCA) for computer vision and latent semantic analysis (LSA) for natural language processing.&lt;/p&gt;
+
+&lt;h3&gt;A Brief Overview of the Autoencoder&lt;/h3&gt;
+
+&lt;p&gt;An autoencoder is an unsupervised machine learning technique that utilizes a neural network to produce a low dimensional representation of a high dimensional input. Traditionally, dimensionality reduction depended on linear methods such as PCA, which finds the directions of maximal variance in high-dimensional data. By selecting only those axes that have the largest variance, PCA aims to capture the directions that conain the most information about the inputs, so we can express as much as possible with a minimal number of dimensions. The linearity of PCA, however, places significant limitations on the kinds of feature dimensions that can be extracted. Autoencoders overcome these limitations by exploiting the inherent nonlinearity of neural networks.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/autoencoder_diagram.png&quot; title=&quot;Autoencoder Structure&quot; alt=&quot;Autoencoder Structure&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;The basic structure of an autoencoder&lt;/h6&gt;
+
+&lt;p&gt;An autoencoder consists of two major parts, the encoder and the decoder networks. The encoder network is used during both training and deployment, while the decoder network is only used during training. The purpose of the encoder network is to discover a compressed representation of the given input. In this example, we are generating a 30-dimensional representation from a 2000-dimensional input. The purpose of the decoder network, which is just a reflection of the encoder network, is to reconstruct the original input as closely as possible. It is used during training in order to force the autoencoder to choose the most informative features in its compressed representation. The closer the reconstructed input is to the original, the better our original representation!&lt;/p&gt;
+
+&lt;p&gt;So how does the autoencoder compare to its linear competitors? Let&#39;s take a look at a number of experiments performed by Hinton and Salakhutdinov when the technique &lt;a href=&#39;http://www.cs.toronto.edu/~hinton/science.pdf&#39; target=&#39;_blank&#39;&gt;debuted&lt;/a&gt; in 2006. First, we take a look at how well autoencoders can reconstruct their original output compared to PCA using 30 dimensions.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/autoencoder_face_exp.png&quot; title=&quot;Face Autoencoder Experiment&quot; alt=&quot;Face Autoencoder Experiment&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;A comparison of reconstruction by an autoencoder (middle) and PCA (bottom) to original image inputs (top)&lt;/h6&gt;
+
+&lt;p&gt;The reconstruction by the autoencoder is visibly better than the PCA output, which is a very promsing result. We then explore whether autoencoders can significantly improve the separability of our dataset by comparing 2-dimensional codes produced by an autoencoder to a 2-dimensional representation generated by PCA on the MNIST handwritten digit dataset.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/autoencoder_digit_exp.png&quot; title=&quot;Digit Autoencoder Experiment&quot; alt=&quot;Digit Autoencoder Experiment&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;A comparison of separability of 2-dimensional codes generated by an autoencoder (right) and PCA (left) on the MNIST dataset&lt;/h6&gt;
+
+&lt;p&gt;Finally, we see even more drastic improvements when we compare the autoencoder to the gold-standard unsupervised learning technique for natural language (LSA).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/autoencoder_nlp_exp.png&quot; title=&quot;NLP Autoencoder Experiment&quot; alt=&quot;NLP Autoencoder Experiment&quot; /&gt;&lt;/p&gt;
+
+&lt;h6&gt;A comparison of separability of 2-dimensional codes generated by an autoencoder (right) and PCA (left) on news stories&lt;/h6&gt;
+
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;Autoencoders are an extremely exciting new approach to unsupervised learning, and for virtually every major kind of machine learning task, they have already surpassed the decades of progress made by reseachers handpicking features! We&#39;ve covered a lot of ground, but we&#39;re still only at the tip of the iceberg. In the next blog post, I&#39;ll go into much more depth on how autoencoders work, how we efficiently train them, and other clever optimizations (such as sparsity). If you&#39;re interested and would like to talk, please feel free to drop my a line at nkbuduma@gmail.com. I&#39;m always excited to hear new perspectives ❤&lt;/p&gt;
+</description>
+        <pubDate>Tue, 10 Mar 2015 00:00:00 -0400</pubDate>
+        <link>http://nikhilbuduma.com//2015/03/10/the-curse-of-dimensionality/</link>
+        <guid isPermaLink="true">http://nikhilbuduma.com//2015/03/10/the-curse-of-dimensionality/</guid>
+      </item>
+    
+      <item>
         <title>Genetics as a Social Network - A Data Scientist&#39;s Perspective</title>
         <description>&lt;p&gt;Data science and biology have never really mixed well. And in retrospect, it’s pretty understandable why. Biology and medicine have their own lingua franca, which makes for a pretty steep learning curve. People who thrive at this intersection not only have to be in tune with the fundamentals of biochemistry and genetics, but also need to be mathematically adept and strong algorithmic thinkers.&lt;/p&gt;
 
@@ -60,7 +137,7 @@
 
 &lt;p&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 18 Jan 2015 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 18 Jan 2015 00:00:00 -0500</pubDate>
         <link>http://nikhilbuduma.com//2015/01/18/genetics-as-a-social-network/</link>
         <guid isPermaLink="true">http://nikhilbuduma.com//2015/01/18/genetics-as-a-social-network/</guid>
       </item>
@@ -184,7 +261,7 @@
 
 &lt;p&gt;RNNs are pretty powerful stuff, and I&#39;m quite excited to see what comes out of this area of active research over the next few years. If any of these topics that I briefly touched upon in the previous paragraph seem interesting, shoot me an email at nkbuduma@gmail.com! I can write another blog post exploring other approaches to RNNs. Thanks for all of the support and I hope you enjoy this article ❤&lt;/p&gt;
 </description>
-        <pubDate>Sun, 11 Jan 2015 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 11 Jan 2015 00:00:00 -0500</pubDate>
         <link>http://nikhilbuduma.com//2015/01/11/a-deep-dive-into-recurrent-neural-networks/</link>
         <guid isPermaLink="true">http://nikhilbuduma.com//2015/01/11/a-deep-dive-into-recurrent-neural-networks/</guid>
       </item>
@@ -448,7 +525,7 @@
 
 &lt;p&gt;We&#39;ve covered a lot of ground, but there&#39;s still a lot more that&#39;s going on in deep learning research. In future articles, I will probably talk more about different kinds of neural architectures (convolutional networks, soft max layers, etc.). I&#39;ll probably also write an article about how to train your own neural network using some of the awesome open source libraries out there, such as Caffe (which allows you to GPU accelerate the training of neural networks). Those of you who are interested in pursuing deep learning further, please get in touch! I love talking about new ideas and projects ❤&lt;/p&gt;
 </description>
-        <pubDate>Mon, 29 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 29 Dec 2014 00:00:00 -0500</pubDate>
         <link>http://nikhilbuduma.com//2014/12/29/deep-learning-in-a-nutshell/</link>
         <guid isPermaLink="true">http://nikhilbuduma.com//2014/12/29/deep-learning-in-a-nutshell/</guid>
       </item>
@@ -543,7 +620,7 @@
 &lt;/div&gt;
 
 </description>
-        <pubDate>Sat, 27 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Sat, 27 Dec 2014 00:00:00 -0500</pubDate>
         <link>http://nikhilbuduma.com//2014/12/27/the-cell-reimagined/</link>
         <guid isPermaLink="true">http://nikhilbuduma.com//2014/12/27/the-cell-reimagined/</guid>
       </item>
@@ -651,7 +728,7 @@
 
 
 </description>
-        <pubDate>Mon, 22 Sep 2014 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 22 Sep 2014 00:00:00 -0400</pubDate>
         <link>http://nikhilbuduma.com//2014/09/22/Hacking-the-North/</link>
         <guid isPermaLink="true">http://nikhilbuduma.com//2014/09/22/Hacking-the-North/</guid>
       </item>
@@ -740,7 +817,7 @@ By the way, I also find it kind of amusing that I’m making my first post on Me
 &lt;/div&gt;
 
 </description>
-        <pubDate>Mon, 21 Jul 2014 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 21 Jul 2014 00:00:00 -0400</pubDate>
         <link>http://nikhilbuduma.com//2014/07/21/greylock-hackfest-medium/</link>
         <guid isPermaLink="true">http://nikhilbuduma.com//2014/07/21/greylock-hackfest-medium/</guid>
       </item>
@@ -771,7 +848,7 @@ By the way, I also find it kind of amusing that I’m making my first post on Me
 
 &lt;p&gt;&lt;img src=&quot;/img/fistbump.jpg&quot; title=&quot;Fist Bump&quot; alt=&quot;Fist Bump&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Thu, 01 May 2014 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 01 May 2014 00:00:00 -0400</pubDate>
         <link>http://nikhilbuduma.com//2014/05/01/speaking-at-the-cee-congressional-luncheon/</link>
         <guid isPermaLink="true">http://nikhilbuduma.com//2014/05/01/speaking-at-the-cee-congressional-luncheon/</guid>
       </item>

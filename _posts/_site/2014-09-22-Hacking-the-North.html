@@ -1,0 +1,96 @@
+<p>When I first heard about Hack the North at the University of Waterloo, I was immediately on board. Basically free flights to and from Canada, a roof over my head while I’m there, unlimited free food (including poutine), and 36 hours of high energy hacking. It was an irresistable opportunity.</p>
+
+<h3 id="the-rejection-letter">The Rejection Letter</h3>
+
+<p>I decided to apply as a team with two of my close friends from MIT, Anish and Shelby. The three of us were now addicted to the high-octane energy of the hackathon scene. We even had an idea for a project. We were going to build a Google glass application that would take live video feed and create a searchable archive of your life experiences. You’d never have to worry about seeing a flyer in the hallway and then forgetting the phone number or email. Or you could quickly find and extract your friend’s great joke from lunch for your Medium post. It was going to be awesome! </p>
+
+<p>But then decision emails trickled out, and my excitement slowly faded into dejection:</p>
+
+<blockquote>
+  <p><em>Hold on a little longer… You’ve been waitlisted! We received an overwhelming 2500+ applicants this year and unfortunately due to our venue’s space limitations, we are unable to offer you an immediate spot at the event…</em></p>
+</blockquote>
+
+<p>Darn. Well that’s a bummer. The three of us were really looking forward to flying up to Canada. And I had never been before either. </p>
+
+<p>Then something strange happened. Anish pinged the group chat on Facebook, excited about being accepted to the hackathon. Shelby was in too. Confused, I sent an email to the organizing team about the situation, and by the next day, I received a reply. There had been a mix-up due to the volume of people who had applied. </p>
+
+<p>I was in after all!</p>
+
+<h3 id="an-unexpected-journey">An Unexpected Journey</h3>
+
+<p>This section might make this sound like this is going to be something out of a Hobbit movie, but seriously, I would have never guessed that getting to and from a hackathon could ever be as exciting as the hackathon itself. </p>
+
+<p>My itinerary from Boston to Waterloo seemed like nothing out of the ordinary. A connection through LaGuardia Airport in New York en route to Toronto, followed by a bus organized by Hack the North down to the UWaterloo campus.</p>
+
+<p>But then things started to get interesting in New York. I located the gate of my connected flight immediately after landing, even though I was starving from not having eaten at all that day, set my stuff down, and got my passport cleared. And then, after doing what any responsible traveler ought to do, I bought a meal at from the restaurant closest to the gate. As I’m finishing up my meal and it’s just about time to board, a United Airways representative announces, “This flight has been cancelled due to mechanical problems.”</p>
+
+<p>Wait what?</p>
+
+<p>Immediately people begin to line up to get their flights rescheduled, but I knew that I’d be late if I waited and would most definitely get stranded at the Toronto airport if I didn’t play this smart. I needed to get on the next flight to Toronto.</p>
+
+<p>I intercepted one of the United representatives and asked him to put me on the next flight that left the airport, whether it was a United flight or some other carrier. He resisted, but after arguing for 5 minutes, he finally gave in. He printed a new ticket and handed it to me. The flight was scheduled to board in 10 minutes, and to depart in 25. It was also in a different terminal, approximately a mile away, so I’d have to go through security again. </p>
+
+<p>The shuttle wasn’t going to get me there on time, so I grabbed my stuff and bolted. Pretty sure that was the fastest mile I’ve ever run in my life. </p>
+
+<p>(As a sidenote, the way back was also one hell of a trip. Anish and I got stranded in Philadelphia because our first leg was so delayed that we missed our connection. We spent the night at some substandard hotel, struggling to find something to eat. They didn’t even give us meal vouchers. Never flying United again.)</p>
+
+<h3 id="in-canada-at-last">In Canada at Last</h3>
+
+<p>Right before I boarded my plane, I shot off an email to the Hack the North team letting them know my situation, and asking them to wait for me just in case something went wrong. Thankfully, they got the memo, so someone was waiting for me when I arrived at the airport in Toronto at the wrong terminal. We were both relieved that the bus hadn’t yet arrived before we got to the right spot. And what do you know? There was Shelby!</p>
+
+<p><img src="/img/timhortons.jpg" alt="Tim Hortons" title="Tim Hortons" />
+###### Shameless selfies at the airport Tim Hortons</p>
+
+<p>Intrigued by the lengendary stories of the coffee shop chain Tim Hortons, we decided to give the place a try. We got a maple flavored donut from the little shop in the terminal, which turned out to be pretty darn good. Finally, after waiting for another hour (I guess traffic’s pretty bad in Canada?), the bus finally arrived!</p>
+
+<h3 id="rounding-out-the-remembrall-team">Rounding out the Remembrall Team</h3>
+
+<p>We all realized that the scope of Remembrall (what we decided to call our project) was probably going to be beyond what the three of us could handle on our own. We’d have to put together a Google glass application, a nontrivial server-side infrastructure for audio and video processing, and a web interface that allowed you to perform some pretty sophisticated search operations to select video clips and compose journal entries. So we found Moaaz from UWaterloo through the Hack the North Facebook group to join our team. </p>
+
+<p>After the four of us finally found each other on campus and met up with one of my good old friends from the biology Olympiad (we both competed in Singapore in 2012, except she was on Team Canada), we scoped out a hacker space for ourselves on the second floor of the engineering building. We filled it up with sofa chairs that we found scattered across the floor. It even had this great adjoining empty hallway where my teammates could sleep if they were ever tired. I, of course, wouldn’t need it. As they say, sleep is for the weak. </p>
+
+<p><img src="/img/sleeping.jpg" alt="Sleeping" title="Sleeping" />
+###### Some random person, definitely not me, sleeping in the hallway</p>
+
+<p>Er… ok fine. You got me there</p>
+
+<h3 id="rekognize-the-opportunity-and-hustle">Rekognize the Opportunity and Hustle</h3>
+
+<p>Over the course of 36 hours, we slowly built our project from the ground up. But one of the roadblocks we hit early on during the weekend seemed like it was going to spell the end for Remembrall. One of the major components of the project was analyzing the video feed streamed from our Google glass and performing image recognition on a per frame basis. We quickly realized that implementing our own recognition system was probably going to be too time consuming, so I spent some time scouring the web for an API we could leverage. It wasn’t too long before I found Rekognition, which gave us exactly what we were looking for. Excitedly, I showed this to my team.</p>
+
+<p>But then the harsh reality of economics hit me. If we were going to do real time video processing, even at a measly rate of a single frame per second, we’d have to make over 3,000 API calls just to analyze an hour of video. That was (at the time) beyond what we could get out of the free tier of the service, so we needed another plan of action. </p>
+
+<p>Out of desperation, I decided to try the “Chat with us!” feature on the Rekognition website. I don’t know what I was thinking. It was 3 AM, and no sane person would expect a reply from a startup’s customer service at such a late hour. And even if they did see the message, there was a slim chance we’d get what we wanted. </p>
+
+<p>But by some miracle, someone did respond, and they also upgraded my account to the pro service free of charge. I chucked a Hail Mary, and the unthinkable happened. I guess the moral of the story is to never be afraid to pick up the darn phone, because you never know what will happen unless you try. </p>
+
+<h3 id="round-one-begins">Round One Begins</h3>
+
+<p>By the end of 36 hours we were in good shape. After wrangling with the Google Glass SDK and (ab)using the Wit.ai API, Anish was able to get the Google Glass application and audio to text components working. I recorded a significant amount of video footage, integrated the image/concept recognition components, and got elastic search to work on the back end. And finally, Shelby and Moaaz were able to get the web interface to work beautifully. </p>
+
+<p>When were greeted by our judging panel for round one, we were ready to give the beast a test run. And it went amazingly. So amazingly that we were interrupted halfway through the presentation by one of the judges, who exclaimed that Remembrall was one of the most impressive hackathon demos she had seen. Fist bumps flew through the air as we walked out of the first round. </p>
+
+<p>This is why we do what we do. To build things that bring magic to life.</p>
+
+<h3 id="the-closing">The Closing</h3>
+
+<p>We ended up being selected as one of the top 10 teams of the hackathon and presented our demo on stage! If you’d like to watch our presentation, you can find it right here! We also have a <a target="_blank" href="http://remembrall.me">website</a> for the project, which is still a work in progress. </p>
+
+<div align="center">
+<br />
+<iframe width="560" height="315" src="//www.youtube.com/embed/XHwZ8Hd22YQ" frameborder="0" allowfullscreen=""></iframe>
+<br />
+</div>
+
+<p>We also ended up winning the Thiel Fellowship sponsorship prize, which meant an Oculus Rift DK2 for each of us in addition to a fully paid trip to Las Vegas for the Thiel Summit!</p>
+
+<p><img src="/img/oculus.jpg" alt="Oculus" title="Oculus" />
+###### New Oculus Rift DK2’s!</p>
+
+<p>The weekend was over, but we left in high spirits. Thank you for throwing this hackathon, Hack the North. I know when I look back on my college experience later in life, this is one of the things I’ll fondly remember.</p>
+
+<div style="text-align: center;font-family:lato,san serif">
+<br />
+<span style="font-size:12px"><i>Thanks to <a href="https://medium.com/@davefontenot" target="_blank">Dave Fontenot</a> for encouraging me to finish this!</i></span>
+</div>
+
