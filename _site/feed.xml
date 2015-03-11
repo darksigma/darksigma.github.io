@@ -48,7 +48,7 @@
 
 &lt;h3&gt;A Brief Overview of the Autoencoder&lt;/h3&gt;
 
-&lt;p&gt;An autoencoder is an unsupervised machine learning technique that utilizes a neural network to produce a low dimensional representation of a high dimensional input. Traditionally, dimensionality reduction depended on linear methods such as PCA, which finds the directions of maximal variance in high-dimensional data. By selecting only those axes that have the largest variance, PCA aims to capture the directions that conain the most information about the inputs, so we can express as much as possible with a minimal number of dimensions. The linearity of PCA, however, places significant limitations on the kinds of feature dimensions that can be extracted. Autoencoders overcome these limitations by exploiting the inherent nonlinearity of neural networks.&lt;/p&gt;
+&lt;p&gt;An autoencoder is an unsupervised machine learning technique that utilizes a neural network to produce a low dimensional representation of a high dimensional input. Traditionally, dimensionality reduction depended on linear methods such as PCA, which finds the directions of maximal variance in high-dimensional data. By selecting only those axes that have the largest variance, PCA aims to capture the directions that contain the most information about the inputs, so we can express as much as possible with a minimal number of dimensions. The linearity of PCA, however, places significant limitations on the kinds of feature dimensions that can be extracted. Autoencoders overcome these limitations by exploiting the inherent nonlinearity of neural networks.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/autoencoder_diagram.png&quot; title=&quot;Autoencoder Structure&quot; alt=&quot;Autoencoder Structure&quot; /&gt;&lt;/p&gt;
 
@@ -76,7 +76,7 @@
 
 &lt;h3&gt;Conclusion&lt;/h3&gt;
 
-&lt;p&gt;Autoencoders are an extremely exciting new approach to unsupervised learning, and for virtually every major kind of machine learning task, they have already surpassed the decades of progress made by reseachers handpicking features! We&#39;ve covered a lot of ground, but we&#39;re still only at the tip of the iceberg. In the next blog post, I&#39;ll go into much more depth on how autoencoders work, how we efficiently train them, and other clever optimizations (such as sparsity). If you&#39;re interested and would like to talk, please feel free to drop my a line at nkbuduma@gmail.com. I&#39;m always excited to hear new perspectives ❤&lt;/p&gt;
+&lt;p&gt;Autoencoders are an extremely exciting new approach to unsupervised learning, and for virtually every major kind of machine learning task, they have already surpassed the decades of progress made by reseachers handpicking features! We&#39;ve covered a lot of ground, but we&#39;re still only at the tip of the iceberg. In the next blog post, I&#39;ll go into much more depth on how autoencoders work, how we efficiently train them, and other clever optimizations (such as sparsity). If you&#39;re interested and would like to talk, please feel free to drop me a line at nkbuduma@gmail.com. I&#39;m always excited to hear new perspectives ❤&lt;/p&gt;
 </description>
         <pubDate>Tue, 10 Mar 2015 00:00:00 -0400</pubDate>
         <link>http://nikhilbuduma.com//2015/03/10/the-curse-of-dimensionality/</link>
