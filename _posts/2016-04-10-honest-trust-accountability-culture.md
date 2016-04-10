@@ -22,6 +22,6 @@ I learned a valuable lesson from the aftermath of that competition. And in retro
 In healthcare, honesty, trust, and accountability are especially critical. The healthcare system is where it is today because of people who sought to reap profits at the expense of people in desperate need. The result is that affordability and access are at all time lows and doctors "feel like a pawn in a moneymaking game for hospital administrators."<sup>2</sup> If we're to build a system that puts the patient first and allows doctors to practice without having to play corporate politics, we must be brutally honest about our design and intentions, and hold ourselves accountable for when things don't go as we expect. It's a tall order, but it's worth the effort to make the world a better place.
 
 <p style="font-size:14px">
-<sup>1</sup><>https://www.youtube.com/watch?v=hcRxFRgNpns
+<sup>1</sup>https://www.youtube.com/watch?v=hcRxFRgNpns <br>
 <sup>2</sup>http://www.wsj.com/articles/the-u-s-s-ailing-medical-system-a-doctors-perspective-1409325361
 </p>
