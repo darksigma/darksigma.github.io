@@ -2,89 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nikhil Buduma</title>
-    <description>Nikhil Buduma&#39;s Blog</description>
-    <link>http://nikhilbuduma.com</link>
-    <atom:link href="http://nikhilbuduma.com/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Nikhil Buduma's Blog</description>
+    <link>http://localhost:4000</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>The Curse of Dimensionality and the Autoencoder</title>
-        <description>&lt;p&gt;Let&#39;s say you&#39;re working on a cool image processing project, and your goal is to build an algorithm that analyzes faces for emotions. It takes in a 256 pixel by 256 pixel grayscale image as its input and spits out an emotion as an answer. For example, if you passed in the following image, you&#39;d expect the algorithm to label it as &quot;happy.&quot;&lt;/p&gt;
+        <title>Building a Culture of Honesty, Trust, and Accountability at Remedy</title>
+        <description>&lt;p&gt;It’s been nearly four months since two of my best friends and I left MIT to work on something together. After a significant amount of exploration and iteration, we finally discovered a thesis and vision that we wanted to dedicate the next ten years of our life to — fundamentally redesigning our country’s broken healthcare system, starting with primary care. While I could spend days upon days talking about the state of U.S. healthcare, its individual components, misaligned incentive structures, and failure points, I want to touch on a much more universal concern for startup founders in this reflection.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/happy_man.jpg&quot; title=&quot;A picture of a happy man&quot; alt=&quot;Happy Man&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;As we make progress on our product, we've been thinking seriously about the implications of bringing fresh minds onto the team. If we find the right people, the first several teammates will help us iterate much more quickly towards product market fit and accelerate the growth of our platform. It’s important to keep in mind, however, that first hires have a dramatic impact on our team's culture, and a toxic culture is one of the most significant threats to the success of an early stage startup. Consequently, our early team must embody the culture we want to foster as an organization. This, to me, is more important than any skill set or prior experience.&lt;/p&gt;
 
-&lt;h6&gt;A greyscale input image of a happy man&lt;/h6&gt;
+&lt;p&gt;So the question becomes what kind of culture are we striving for? While most companies look for people with intellectual curiosity and unrelenting resourcefulness, I think one aspect of company culture that is often overlooked is courage. Specifically, I think there are some subtle aspects of courage that are often overlooked. Yes, an early startup hire must be brave enough to forgo the comforts of a stable job, predictable work hours, and well-defined responsibilites, but that's only half of the story.&lt;/p&gt;
 
-&lt;p&gt;Now this is all well and good, but before we&#39;re satisfied with this approach, let&#39;s take a step back and think about what this really means. A 256 by 256 grayscale image corresponds to an input vector of over 65,000 dimensions! In other words, we&#39;re trying to solve a problem in a 65,000-dimensional space. That&#39;s not a particularly easy thing to do, even for a computer! Not only are large inputs annoying to store, move around, and compute with, but they also give rise to some pretty serious tractability concerns.&lt;/p&gt;
+&lt;p&gt;We're looking for people who are honest about their mistakes and intentions. The best leaders are transparent about why and how things went wrong, and they always hold themselves accountable for their shortcomings. They hold themselves and the people around them to an incredibly high moral standard. In the heat of the moment, when everything seems to be going wrong, this takes a whole lot of courage.&lt;/p&gt;
 
-&lt;h3&gt;Dimensionality is Exponentially Worse&lt;/h3&gt;
+&lt;p&gt;My cofounders will be the first to tell you that this form of courage is one of the most important aspects I look for in the people I consider working with. During my second year at MIT, I participated in a 24 hour competition with teammates that misrepresented their contribution to a project. They wanted to reimplement a Microsoft Research paper that could make seamlessly looping GIFs from short video segments. The project involved some research in computer vision that they had been studying for over a week, but given that I only learned about the concept the morning of the competition, I quickly found that I didn't know the details algorithm well enough to reimplement it within the span of 24 hours. As a result, I ended up working on the user interface, and did not invest the time required to understand what my teammates were building and whether their code accomplished what they claimed it did. It wasn't until well after the competition, when a more detailed investigation was launched, that I realized that the results my teammates were feeding to the user interface were plagiarized.&lt;/p&gt;
 
-&lt;p&gt;Let&#39;s get a rough idea of how the difficulty of a machine learning problem increases as the dimensionality increases. According to a &lt;a href=&#39;http://www-personal.umich.edu/~jizhu/jizhu/wuke/Stone-AoS82.pdf&#39; target=&#39;_blank&#39;&gt;study&lt;/a&gt; by C.J. Stone in 1982, the time it takes to fit a model (specifically a nonparametric regression) to your data is at best proportional to &lt;script type=&#39;math/tex&#39;&gt;m^{-p/(2p+d)}&lt;/script&gt;, where &lt;script type=&#39;math/tex&#39;&gt;m&lt;/script&gt; is the number of data points, &lt;script type=&#39;math/tex&#39;&gt;d&lt;/script&gt; is the dimensionality of the data, and &lt;script type=&#39;math/tex&#39;&gt;p&lt;/script&gt; is a parameter that depends on the model we are using (specifically, we are assuming that the regression function is &lt;script type=&#39;math/tex&#39;&gt;p&lt;/script&gt; times differentiable). In a nutshell, this relation implies that we need exponentially more training examples was we increase the dimensionality of our inputs.&lt;/p&gt;
+&lt;p&gt;The incident sparked a headline article in the school paper and took an excruciating toll on my personal health. The shock of the realization triggered a temporary cardiac arrhythmia that landed me in the hospital. And for long time, I suffered from crippling social anxiety. Trusting others was difficult, and it took time for me to heal. During this time I had several conversations with close friends and mentors to help me grow, but probably the most comforting realization was that I was not alone. In fact, in a talk that he gave at Stanford, former Google CEO Eric Schmidt described a similar experience he had at hardware manufacturer Novell:&lt;/p&gt;
 
-&lt;p&gt;We can observe this graphically by considering a simple example, borrowed from Gutierrez-Osuna. Our learning algorithm divides the feature space uniformly into bins and plot all of our training examples. We then assign each bin a label based on the predominant class that&#39;s found in that bin. Finally, for each new example that we want to classify, we just need to figure out the bin the example falls into and the label associated with that bin!&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;i&gt;I went to Novell under the mistaken idea that I wanted to be a CEO and failed to do any due diligence. Had I done the due diligence I wouldn't have taken the job, and therefore I would not have gone to Google, so it's probably good I didn't do the due diligence. But at Novell, there was a week which we remember, my colleague and I who had joined with me, was the worst week ever. Our basic goal was to get out of this with our professional reputations intact and not in jail. And that's after you join a company you discover the books are cooked, the people are frauds, and the customers aren't paying, and so forth and so on.&lt;/i&gt;&lt;sup&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=hcRxFRgNpns&quot; target=&quot;_blank&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&lt;/blockquote&gt;
 
-&lt;p&gt;In our toy problem, we begin by choosing a single feature (one-dimensional inputs) and divide the space into 3 simple bins:&lt;/p&gt;
+&lt;p&gt;I learned a valuable lesson from the aftermath of that competition. And in retrospect, I'm glad I learned this lesson early on in my career instead of when I was knee deep in the startup that I deeply cared about. Although many of my friends have made excuses on my behalf — that it wasn't something that I could have seen coming or that I wouldn't have had the time to thoroughly check their work in a 24 hour competition — I consider this experience a moment of personal failure. I failed to understand how important culture is to the success of a team, whether it's a 24 hour competition or a potentially lifelong relationship. When transparency and honest communication break down, that spells disaster for a startup. At the end of the day, it isn't enough for a single person to hold themselves to a high moral standard. This courage must be part of the team's DNA.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/1d_dimensionality.png&quot; title=&quot;1D Example&quot; alt=&quot;1D example&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;In healthcare, honesty, trust, and accountability are especially critical. The healthcare system is where it is today because of people who sought to reap profits at the expense of people in desperate need. The result is that affordability and access are at all time lows and doctors &quot;feel like a pawn in a moneymaking game for hospital administrators.&quot;&lt;sup&gt;&lt;a href=&quot;http://www.wsj.com/articles/the-u-s-s-ailing-medical-system-a-doctors-perspective-1409325361&quot; target=&quot;_blank&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; If we're to build a system that puts the patient first and allows doctors to practice without having to play corporate politics, we must be brutally honest about our design and intentions, and hold ourselves accountable for when things don't go as we expect. It's a tall order, but it's worth the effort to make the world a better place.&lt;/p&gt;
 
-&lt;h6&gt;A simple example involving one-dimensional inputs&lt;/h6&gt;
+&lt;p style=&quot;font-size:14px&quot;&gt;
+&lt;sup&gt;1&lt;/sup&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=hcRxFRgNpns&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=hcRxFRgNpns&lt;/a&gt;&lt;br&gt;
+&lt;sup&gt;2&lt;/sup&gt;&lt;a href=&quot;http://www.wsj.com/articles/the-u-s-s-ailing-medical-system-a-doctors-perspective-1409325361&quot; target=&quot;_blank&quot;&gt;http://www.wsj.com/articles/the-u-s-s-ailing-medical-system-a-doctors-perspective-1409325361&lt;/a&gt;
+&lt;/p&gt;
 
-&lt;p&gt;Understandably, we notice there&#39;s too much overlap between classes, so we decide to add another feature to improve separability. But we notice that if we keep the same number of samples, we get a 2D scatter plot that&#39;s really sparse, and it&#39;s really hard to ascertain any meaningful relationships without increasing the number of samples. If we move onto 3-dimensional inputs, it becomes even worse. Now we&#39;re trying to fill even more &lt;script type=&#39;math/tex&#39;&gt;3^{3} = 27&lt;/script&gt; bins with the same number of examples. The scatter plot is nearly empty!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/dimension_sparsity.png&quot; title=&quot;MoaD Example&quot; alt=&quot;MoaD example&quot; /&gt;&lt;/p&gt;
-
-&lt;h6&gt;Sparsity becomes exponentially worse as dimension increases&lt;/h6&gt;
-
-&lt;p&gt;Of important note is that this is NOT an issue that can be easily solved by more effective computing or improved hardware! For many machine learning tasks, collecting training examples is the most time consuming part, so this mathematical result forces us to be careful about the dimensions we choose to analyze. If we are able to express our inputs in few enough dimensions, we might be able to turn an unfeasible problem into a feasible one!&lt;/p&gt;
-
-&lt;h3&gt;Manual Feature Selection&lt;/h3&gt;
-
-&lt;p&gt;Going back to the original problem of classifying facial expressions, it&#39;s quite clear that we don&#39;t need all 65,000 dimensions to classify an image. Specifically, there are certain key &lt;em&gt;features&lt;/em&gt; that our brain automatically uses to detect emotion quickly. For example, the curve of the person&#39;s lips, the extent his brow is furrowed, and the shape of his eyes all help us determine that the man in the picture is feeling happy. It turns out that these features can be conveniently summarized by looking at the relative positioning of various &lt;em&gt;facial keypoints&lt;/em&gt;, and the distances between them.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/facial_keypoints.png&quot; title=&quot;Facial Keypoints&quot; alt=&quot;Facial Keypoints&quot; /&gt;&lt;/p&gt;
-
-&lt;h6&gt;The key features of human facial expression&lt;/h6&gt;
-
-&lt;p&gt;Obviously, this allows us to significantly reduce the dimensionality of our input (from 65,000 to about 60), but there are some limitations! Hand selection of features can take years and years of research to optimize. For many problems, the features that matter are not easy to express. For example, it becomes very difficult to select features for generalized object recognition, where the algorithm needs to tell apart birds, from faces, from cars, etc. So how do we extract the most information-rich dimensions from our inputs? This is answered by a field of machine learning that is called unsupervised learning. In the next section, we will be discussing the autoencoder, a unsupervised learning technique pioneered by Geoffrey Hinton that is based on neural networks. We&#39;ll briefly talk about how the autoencoder works and how it compares to traditional linear approaches such as principal component analysis (PCA) for computer vision and latent semantic analysis (LSA) for natural language processing.&lt;/p&gt;
-
-&lt;h3&gt;A Brief Overview of the Autoencoder&lt;/h3&gt;
-
-&lt;p&gt;An autoencoder is an unsupervised machine learning technique that utilizes a neural network to produce a low dimensional representation of a high dimensional input. Traditionally, dimensionality reduction depended on linear methods such as PCA, which finds the directions of maximal variance in high-dimensional data. By selecting only those axes that have the largest variance, PCA aims to capture the directions that contain the most information about the inputs, so we can express as much as possible with a minimal number of dimensions. The linearity of PCA, however, places significant limitations on the kinds of feature dimensions that can be extracted. Autoencoders overcome these limitations by exploiting the inherent nonlinearity of neural networks.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/autoencoder_diagram.png&quot; title=&quot;Autoencoder Structure&quot; alt=&quot;Autoencoder Structure&quot; /&gt;&lt;/p&gt;
-
-&lt;h6&gt;The basic structure of an autoencoder&lt;/h6&gt;
-
-&lt;p&gt;An autoencoder consists of two major parts, the encoder and the decoder networks. The encoder network is used during both training and deployment, while the decoder network is only used during training. The purpose of the encoder network is to discover a compressed representation of the given input. In this example, we are generating a 30-dimensional representation from a 2000-dimensional input. The purpose of the decoder network, which is just a reflection of the encoder network, is to reconstruct the original input as closely as possible. It is used during training in order to force the autoencoder to choose the most informative features in its compressed representation. The closer the reconstructed input is to the original, the better our original representation!&lt;/p&gt;
-
-&lt;p&gt;So how does the autoencoder compare to its linear competitors? Let&#39;s take a look at a number of experiments performed by Hinton and Salakhutdinov when the technique &lt;a href=&#39;http://www.cs.toronto.edu/~hinton/science.pdf&#39; target=&#39;_blank&#39;&gt;debuted&lt;/a&gt; in 2006. First, we take a look at how well autoencoders can reconstruct their original output compared to PCA using 30 dimensions.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/autoencoder_face_exp.png&quot; title=&quot;Face Autoencoder Experiment&quot; alt=&quot;Face Autoencoder Experiment&quot; /&gt;&lt;/p&gt;
-
-&lt;h6&gt;A comparison of reconstruction by an autoencoder (middle) and PCA (bottom) to original image inputs (top)&lt;/h6&gt;
-
-&lt;p&gt;The reconstruction by the autoencoder is visibly better than the PCA output, which is a very promsing result. We then explore whether autoencoders can significantly improve the separability of our dataset by comparing 2-dimensional codes produced by an autoencoder to a 2-dimensional representation generated by PCA on the MNIST handwritten digit dataset.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/autoencoder_digit_exp.png&quot; title=&quot;Digit Autoencoder Experiment&quot; alt=&quot;Digit Autoencoder Experiment&quot; /&gt;&lt;/p&gt;
-
-&lt;h6&gt;A comparison of separability of 2-dimensional codes generated by an autoencoder (right) and PCA (left) on the MNIST dataset&lt;/h6&gt;
-
-&lt;p&gt;Finally, we see even more drastic improvements when we compare the autoencoder to the gold-standard unsupervised learning technique for natural language (LSA).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/autoencoder_nlp_exp.png&quot; title=&quot;NLP Autoencoder Experiment&quot; alt=&quot;NLP Autoencoder Experiment&quot; /&gt;&lt;/p&gt;
-
-&lt;h6&gt;A comparison of separability of 2-dimensional codes generated by an autoencoder (right) and PCA (left) on news stories&lt;/h6&gt;
-
-&lt;h3&gt;Conclusion&lt;/h3&gt;
-
-&lt;p&gt;Autoencoders are an extremely exciting new approach to unsupervised learning, and for virtually every major kind of machine learning task, they have already surpassed the decades of progress made by reseachers handpicking features! We&#39;ve covered a lot of ground, but we&#39;re still only at the tip of the iceberg. In the next blog post, I&#39;ll go into much more depth on how autoencoders work, how we efficiently train them, and other clever optimizations (such as sparsity). If you&#39;re interested and would like to talk, please feel free to drop me a line at nkbuduma@gmail.com. I&#39;m always excited to hear new perspectives ❤&lt;/p&gt;
 </description>
-        <pubDate>Tue, 10 Mar 2015 00:00:00 -0400</pubDate>
-        <link>http://nikhilbuduma.com//2015/03/10/the-curse-of-dimensionality/</link>
-        <guid isPermaLink="true">http://nikhilbuduma.com//2015/03/10/the-curse-of-dimensionality/</guid>
+        <pubDate>Sun, 10 Apr 2016 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000//2016/04/10/honest-trust-accountability-culture/</link>
+        <guid isPermaLink="true">http://localhost:4000//2016/04/10/honest-trust-accountability-culture/</guid>
       </item>
     
       <item>
-        <title>Genetics as a Social Network - A Data Scientist&#39;s Perspective</title>
+        <title>Genetics as a Social Network - A Data Scientist's Perspective</title>
         <description>&lt;p&gt;Data science and biology have never really mixed well. And in retrospect, it’s pretty understandable why. Biology and medicine have their own lingua franca, which makes for a pretty steep learning curve. People who thrive at this intersection not only have to be in tune with the fundamentals of biochemistry and genetics, but also need to be mathematically adept and strong algorithmic thinkers.&lt;/p&gt;
 
 &lt;h3&gt;The Data Science and Biology Divide&lt;/h3&gt;
@@ -101,17 +55,17 @@
 
 &lt;p&gt;But in reality, genetics is much more complicated than that. A single protein could have its expression be modulated by tens of upstream regulators (called transcription factors). And in turn, the same protein could affect the expression of hundreds of other proteins. In a sense, you can think about a cell’s genetics as a huge social network. The fact that protein A directly regulates protein B is analogous to person A following person B on Twitter.  So, quite surprisingly, the same techniques you might use to analyze a user’s Twitter network to get them to click an advertisement are also applicable to analyzing a cell’s regulatory network to diagnose disease and design new therapies.&lt;/p&gt;
 
-&lt;p&gt;But how exactly do we interrogate these relationships? How do we even know that protein A regulates protein B in a particular cell type? This is where high-throughput biotechnology comes in. Over the past couple of years, researchers have pioneered a technique called &lt;a href=&#39;http://www.nature.com/nature/journal/v489/n7414/full/nature11212.html&#39; target=&#39;_blank&#39;&gt;DNAse hypersensitivity&lt;/a&gt;, which helps us infer these key relationships. In addition to having a region that directly codes for a protein, a gene also has a number of upstream sequences that are bound by regulatory proteins that control its expression. Essentially, the DNase hypersensitivity technique takes advantage of the fact that DNA, for the most part, is packaged very tightly except around these very specific regulatory sequences. As a result, when the DNA is exposed to a DNA digesting enzyme, it is mostly cut at these loosely-packed and exposed regions. The only exception is the small tract of nucleotides that are directly bound to a regulatory protein. These nucleotides are protected from digestion, resulting in a very clear &lt;em&gt;transcription factor footprint&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;But how exactly do we interrogate these relationships? How do we even know that protein A regulates protein B in a particular cell type? This is where high-throughput biotechnology comes in. Over the past couple of years, researchers have pioneered a technique called &lt;a href='http://www.nature.com/nature/journal/v489/n7414/full/nature11212.html' target='_blank'&gt;DNAse hypersensitivity&lt;/a&gt;, which helps us infer these key relationships. In addition to having a region that directly codes for a protein, a gene also has a number of upstream sequences that are bound by regulatory proteins that control its expression. Essentially, the DNase hypersensitivity technique takes advantage of the fact that DNA, for the most part, is packaged very tightly except around these very specific regulatory sequences. As a result, when the DNA is exposed to a DNA digesting enzyme, it is mostly cut at these loosely-packed and exposed regions. The only exception is the small tract of nucleotides that are directly bound to a regulatory protein. These nucleotides are protected from digestion, resulting in a very clear &lt;em&gt;transcription factor footprint&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/hypersensitivity.png&quot; title=&quot;DNAse Hypersensitivity&quot; alt=&quot;DNAse Hypersensitivity&quot; /&gt;&lt;/p&gt;
 
 &lt;h6&gt;Histogram showing frequency of DNAse digestion at each location, with a characteristic hypersensitivity site (green) and corresponding transcription factor footprint (red)&lt;/h6&gt;
 
-&lt;p&gt;We can then take the DNA sequences of the transcription factor footprints associated with each gene and predict the proteins bound to these regulatory regions using a database such as &lt;a href=&#39;http://www.gene-regulation.com/pub/databases.html&#39; target=&#39;blank&#39;&gt;TRANSFAC&lt;/a&gt;. This &lt;a target=&#39;_blank&#39; href=&#39;http://www.cell.com/cell/abstract/S0092-8674(12)00639-3&#39;&gt;procedure&lt;/a&gt; enables us to reconstruct the genetic regulatory networks at play in every cell type in the body:&lt;/p&gt;
+&lt;p&gt;We can then take the DNA sequences of the transcription factor footprints associated with each gene and predict the proteins bound to these regulatory regions using a database such as &lt;a href='http://www.gene-regulation.com/pub/databases.html' target='blank'&gt;TRANSFAC&lt;/a&gt;. This &lt;a target='_blank' href='http://www.cell.com/cell/abstract/S0092-8674(12)00639-3'&gt;procedure&lt;/a&gt; enables us to reconstruct the genetic regulatory networks at play in every cell type in the body:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/gene_network_recon.png&quot; title=&quot;Network Construction&quot; alt=&quot;Network Construction&quot; /&gt;&lt;/p&gt;
 
-&lt;h6&gt;Algorithmically generating a cell&#39;s regulatory genetic network from footprint data. Figure borrowed from &lt;a target=&#39;_blank&#39; href=&#39;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3679407/&#39;&gt;Neph et al.&lt;/a&gt;&lt;/h6&gt;
+&lt;h6&gt;Algorithmically generating a cell's regulatory genetic network from footprint data. Figure borrowed from &lt;a target='_blank' href='http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3679407/'&gt;Neph et al.&lt;/a&gt;&lt;/h6&gt;
 
 &lt;h3&gt;Applications of Regulatory Network Reconstruction&lt;/h3&gt;
 
@@ -119,7 +73,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/img/cell_type_network_comp.png&quot; title=&quot;Cell Specific Networks&quot; alt=&quot;Cell Specific Networks&quot; /&gt;&lt;/p&gt;
 
-&lt;h6&gt;Comparing the regulatory networks in various cell types in the human body. Figure borrowed from &lt;a target=&#39;_blank&#39; href=&#39;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3679407/&#39;&gt;Neph et al.&lt;/a&gt;&lt;/h6&gt;
+&lt;h6&gt;Comparing the regulatory networks in various cell types in the human body. Figure borrowed from &lt;a target='_blank' href='http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3679407/'&gt;Neph et al.&lt;/a&gt;&lt;/h6&gt;
 
 &lt;p&gt;Moreover, my current research involves constructing these networks to compare humans to laboratory model organisms such as mice, rats, and chimpanzees. These comparative models could help us figure out why certain drugs work well in animal studies but fail miserable in clinical trials. Every single year, approximately 95% of drugs fail to obtain approval, and understanding these contextual differences could potentially save billions of dollars in wasted resources.&lt;/p&gt;
 
@@ -127,26 +81,26 @@
 
 &lt;p&gt;With petabytes of data being produced every single year, biology and medicine need data science now more than ever before. Undoubtedly, data will shape the future in ways that we can only begin to imagine.&lt;/p&gt;
 
-&lt;p&gt;If you want to talk about how to hack biology and medicine with data, please shoot me a line at nkbuduma@gmail.com! I&#39;m always open to discussing cool ideas ❤&lt;/p&gt;
+&lt;p&gt;If you want to talk about how to hack biology and medicine with data, please shoot me a line at nkbuduma@gmail.com! I'm always open to discussing cool ideas ❤&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center;font-family:lato,san serif&quot;&gt;
 &lt;br/&gt;
-&lt;span style=&#39;font-size:12px&#39;&gt;&lt;i&gt;This article is cross-posted on KDNuggets &lt;a href=&#39;http://www.kdnuggets.com/2015/01/genetics-as-social-network-data-scientist-perspective.html&#39; target=&#39;_blank&#39;&gt;here&lt;/a&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;span style='font-size:12px'&gt;&lt;i&gt;This article is cross-posted on KDNuggets &lt;a href='http://www.kdnuggets.com/2015/01/genetics-as-social-network-data-scientist-perspective.html' target='_blank'&gt;here&lt;/a&gt;&lt;/i&gt;&lt;/span&gt;
 &lt;/div&gt;
 
 
 &lt;p&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 18 Jan 2015 00:00:00 -0500</pubDate>
-        <link>http://nikhilbuduma.com//2015/01/18/genetics-as-a-social-network/</link>
-        <guid isPermaLink="true">http://nikhilbuduma.com//2015/01/18/genetics-as-a-social-network/</guid>
+        <pubDate>Sun, 18 Jan 2015 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000//2015/01/18/genetics-as-a-social-network/</link>
+        <guid isPermaLink="true">http://localhost:4000//2015/01/18/genetics-as-a-social-network/</guid>
       </item>
     
       <item>
         <title>A Deep Dive into Recurrent Neural Nets</title>
         <description>&lt;p&gt;Last time, we talked about the traditional feed-forward neural net and concepts that form the basis of deep learning. These ideas are extremely powerful! We saw how feed-forward convolutional neural networks have set records on many difficult tasks including handwritten digit recognition and object classification. And even today, feed-forward neural networks consistently outperform virtually all other approaches to solving classification tasks.&lt;/p&gt;
 
-&lt;p&gt;And yet, despite their well celebrated successes, most experts would agree that feed-forward neural nets are still rather limited in what they can achieve. Why? Because the task of &quot;classification&quot; is only one small component of the incredible computational power of the human brain. We&#39;re wired not only to recognize individual instances but to also analyze entire sequences of inputs. These sequences are ultra rich in information, have complex time dependencies, and can be of arbitrary length. For example, vision, motor control, speech, and comprehension all require us to process high-dimensional inputs as they change over time. This is something that feed-forward nets are incredibly poor at modeling.&lt;/p&gt;
+&lt;p&gt;And yet, despite their well celebrated successes, most experts would agree that feed-forward neural nets are still rather limited in what they can achieve. Why? Because the task of &quot;classification&quot; is only one small component of the incredible computational power of the human brain. We're wired not only to recognize individual instances but to also analyze entire sequences of inputs. These sequences are ultra rich in information, have complex time dependencies, and can be of arbitrary length. For example, vision, motor control, speech, and comprehension all require us to process high-dimensional inputs as they change over time. This is something that feed-forward nets are incredibly poor at modeling.&lt;/p&gt;
 
 &lt;h3&gt;What is a Recurrent Neural Net?&lt;/h3&gt;
 
@@ -156,67 +110,67 @@
 
 &lt;h6&gt;An example schematic of a RNN with directed cycles and self connectivities&lt;/h6&gt;
 
-&lt;p&gt;The RNN consists of a bunch of input units, labeled &lt;script type=&quot;math/tex&quot;&gt;u_1,...,u_K&lt;/script&gt; and output units, labeled &lt;script type=&quot;math/tex&quot;&gt;y_1,...,y_L&lt;/script&gt;. There are also the hidden units &lt;script type=&quot;math/tex&quot;&gt;x_1,...x_N&lt;/script&gt;, which do most of the interesting work. You&#39;ll notice that the illustration shows a unidirectional flow of information from the input units to the hidden units as well as another unidirectional flow of information from the hidden units to the output units. In some cases, RNNs break the latter restriction with connections leading from the output units back to the hidden units. These are called &quot;backprojections,&quot; and don&#39;t make the analysis of RNNs too much more complicated. The same techniques we will discuss here will also apply to RNNs with backprojections.&lt;/p&gt;
+&lt;p&gt;The RNN consists of a bunch of input units, labeled &lt;script type=&quot;math/tex&quot;&gt;u_1,...,u_K&lt;/script&gt; and output units, labeled &lt;script type=&quot;math/tex&quot;&gt;y_1,...,y_L&lt;/script&gt;. There are also the hidden units &lt;script type=&quot;math/tex&quot;&gt;x_1,...x_N&lt;/script&gt;, which do most of the interesting work. You'll notice that the illustration shows a unidirectional flow of information from the input units to the hidden units as well as another unidirectional flow of information from the hidden units to the output units. In some cases, RNNs break the latter restriction with connections leading from the output units back to the hidden units. These are called &quot;backprojections,&quot; and don't make the analysis of RNNs too much more complicated. The same techniques we will discuss here will also apply to RNNs with backprojections.&lt;/p&gt;
 
-&lt;p&gt;There are a lot of pretty challenging technical difficulties that arise when training recurrent neural networks, and it&#39;s still a very active area of research. Hopefully by the end of this article, we&#39;ll have a solid understanding of how RNNs work and some of the results that have been achieved!&lt;/p&gt;
+&lt;p&gt;There are a lot of pretty challenging technical difficulties that arise when training recurrent neural networks, and it's still a very active area of research. Hopefully by the end of this article, we'll have a solid understanding of how RNNs work and some of the results that have been achieved!&lt;/p&gt;
 
 &lt;h3&gt;Simulating a Recurrent Neural Network&lt;/h3&gt;
 
-&lt;p&gt;Now that we understand how a RNN is structured, we can discuss how it&#39;s able to simulate a sequence of events. Let&#39;s consider a neat toy example of a recurrent neural net acting like an timer module, a classic example designed by Herbert Jaeger (his original manuscript can be found &lt;a target=&#39;_blank&#39; href=&#39;http://www.pdx.edu/sites/www.pdx.edu.sysc/files/Jaeger_TrainingRNNsTutorial.2005.pdf&#39;&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Now that we understand how a RNN is structured, we can discuss how it's able to simulate a sequence of events. Let's consider a neat toy example of a recurrent neural net acting like an timer module, a classic example designed by Herbert Jaeger (his original manuscript can be found &lt;a target='_blank' href='http://www.pdx.edu/sites/www.pdx.edu.sysc/files/Jaeger_TrainingRNNsTutorial.2005.pdf'&gt;here&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/timer_ex.png&quot; title=&quot;Timer RNN input/output&quot; alt=&quot;Timer RNN input/output&quot; /&gt;&lt;/p&gt;
 
 &lt;h6&gt;A simple example of how a perfect RNN would simulate a timer&lt;/h6&gt;
 
-&lt;p&gt;In this case, we have two inputs. The input &lt;script type=&quot;math/tex&quot;&gt;u_1&lt;/script&gt; corresponds to a binary switch which spikes to one when the RNN is supposed to start the timer. The input &lt;script type=&quot;math/tex&quot;&gt;u_2&lt;/script&gt; is a discrete variable that varies between 0.1 and 1.0 inclusive which corresponds to how long the output should be turned on if the timer is started at that instant. The RNN&#39;s specification requires it to turn on the output for a duration of &lt;script type=&quot;math/tex&quot;&gt;1000u_2&lt;/script&gt;. Finally, the outputs in the training examples toggle between 0 (off) and 0.5 (on).&lt;/p&gt;
+&lt;p&gt;In this case, we have two inputs. The input &lt;script type=&quot;math/tex&quot;&gt;u_1&lt;/script&gt; corresponds to a binary switch which spikes to one when the RNN is supposed to start the timer. The input &lt;script type=&quot;math/tex&quot;&gt;u_2&lt;/script&gt; is a discrete variable that varies between 0.1 and 1.0 inclusive which corresponds to how long the output should be turned on if the timer is started at that instant. The RNN's specification requires it to turn on the output for a duration of &lt;script type=&quot;math/tex&quot;&gt;1000u_2&lt;/script&gt;. Finally, the outputs in the training examples toggle between 0 (off) and 0.5 (on).&lt;/p&gt;
 
 &lt;p&gt;But how exactly would a neural net achieve this calculation? First, the RNN has all of its hidden activities initialized to some pre-determined state. Then at each time step (time &lt;script type=&quot;math/tex&quot;&gt;t = 1,2,...&lt;/script&gt;), every hidden unit sends its current activity through all its outgoing connections. It then recalculate its new activity by computing the weighted sum (logit) of its inputs from other neurons (including itself if there is a self connection) and the current values of the inputs, and then feeding this value into a neuron-specific function (a straightforward copy operation, sigmoid transform, soft-max, etc.). Because the previous vector of activities is used to compute the vector of activies in each time step, RNNs are able to retain memory of previous events and utlize this memory in making decisions.&lt;/p&gt;
 
-&lt;p&gt;Clearly a neural net would be unlikely to perfectly perform according to specification, but you can imagine it outputting a result (orange) that looks pretty darn close to the ground truth (blue) after training the RNN with hundreds or thousands of examples. We&#39;ll talk more about approaches to training RNNs in the following sections.&lt;/p&gt;
+&lt;p&gt;Clearly a neural net would be unlikely to perfectly perform according to specification, but you can imagine it outputting a result (orange) that looks pretty darn close to the ground truth (blue) after training the RNN with hundreds or thousands of examples. We'll talk more about approaches to training RNNs in the following sections.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/timer_fit.png&quot; title=&quot;Timer RNN Output&quot; alt=&quot;Timer RNN outupt&quot; /&gt;&lt;/p&gt;
 
 &lt;h6&gt;An example fit for how a well-trained RNN might approximate the output of a test case&lt;/h6&gt;
 
-&lt;p&gt;At this point, you&#39;re probably thinking that this is pretty cool, but it&#39;s still a pretty contrived example. What&#39;s the strategy for using RNNs in practice? We examine real systems and their behaviors over time in response to stimuli. For example, you might teach a RNN to transcribe audio into text by building a dataset (in a sense, observing the response of the human auditory system in response to the inputs in the training set). You may also use a trained neural net to model a system&#39;s reactions under novel stimuli.&lt;/p&gt;
+&lt;p&gt;At this point, you're probably thinking that this is pretty cool, but it's still a pretty contrived example. What's the strategy for using RNNs in practice? We examine real systems and their behaviors over time in response to stimuli. For example, you might teach a RNN to transcribe audio into text by building a dataset (in a sense, observing the response of the human auditory system in response to the inputs in the training set). You may also use a trained neural net to model a system's reactions under novel stimuli.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/trifecta.png&quot; title=&quot;Trifecta&quot; alt=&quot;Trifecta&quot; /&gt;&lt;/p&gt;
 
 &lt;h6&gt;How a RNN might be used in practice&lt;/h6&gt;
 
-&lt;p&gt;But if you&#39;re creative, you can use RNNs in ways that seem pretty spectacular. For example, a specialized kind of RNN, called a long short-term RNN or LSTM, has been used to achieve spectacular rates of data compression (although the current approach to RNN-based compression does take a significant amount time). For those itching to learn more, we&#39;ll talk about the LSTM architecture in a later section.&lt;/p&gt;
+&lt;p&gt;But if you're creative, you can use RNNs in ways that seem pretty spectacular. For example, a specialized kind of RNN, called a long short-term RNN or LSTM, has been used to achieve spectacular rates of data compression (although the current approach to RNN-based compression does take a significant amount time). For those itching to learn more, we'll talk about the LSTM architecture in a later section.&lt;/p&gt;
 
 &lt;h3&gt;Training a RNN - Backpropagation Through Time&lt;/h3&gt;
 
 &lt;p&gt;Great, now we understand what a RNN is and how it works, but how do we train a RNN in the first place to achieve all of these spectacular feats? Specifically, how do we determine the weights that are on each of the connections? And how do we choose the initial activities of all of the hidden units? Our first instinct might be to use backpropagation directly, after all it worked quite well when we used it on feed forward neural nets.&lt;/p&gt;
 
-&lt;p&gt;The problem with using backpropagation here is that we have cyclical dependencies. In feed forward nets, when we calculated the error derivatives with respect to the weights in one layer, we could express them completely in terms of the error derivatives from the layer above. In a recurrent neural network, we don&#39;t have this nice layering because the neurons do not form a directed acyclic graph. Trying to backpropagate through a RNN could force us to try to express an error derivative in terms of itself, which doesn&#39;t make for easy analysis.&lt;/p&gt;
+&lt;p&gt;The problem with using backpropagation here is that we have cyclical dependencies. In feed forward nets, when we calculated the error derivatives with respect to the weights in one layer, we could express them completely in terms of the error derivatives from the layer above. In a recurrent neural network, we don't have this nice layering because the neurons do not form a directed acyclic graph. Trying to backpropagate through a RNN could force us to try to express an error derivative in terms of itself, which doesn't make for easy analysis.&lt;/p&gt;
 
-&lt;p&gt;So how can we use backpropagation for RNNs, if at all? The answer lies in employing a clever transformation, where we convert our RNN into a new structure that&#39;s essentially a feed-forward neural network! We call this strategy &quot;unrolling&quot; the RNN through time, and an example can be seen in the figure below (with only one input/output per time step to simplify the illustration):&lt;/p&gt;
+&lt;p&gt;So how can we use backpropagation for RNNs, if at all? The answer lies in employing a clever transformation, where we convert our RNN into a new structure that's essentially a feed-forward neural network! We call this strategy &quot;unrolling&quot; the RNN through time, and an example can be seen in the figure below (with only one input/output per time step to simplify the illustration):&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/rnn_unroll.png&quot; title=&quot;RNN unrolled&quot; alt=&quot;RNN unrolled&quot; /&gt;&lt;/p&gt;
 
 &lt;h6&gt;An example of &quot;unrolling&quot; and RNN through time to use backpropagation&lt;/h6&gt;
 
-&lt;p&gt;The process is actually quite simple, but it has a profound impact on our ability to analyze the neural network. We take the RNN&#39;s inputs, outputs, and hidden units and replicate it for every time step. These replications correspond to layers in our new feed forward neural network. We then connect hidden units as follows. If the original RNN has a connection of weight &lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt; from neuron &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; to neuron &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt;, in our feed forward neural net, we draw a connection of weight &lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt; from neuron &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; in every layer &lt;script type=&quot;math/tex&quot;&gt;t_k&lt;/script&gt; to neuron &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt; in every layer &lt;script type=&quot;math/tex&quot;&gt;t_{k+1}&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;The process is actually quite simple, but it has a profound impact on our ability to analyze the neural network. We take the RNN's inputs, outputs, and hidden units and replicate it for every time step. These replications correspond to layers in our new feed forward neural network. We then connect hidden units as follows. If the original RNN has a connection of weight &lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt; from neuron &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; to neuron &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt;, in our feed forward neural net, we draw a connection of weight &lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt; from neuron &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; in every layer &lt;script type=&quot;math/tex&quot;&gt;t_k&lt;/script&gt; to neuron &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt; in every layer &lt;script type=&quot;math/tex&quot;&gt;t_{k+1}&lt;/script&gt;.&lt;/p&gt;
 
 &lt;p&gt;Thus, to train our RNN, we randomly initialize the weights, &quot;unroll&quot; it into a feed forward neural net, and backpropogate to determine the optimal weights! To determine the initializations for the hidden states at time 0, we can treat the initial activities as parameters fed into the feed forward network at the lowest layer and backpropagate to determine their optimal values as well!&lt;/p&gt;
 
-&lt;p&gt;We run into a problem however, which is that after every batch of training examples we use, we need to modify the weights based on the error derivatives we calculated. In our feed-forward net, we have sets of connections that all correspond to the same connection in the original RNN. The error derivatives calculated with respect to their weights, however, are not guaranteed to be equal, which means we might be modifying them by different amounts. We definitely don&#39;t want to be doing that!&lt;/p&gt;
+&lt;p&gt;We run into a problem however, which is that after every batch of training examples we use, we need to modify the weights based on the error derivatives we calculated. In our feed-forward net, we have sets of connections that all correspond to the same connection in the original RNN. The error derivatives calculated with respect to their weights, however, are not guaranteed to be equal, which means we might be modifying them by different amounts. We definitely don't want to be doing that!&lt;/p&gt;
 
 &lt;p&gt;We can get around this challenge, by averaging (or summing) the error derivatives over all the connections that belong to the same set. This means that after each batch, we modify corresponding connections by the same amount, so if they were initialized to the same value, they will end up at the same value. This solves our problem :)&lt;/p&gt;
 
 &lt;h3&gt;The Problems with Deep Backpropagation&lt;/h3&gt;
 
-&lt;p&gt;Unlike traditional feed forward nets, the feed forward nets generated by unrolling RNNs can be enormously deep. This gives rise to a serious practical issue: it can be obscenely difficult to train using the backpropagation through time approach. Let&#39;s take a step back and try to understand why.&lt;/p&gt;
+&lt;p&gt;Unlike traditional feed forward nets, the feed forward nets generated by unrolling RNNs can be enormously deep. This gives rise to a serious practical issue: it can be obscenely difficult to train using the backpropagation through time approach. Let's take a step back and try to understand why.&lt;/p&gt;
 
-&lt;p&gt;Let&#39;s try to train a RNN to do a very primitive task. Let&#39;s give the RNN a single hidden unit with a bias term, and we&#39;ll connect it to itself and a singular output. We want this neural network to output a fixed target value after 50 steps, let&#39;s say 0.7. We&#39;ll use the squared error of the output on the 50th time step as our error function, which we can plot as a surface over the value of the weight and the bias:&lt;/p&gt;
+&lt;p&gt;Let's try to train a RNN to do a very primitive task. Let's give the RNN a single hidden unit with a bias term, and we'll connect it to itself and a singular output. We want this neural network to output a fixed target value after 50 steps, let's say 0.7. We'll use the squared error of the output on the 50th time step as our error function, which we can plot as a surface over the value of the weight and the bias:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/rnn_error_surface.png&quot; title=&quot;Error Surface&quot; alt=&quot;Error Surface&quot; /&gt;&lt;/p&gt;
 
-&lt;h6&gt;The problematic error surface of a simple RNN (image from: &lt;a target=&#39;_blank&#39; href=&#39;http://arxiv.org/pdf/1211.5063v2.pdf&#39;&gt;Pascanu et al.&lt;/a&gt;)&lt;/h6&gt;
+&lt;h6&gt;The problematic error surface of a simple RNN (image from: &lt;a target='_blank' href='http://arxiv.org/pdf/1211.5063v2.pdf'&gt;Pascanu et al.&lt;/a&gt;)&lt;/h6&gt;
 
-&lt;p&gt;Now, let&#39;s say we started at the red star (using a random initialization of weights). You&#39;ll notice that as we use gradient descent, we get closer and closer to the local minimum on the surface. But suddenly, when we slightly overreach the valley and hit the cliff, we are presented with a massive gradient in the opposite direction. This forces us to bounce extremely far away from the local minimum. And once we&#39;re in nowhere land, we quickly find that the gradients are so vanishingly small that coming close again will take a seemingly endless amount of time. This issue is called the problem of &lt;em&gt;exploding and vanishing gradients&lt;/em&gt;. You can imagine perhaps controlling this issue by rescaling gradients to never exceed a maximal magnitude (see the dotted path after hitting the cliff), but this approach still doesn&#39;t perform spectacularly well, especially in more complex RNNs. For a more mathematical treatment of this issue, check out this &lt;a target=&#39;_blank&#39; href=&#39;http://arxiv.org/pdf/1211.5063v2.pdf&#39;&gt;paper&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now, let's say we started at the red star (using a random initialization of weights). You'll notice that as we use gradient descent, we get closer and closer to the local minimum on the surface. But suddenly, when we slightly overreach the valley and hit the cliff, we are presented with a massive gradient in the opposite direction. This forces us to bounce extremely far away from the local minimum. And once we're in nowhere land, we quickly find that the gradients are so vanishingly small that coming close again will take a seemingly endless amount of time. This issue is called the problem of &lt;em&gt;exploding and vanishing gradients&lt;/em&gt;. You can imagine perhaps controlling this issue by rescaling gradients to never exceed a maximal magnitude (see the dotted path after hitting the cliff), but this approach still doesn't perform spectacularly well, especially in more complex RNNs. For a more mathematical treatment of this issue, check out this &lt;a target='_blank' href='http://arxiv.org/pdf/1211.5063v2.pdf'&gt;paper&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3&gt;Long Short Term Memory&lt;/h3&gt;
 
@@ -228,7 +182,7 @@
 
 &lt;p&gt;The LSTM unit consists of a memory cell which attempts to store information for extended periods of time. Access to this memory cell is protected by specialized gate neurons - the keep, write, and read gates - which are all logistic units. These gate cells, instead of sending their activities as inputs to other neurons, set the weights on edges connecting the rest of the neural net to the memory cell. The memory cell is a linear neuron that has a connection to itself. When the keep gate is turned on (with an activity of 1), the self connection has weight one and the memory cell writes its contents into itself. When the keep gate outputs a zero, the memory cell forgets its previous contents. The write gate allows the rest of the neural net to write into the memory cell when it outputs a 1 while the read gate allows the rest of the neural net to read from the memory cell when it outputs a 1.&lt;/p&gt;
 
-&lt;p&gt;So how exactly does this force a constant error flow through time to locally protect against exploding and vanishing gradients? To visualize this, let&#39;s unroll the LSTM unit through time:&lt;/p&gt;
+&lt;p&gt;So how exactly does this force a constant error flow through time to locally protect against exploding and vanishing gradients? To visualize this, let's unroll the LSTM unit through time:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/lstm_unroll.png&quot; title=&quot;LSTM unrolled&quot; alt=&quot;LSTM unrolled&quot; /&gt;&lt;/p&gt;
 
@@ -249,66 +203,66 @@
 
 &lt;p&gt;2) Row 2: Shows the states of some of the memory cells (Notice how they get reset when a character is recognized!)&lt;/p&gt;
 
-&lt;p&gt;3) Row 3: Shows the writing as it&#39;s being analyzed by the LSTM RNN&lt;/p&gt;
+&lt;p&gt;3) Row 3: Shows the writing as it's being analyzed by the LSTM RNN&lt;/p&gt;
 
 &lt;p&gt;4) Row 4: This shows the gradient backpropagated to the inputs from the most active character of the upper soft-max layer (This tells you which data points are providing the most influence on your current decision for the character)&lt;/p&gt;
 
-&lt;p&gt;The LSTM RNN does quite well, and it&#39;s been applied in lots of other places as well. As we discussed earlier, deep architectures for LSTM RNNs have been used to achieve pretty astonishing data compression rates. For those who are interested in learning more about this particular application for LSTM RNNs can check out this &lt;a target=&#39;_blank&#39; href=&#39;http://arxiv.org/pdf/1308.0850.pdf&#39;&gt;paper&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The LSTM RNN does quite well, and it's been applied in lots of other places as well. As we discussed earlier, deep architectures for LSTM RNNs have been used to achieve pretty astonishing data compression rates. For those who are interested in learning more about this particular application for LSTM RNNs can check out this &lt;a target='_blank' href='http://arxiv.org/pdf/1308.0850.pdf'&gt;paper&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3&gt;Conclusions&lt;/h3&gt;
 
 &lt;p&gt;How to effectively train neural nets remains an area of active research and has resulted in a number of alternative approaches, with no clear winner. The LSTM RNN architecture is one such approach to improving the training of RNNs. Another approach is to use a much better optimzer that can deal with exploding and vanishing gradients. Hessian-free optimization tries to detect directions with a small gradient, but even smaller curvature. This problem allows it to perform much better than naive gradient descent. A third approach involves a very careful initialization of the weights in hopes that it will allow us to avoid the problem of exploding and vanishing gradients in the first place (e.g. echo state networks, momentum based approaches).&lt;/p&gt;
 
-&lt;p&gt;RNNs are pretty powerful stuff, and I&#39;m quite excited to see what comes out of this area of active research over the next few years. If any of these topics that I briefly touched upon in the previous paragraph seem interesting, shoot me an email at nkbuduma@gmail.com! I can write another blog post exploring other approaches to RNNs. Thanks for all of the support and I hope you enjoy this article ❤&lt;/p&gt;
+&lt;p&gt;RNNs are pretty powerful stuff, and I'm quite excited to see what comes out of this area of active research over the next few years. If any of these topics that I briefly touched upon in the previous paragraph seem interesting, shoot me an email at nkbuduma@gmail.com! I can write another blog post exploring other approaches to RNNs. Thanks for all of the support and I hope you enjoy this article ❤&lt;/p&gt;
 </description>
-        <pubDate>Sun, 11 Jan 2015 00:00:00 -0500</pubDate>
-        <link>http://nikhilbuduma.com//2015/01/11/a-deep-dive-into-recurrent-neural-networks/</link>
-        <guid isPermaLink="true">http://nikhilbuduma.com//2015/01/11/a-deep-dive-into-recurrent-neural-networks/</guid>
+        <pubDate>Sun, 11 Jan 2015 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000//2015/01/11/a-deep-dive-into-recurrent-neural-networks/</link>
+        <guid isPermaLink="true">http://localhost:4000//2015/01/11/a-deep-dive-into-recurrent-neural-networks/</guid>
       </item>
     
       <item>
         <title>Deep Learning in a Nutshell</title>
-        <description>&lt;p&gt;Deep learning. Neural networks. Backpropagation. Over the past year or two, I&#39;ve heard these buzz words being tossed around a lot, and it&#39;s something that has definitely seized my curiosity recently. Deep learning is an area of active research these days, and if you&#39;ve kept up with the field of computer science, I&#39;m sure you&#39;ve come across at least some of these terms at least once.&lt;/p&gt;
+        <description>&lt;p&gt;Deep learning. Neural networks. Backpropagation. Over the past year or two, I've heard these buzz words being tossed around a lot, and it's something that has definitely seized my curiosity recently. Deep learning is an area of active research these days, and if you've kept up with the field of computer science, I'm sure you've come across at least some of these terms at least once.&lt;/p&gt;
 
-&lt;p&gt;Deep learning can be an indimidating concept, but it&#39;s becoming increasingly important these days. Google&#39;s already making huge strides in the space with the &lt;a target=&#39;_blank&#39; href=&#39;http://www.wired.com/2014/07/google_brain/&#39;&gt;Google Brain project&lt;/a&gt; and its recent acquisition of the London-based deep learning startup &lt;a target=&#39;blank&#39; href=&#39;http://deepmind.com/&#39;&gt;DeepMind&lt;/a&gt;. Moreover, deep learning methods are beating out traditional machine learning approaches on virtually every single metric.&lt;/p&gt;
+&lt;p&gt;Deep learning can be an indimidating concept, but it's becoming increasingly important these days. Google's already making huge strides in the space with the &lt;a target='_blank' href='http://www.wired.com/2014/07/google_brain/'&gt;Google Brain project&lt;/a&gt; and its recent acquisition of the London-based deep learning startup &lt;a target='blank' href='http://deepmind.com/'&gt;DeepMind&lt;/a&gt;. Moreover, deep learning methods are beating out traditional machine learning approaches on virtually every single metric.&lt;/p&gt;
 
 &lt;p&gt;So what exactly is deep learning? How does it work? And most importantly, why should you even care?&lt;/p&gt;
 
 &lt;h3&gt;Note to the Reader&lt;/h3&gt;
 
-&lt;p&gt;If you&#39;re new to computer science, and you&#39;ve followed me up till this point, please stick with me. Certain optional sections of this article may get a little math heavy (marked with a *), but I want to make this subject accessible to everyone, computer science major or not. In fact, if you are reading through this article and, at any point, you find yourself confused about the material, please email me. I will make whatever edits and clarifications that are necessary to make the article clearer.&lt;/p&gt;
+&lt;p&gt;If you're new to computer science, and you've followed me up till this point, please stick with me. Certain optional sections of this article may get a little math heavy (marked with a *), but I want to make this subject accessible to everyone, computer science major or not. In fact, if you are reading through this article and, at any point, you find yourself confused about the material, please email me. I will make whatever edits and clarifications that are necessary to make the article clearer.&lt;/p&gt;
 
 &lt;h3&gt;What is Machine Learning?&lt;/h3&gt;
 
-&lt;p&gt;Before we dive into deep learning, I want to take a step back and talk a little bit about the broader field of &quot;machine learning&quot; and what it means when we say that we&#39;re programming machines to &lt;em&gt;learn&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Before we dive into deep learning, I want to take a step back and talk a little bit about the broader field of &quot;machine learning&quot; and what it means when we say that we're programming machines to &lt;em&gt;learn&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Sometimes we encounter problems for which it&#39;s really hard to write a computer program to solve. For example, let&#39;s say we wanted to program a computer to recognize hand-written digits:&lt;/p&gt;
+&lt;p&gt;Sometimes we encounter problems for which it's really hard to write a computer program to solve. For example, let's say we wanted to program a computer to recognize hand-written digits:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/mnist.gif&quot; title=&quot;Handwritten Digits&quot; alt=&quot;Handwritten Digits&quot; /&gt;&lt;/p&gt;
 
 &lt;h6&gt;Image Provided by the MNIST handwritten database&lt;/h6&gt;
 
-&lt;p&gt;You could imagine trying to devise a set of rules to distinguish each individual digit. Zeros, for instance, are basically one closed loop. But what if the person didn&#39;t perfectly close the loop. Or what if the right top of the loop closes below where the left top of the loop starts?&lt;/p&gt;
+&lt;p&gt;You could imagine trying to devise a set of rules to distinguish each individual digit. Zeros, for instance, are basically one closed loop. But what if the person didn't perfectly close the loop. Or what if the right top of the loop closes below where the left top of the loop starts?&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/zero.png&quot; title=&quot;Handwritten Zero or Six&quot; alt=&quot;Handwritten Zero or Six&quot; /&gt;&lt;/p&gt;
 
-&lt;h6&gt;A zero that&#39;s difficult to distinguish from a six algorithmically&lt;/h6&gt;
+&lt;h6&gt;A zero that's difficult to distinguish from a six algorithmically&lt;/h6&gt;
 
 &lt;p&gt;In this case, we have difficulty differentiating zeroes from sixes. We could establish some sort of cutoff, but how would you decide the cutoff in the first place? As you can see, it quickly becomes quite complicated to compile a list of heuristics (i.e., rules and guesses) that accurately classifies handwritten digits.&lt;/p&gt;
 
-&lt;p&gt;And there are so many more classes of problems that fall into this category. Recognizing objects, understanding concepts, comprehending speech. We don&#39;t know what program to write because we still don&#39;t know how it&#39;s done by our own brains. And even if we did have a good idea about how to do it, the program might be horrendously complicated.&lt;/p&gt;
+&lt;p&gt;And there are so many more classes of problems that fall into this category. Recognizing objects, understanding concepts, comprehending speech. We don't know what program to write because we still don't know how it's done by our own brains. And even if we did have a good idea about how to do it, the program might be horrendously complicated.&lt;/p&gt;
 
 &lt;p&gt;So instead of trying to write a program, we try to develop an algorithm that a computer can use to look at hundreds or thousands of examples (and the correct answers), and then the computer uses that experience to solve the same problem in new situations. Essentially, our goal is to teach the computer to solve by example, very similar to how we might teach a young child to distinguish a cat from a dog.&lt;/p&gt;
 
-&lt;p&gt;Over the past few decades, computer scientists have developed a number of algorithms that try to allow computers to learn to solve problems through examples. Deep learning, which was first theorized in the early 80&#39;s (and perhaps even earlier), is one paradigm for performing machine learning. And because of a flurry of modern research, deep learning is again on the rise because it&#39;s been shown to be quite good at teaching computers to do what our brains can do naturally.&lt;/p&gt;
+&lt;p&gt;Over the past few decades, computer scientists have developed a number of algorithms that try to allow computers to learn to solve problems through examples. Deep learning, which was first theorized in the early 80's (and perhaps even earlier), is one paradigm for performing machine learning. And because of a flurry of modern research, deep learning is again on the rise because it's been shown to be quite good at teaching computers to do what our brains can do naturally.&lt;/p&gt;
 
-&lt;p&gt;One of the big challenges with traditional machine learning models is a process called &lt;em&gt;feature extraction&lt;/em&gt;. Specifically, the programmer needs to tell the computer what kinds of things it should be looking for that will be informative in making a decision. Feeding the algorithm raw data rarely ever works, so feature extraction is a critical part of the traditional machine learning workflow. This places a huge burden on the programmer, and the algorithm&#39;s effectiveness relies heavily on how insightful the programmer is. For complex problems such as object recognition or handwriting recognition, this is a huge challenge.&lt;/p&gt;
+&lt;p&gt;One of the big challenges with traditional machine learning models is a process called &lt;em&gt;feature extraction&lt;/em&gt;. Specifically, the programmer needs to tell the computer what kinds of things it should be looking for that will be informative in making a decision. Feeding the algorithm raw data rarely ever works, so feature extraction is a critical part of the traditional machine learning workflow. This places a huge burden on the programmer, and the algorithm's effectiveness relies heavily on how insightful the programmer is. For complex problems such as object recognition or handwriting recognition, this is a huge challenge.&lt;/p&gt;
 
 &lt;p&gt;Deep learning is one of the only methods by which we can circumvent the challenges of feature extraction. This is because deep learning models are capable of learning to focus on the right features by themselves, requiring little guidance from the programmer. This makes deep learning an extremely powerful tool for modern machine learning.&lt;/p&gt;
 
 &lt;h3&gt;A First Look at Neural Networks&lt;/h3&gt;
 
-&lt;p&gt;Deep learning is a form of machine learning that uses a model of computing that&#39;s very much inspired by the structure of the brain. Hence we call this model a &lt;em&gt;neural network&lt;/em&gt;. The basic foundational unit of a neural network is the &lt;em&gt;neuron&lt;/em&gt;, which is actually conceptually quite simple.&lt;/p&gt;
+&lt;p&gt;Deep learning is a form of machine learning that uses a model of computing that's very much inspired by the structure of the brain. Hence we call this model a &lt;em&gt;neural network&lt;/em&gt;. The basic foundational unit of a neural network is the &lt;em&gt;neuron&lt;/em&gt;, which is actually conceptually quite simple.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/neuron.png&quot; title=&quot;Neuron&quot; alt=&quot;Neuron&quot; /&gt;&lt;/p&gt;
 
@@ -322,13 +276,13 @@
 
 &lt;p&gt;It feeds the weighted sum of the inputs into the &lt;em&gt;logistic function&lt;/em&gt;. The logistic function returns a value between 0 and 1. When the weighted sum is very negative, the return value is very close to 0. When the weighted sum is very large and positive, the return value is very close to 1. For the more mathematically inclined, the logistic function is a good choice because it has a nice looking derivative, which makes learning a simpler process. But technical details aside, whatever function the neuron uses, the value it computes is transmitted to other neurons as its output. In practice, sigmoidal neurons are used much more often than linear neurons because they enable much more versatile learning algorithms compared to linear neurons.&lt;/p&gt;
 
-&lt;p&gt;A neural network comes about when we start hooking up neurons to each other, to the input data, and to the &quot;outlets,&quot; which correspond to the network&#39;s answer to the learning problem. To make this structure easier to visualize, I&#39;ve included a simple example of a neural net below. We let &lt;script type=&quot;math/tex&quot;&gt;w_{i,j}^{(k)}&lt;/script&gt; be the weight of the link connecting the &lt;script type=&quot;math/tex&quot;&gt;i^{th}&lt;/script&gt; neuron in the &lt;script type=&quot;math/tex&quot;&gt;k^{th}&lt;/script&gt; layer with the &lt;script type=&quot;math/tex&quot;&gt;j^{th}&lt;/script&gt; neuron in the &lt;script type=&quot;math/tex&quot;&gt;k+1^{st}&lt;/script&gt; layer:&lt;/p&gt;
+&lt;p&gt;A neural network comes about when we start hooking up neurons to each other, to the input data, and to the &quot;outlets,&quot; which correspond to the network's answer to the learning problem. To make this structure easier to visualize, I've included a simple example of a neural net below. We let &lt;script type=&quot;math/tex&quot;&gt;w_{i,j}^{(k)}&lt;/script&gt; be the weight of the link connecting the &lt;script type=&quot;math/tex&quot;&gt;i^{th}&lt;/script&gt; neuron in the &lt;script type=&quot;math/tex&quot;&gt;k^{th}&lt;/script&gt; layer with the &lt;script type=&quot;math/tex&quot;&gt;j^{th}&lt;/script&gt; neuron in the &lt;script type=&quot;math/tex&quot;&gt;k+1^{st}&lt;/script&gt; layer:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/neuralnetexample.png&quot; title=&quot;Neural Net&quot; alt=&quot;Neural Net&quot; /&gt;&lt;/p&gt;
 
 &lt;h6&gt;An example of a neural net with 3 layers and 3 neurons per layer&lt;/h6&gt;
 
-&lt;p&gt;Similar to how neurons are generally organized in layers in the human brain, neurons in neural nets are often organized in layers as well, where neurons on the bottom layer receive signals from the inputs, where neurons in the top layers have their outlets connected to the &quot;answer,&quot; and where are usually no connections between neurons in the same layer (although this is an optional restriction, more complex connectivities require more involved mathematical analysis). We also note that in this example, there are no connections that lead from a neuron in a higher layer to a neuron in a lower layer (i.e., no directed cycles). These neural networks are called &lt;em&gt;feed-forward&lt;/em&gt; neural networks as opposed to their counterparts, which are called &lt;em&gt;recursive&lt;/em&gt; neural networks (again these are much more complicated to analyze and train). For the sake of simplicity, we focus only on feed-forward networks throughout this discussion. Here&#39;s a set of some more important notes to keep in mind:&lt;/p&gt;
+&lt;p&gt;Similar to how neurons are generally organized in layers in the human brain, neurons in neural nets are often organized in layers as well, where neurons on the bottom layer receive signals from the inputs, where neurons in the top layers have their outlets connected to the &quot;answer,&quot; and where are usually no connections between neurons in the same layer (although this is an optional restriction, more complex connectivities require more involved mathematical analysis). We also note that in this example, there are no connections that lead from a neuron in a higher layer to a neuron in a lower layer (i.e., no directed cycles). These neural networks are called &lt;em&gt;feed-forward&lt;/em&gt; neural networks as opposed to their counterparts, which are called &lt;em&gt;recursive&lt;/em&gt; neural networks (again these are much more complicated to analyze and train). For the sake of simplicity, we focus only on feed-forward networks throughout this discussion. Here's a set of some more important notes to keep in mind:&lt;/p&gt;
 
 &lt;p&gt;1) Although every layer has the same number of neurons in this example, this is not necessary.&lt;/p&gt;
 
@@ -340,28 +294,28 @@
 
 &lt;h3&gt;Training a Single Neuron&lt;/h3&gt;
 
-&lt;p&gt;Well okay, things are starting to get interesting, but we&#39;re still missing a big chunk of the picture. We know how a neural net can compute answers from inputs, but we&#39;ve been assuming that we know what weights to use to begin with. Finding out what those weights should be is the hard part of the problem, and that&#39;s done through a process called &lt;em&gt;training&lt;/em&gt;. During training, we show the neural net a large number of training examples and iteratively modify the weights to minimize the errors we make on the training examples.&lt;/p&gt;
+&lt;p&gt;Well okay, things are starting to get interesting, but we're still missing a big chunk of the picture. We know how a neural net can compute answers from inputs, but we've been assuming that we know what weights to use to begin with. Finding out what those weights should be is the hard part of the problem, and that's done through a process called &lt;em&gt;training&lt;/em&gt;. During training, we show the neural net a large number of training examples and iteratively modify the weights to minimize the errors we make on the training examples.&lt;/p&gt;
 
-&lt;p&gt;Let&#39;s start off with a toy example involving a single linear neuron to motivate the process. Every day you grab lunch in the dining hall where your meal consists completely of burgers, fries, and soda. You buy some number of servings of each item. You want to be able to predict how much your meal will cost you, but you don&#39;t know the prices of each individual item. The only thing the cashier will tell you is the total price of the meal.&lt;/p&gt;
+&lt;p&gt;Let's start off with a toy example involving a single linear neuron to motivate the process. Every day you grab lunch in the dining hall where your meal consists completely of burgers, fries, and soda. You buy some number of servings of each item. You want to be able to predict how much your meal will cost you, but you don't know the prices of each individual item. The only thing the cashier will tell you is the total price of the meal.&lt;/p&gt;
 
-&lt;p&gt;How do we solve this problem? Well, we could begin by being smart about picking our training cases, right? For one meal we could buy only a single serving of burgers, for another we could only buy a single serving of fries, and then for our last meal we could buy a single serving of soda. In general, choosing smart training cases is a very good idea. There&#39;s lots of research that shows that by engineering a clever training set, you can make your neural net a lot more effective. The issue with this approach is that in real situations, this rarely ever gets you even 10% of the way to the solution. For example, what&#39;s the analog of this strategy in image recognition?&lt;/p&gt;
+&lt;p&gt;How do we solve this problem? Well, we could begin by being smart about picking our training cases, right? For one meal we could buy only a single serving of burgers, for another we could only buy a single serving of fries, and then for our last meal we could buy a single serving of soda. In general, choosing smart training cases is a very good idea. There's lots of research that shows that by engineering a clever training set, you can make your neural net a lot more effective. The issue with this approach is that in real situations, this rarely ever gets you even 10% of the way to the solution. For example, what's the analog of this strategy in image recognition?&lt;/p&gt;
 
-&lt;p&gt;Let&#39;s try to motivate a solution that works in general. Take a look at the single neuron we want to train:&lt;/p&gt;
+&lt;p&gt;Let's try to motivate a solution that works in general. Take a look at the single neuron we want to train:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/dininghallneuron.png&quot; title=&quot;Dining Hall Neuron&quot; alt=&quot;Dining Hall Neuron&quot; /&gt;&lt;/p&gt;
 
 &lt;h6&gt;The neuron we want to train for the Dining Hall Problem&lt;/h6&gt;
 
-&lt;p&gt;Let&#39;s say we have a bunch of training examples. Then we can calculate what the neural network will output on the &lt;script type=&quot;math/tex&quot;&gt;i^{th}&lt;/script&gt; training example using the simple formula in the diagram. We want to train the neuron so that we pick the optimal weights possible - the weights that minimize the errors we make on the training examples. In this case, let&#39;s say we want to minimize the square error over all of the training examples that we encounter. More formally, if we know that &lt;script type=&quot;math/tex&quot;&gt;t^{(i)}&lt;/script&gt; is the true answer for the &lt;script type=&quot;math/tex&quot;&gt;i^{th}&lt;/script&gt; training example and &lt;script type=&quot;math/tex&quot;&gt;y^{(i)}&lt;/script&gt; is the value computed by the neural network, we want to minimize the value of the error function &lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt;:&lt;/p&gt;
+&lt;p&gt;Let's say we have a bunch of training examples. Then we can calculate what the neural network will output on the &lt;script type=&quot;math/tex&quot;&gt;i^{th}&lt;/script&gt; training example using the simple formula in the diagram. We want to train the neuron so that we pick the optimal weights possible - the weights that minimize the errors we make on the training examples. In this case, let's say we want to minimize the square error over all of the training examples that we encounter. More formally, if we know that &lt;script type=&quot;math/tex&quot;&gt;t^{(i)}&lt;/script&gt; is the true answer for the &lt;script type=&quot;math/tex&quot;&gt;i^{th}&lt;/script&gt; training example and &lt;script type=&quot;math/tex&quot;&gt;y^{(i)}&lt;/script&gt; is the value computed by the neural network, we want to minimize the value of the error function &lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt;:&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;E =\frac{1}{2}\sum_{i}(t^{(i)} - y^{(i)})^2&lt;/script&gt;
 
 
-&lt;p&gt;Now at this point you might be thinking, wait up... Why do we need to bother ourselves with this error function nonsense when we have a bunch of variables (weights) and we have a set of equations (one for each training example)? Couldn&#39;t we just solve this problem by setting up a system of linear system of equations? That would automaically give us an error of zero assuming that we have a consistent set of training examples, right?&lt;/p&gt;
+&lt;p&gt;Now at this point you might be thinking, wait up... Why do we need to bother ourselves with this error function nonsense when we have a bunch of variables (weights) and we have a set of equations (one for each training example)? Couldn't we just solve this problem by setting up a system of linear system of equations? That would automaically give us an error of zero assuming that we have a consistent set of training examples, right?&lt;/p&gt;
 
-&lt;p&gt;That&#39;s a smart observation, but the insight unfortunately doesn&#39;t generalize well. Remember that although we&#39;re using a linear neuron here, linear neurons aren&#39;t used very much in practice because they&#39;re constrained in what they can learn. And the moment you start using nonlinear neurons like the sigmoidal neurons we talked about, we can no longer set up a system of linear equations!&lt;/p&gt;
+&lt;p&gt;That's a smart observation, but the insight unfortunately doesn't generalize well. Remember that although we're using a linear neuron here, linear neurons aren't used very much in practice because they're constrained in what they can learn. And the moment you start using nonlinear neurons like the sigmoidal neurons we talked about, we can no longer set up a system of linear equations!&lt;/p&gt;
 
-&lt;p&gt;So maybe we can use an iterative approach instead that generalizes to nonlinear examples. Let&#39;s try to visualize how we might minimize the squared error over all of the training examples by simplifying the problem. Let&#39;s say we&#39;re dealing with a linear neuron with only two inputs (and thus only two weights, &lt;script type=&quot;math/tex&quot;&gt;w_1&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;w_2&lt;/script&gt;). Then we can imagine a 3-dimensional space where the horizontal dimensions correspond to the weights &lt;script type=&quot;math/tex&quot;&gt;w_1&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;w_2&lt;/script&gt;, and there is one vertical dimension that corresponds to the value of the error function &lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt;. So in this space, points in the horizontal plane correspond to different settings of the weights, and the height at those points corresponds to the error that we&#39;re incurring, summed over all training cases. If we consider the errors we make over all possible weights, we get a surface in this 3-dimensional space, in particular a quadratic bowl:&lt;/p&gt;
+&lt;p&gt;So maybe we can use an iterative approach instead that generalizes to nonlinear examples. Let's try to visualize how we might minimize the squared error over all of the training examples by simplifying the problem. Let's say we're dealing with a linear neuron with only two inputs (and thus only two weights, &lt;script type=&quot;math/tex&quot;&gt;w_1&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;w_2&lt;/script&gt;). Then we can imagine a 3-dimensional space where the horizontal dimensions correspond to the weights &lt;script type=&quot;math/tex&quot;&gt;w_1&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;w_2&lt;/script&gt;, and there is one vertical dimension that corresponds to the value of the error function &lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt;. So in this space, points in the horizontal plane correspond to different settings of the weights, and the height at those points corresponds to the error that we're incurring, summed over all training cases. If we consider the errors we make over all possible weights, we get a surface in this 3-dimensional space, in particular a quadratic bowl:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/quadraticerror3d.png&quot; title=&quot;Quadratic Error Surface&quot; alt=&quot;Quadratic Error Surface&quot; /&gt;&lt;/p&gt;
 
@@ -373,23 +327,23 @@
 
 &lt;h6&gt;Visualizing the error surface as a set of contours&lt;/h6&gt;
 
-&lt;p&gt;So now let&#39;s say we find ourselves somewhere on the horizontal plane (by picking a random initialization for the weights). How would we get ourselves to the point on the horizontal plane with the smallest error value? One strategy is to always move perpendicularly to the contour lines. Take a look, for instance, at the path denoted by the red arrows. Quite clearly, you can see that following this strategy will eventually get us to the point of minimum error.&lt;/p&gt;
+&lt;p&gt;So now let's say we find ourselves somewhere on the horizontal plane (by picking a random initialization for the weights). How would we get ourselves to the point on the horizontal plane with the smallest error value? One strategy is to always move perpendicularly to the contour lines. Take a look, for instance, at the path denoted by the red arrows. Quite clearly, you can see that following this strategy will eventually get us to the point of minimum error.&lt;/p&gt;
 
-&lt;p&gt;What&#39;s particularly interesting is that moving perpendicularly to the contour lines is equivalent to taking the path of steepest descent down the parabolic bowl. This is a pretty amazing result from calculus, and it gives us the name of this general strategy for training neural nets: &lt;em&gt;gradient descent&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;What's particularly interesting is that moving perpendicularly to the contour lines is equivalent to taking the path of steepest descent down the parabolic bowl. This is a pretty amazing result from calculus, and it gives us the name of this general strategy for training neural nets: &lt;em&gt;gradient descent&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h3&gt;Learning Rates and the Delta Rule&lt;/h3&gt;
 
-&lt;p&gt;In practice at each step of moving perpendicular to the contour, we need to determine how far we want to walk before recalculating our new direction. This distance needs to depend on the steepness of the surface. Why? The closer we are to the minimum, the shorter we want to step forward. We know we are close to the minimum, because the surface is a lot flatter, so we can use the steepness as an indicator of how close we are to the minimum. We multiply this measure of steepness with a pre-determined constant factor &lt;script type=&quot;math/tex&quot;&gt;\epsilon&lt;/script&gt;, the &lt;em&gt;learning rate&lt;/em&gt;. Picking the learning rate is a hard problem. If we pick a learning rate that&#39;s too small, we risk taking too long during the training process. If we pick a learning rate that&#39;s too big, we&#39;ll mostly likely start diverging away from the minimum (this pretty easy to visualize). Modern training algorithms adapt the learning rate to overcome this difficult challenge.&lt;/p&gt;
+&lt;p&gt;In practice at each step of moving perpendicular to the contour, we need to determine how far we want to walk before recalculating our new direction. This distance needs to depend on the steepness of the surface. Why? The closer we are to the minimum, the shorter we want to step forward. We know we are close to the minimum, because the surface is a lot flatter, so we can use the steepness as an indicator of how close we are to the minimum. We multiply this measure of steepness with a pre-determined constant factor &lt;script type=&quot;math/tex&quot;&gt;\epsilon&lt;/script&gt;, the &lt;em&gt;learning rate&lt;/em&gt;. Picking the learning rate is a hard problem. If we pick a learning rate that's too small, we risk taking too long during the training process. If we pick a learning rate that's too big, we'll mostly likely start diverging away from the minimum (this pretty easy to visualize). Modern training algorithms adapt the learning rate to overcome this difficult challenge.&lt;/p&gt;
 
 &lt;p&gt;For those who are interested, putting all the pieces results in what is called the &lt;em&gt;delta rule&lt;/em&gt; for training the linear neuron. The delta rule states that given a learning rate &lt;script type=&quot;math/tex&quot;&gt;\epsilon&lt;/script&gt;, we ought to change the weight &lt;script type=&quot;math/tex&quot;&gt;w_k&lt;/script&gt; at each iteration of training by &lt;script type=&quot;math/tex&quot;&gt;\Delta w_k = \sum_i \epsilon x_k^{(i)}(t^{(i)} - y^{(i)})&lt;/script&gt;. Deriving this formula is left as an exercise for the experienced reader. For a hint, study our derivation for a sigmoidal neuron in the next section.&lt;/p&gt;
 
-&lt;p&gt;Unfortunately, just taking the path of steepest descent doesn&#39;t always do the trick when we have nonlinear neurons. The error surface can get complicated and there could be multiple local minimum. As a result, using this procedure could potentially get us to a bad local minimum that isn&#39;t the global minimum. As a result, in practice, training neural nets involves a modification of gradient descent called &lt;em&gt;stochastic gradient descent&lt;/em&gt;, that tries to use randomization and noise to find the global minimum with high probability on a complex error surface.&lt;/p&gt;
+&lt;p&gt;Unfortunately, just taking the path of steepest descent doesn't always do the trick when we have nonlinear neurons. The error surface can get complicated and there could be multiple local minimum. As a result, using this procedure could potentially get us to a bad local minimum that isn't the global minimum. As a result, in practice, training neural nets involves a modification of gradient descent called &lt;em&gt;stochastic gradient descent&lt;/em&gt;, that tries to use randomization and noise to find the global minimum with high probability on a complex error surface.&lt;/p&gt;
 
 &lt;h3&gt;Moving onto the Sigmoidal Neuron *&lt;/h3&gt;
 
-&lt;p&gt;This section and the next will get a little heavy with the math, so just be forewarned. If you&#39;re not comfortable with multivariate calculus, feel free to skip them and move onto the remaining sections. Otherwise, let&#39;s just dive right into it!&lt;/p&gt;
+&lt;p&gt;This section and the next will get a little heavy with the math, so just be forewarned. If you're not comfortable with multivariate calculus, feel free to skip them and move onto the remaining sections. Otherwise, let's just dive right into it!&lt;/p&gt;
 
-&lt;p&gt;Let&#39;s recall the mechanism by which logistic neurons compute their output value from their inputs:&lt;/p&gt;
+&lt;p&gt;Let's recall the mechanism by which logistic neurons compute their output value from their inputs:&lt;/p&gt;
 
 &lt;script type=&quot;math/tex;mode=display&quot;&gt;
     z = \sum_k w_kx_k
@@ -445,9 +399,9 @@
 
 &lt;h3&gt;The Backpropagation Algorithm *&lt;/h3&gt;
 
-&lt;p&gt;Now we&#39;re finally ready to tackle the problem of training multilayer neural networks (instead of just single neurons). So what&#39;s the idea behind backpropagation? We don&#39;t know what the hidden units ought to be doing, but what we can do is compute how fast the error changes as we change a hidden activity. Essentially we&#39;ll be trying to find the path of steepest descent!&lt;/p&gt;
+&lt;p&gt;Now we're finally ready to tackle the problem of training multilayer neural networks (instead of just single neurons). So what's the idea behind backpropagation? We don't know what the hidden units ought to be doing, but what we can do is compute how fast the error changes as we change a hidden activity. Essentially we'll be trying to find the path of steepest descent!&lt;/p&gt;
 
-&lt;p&gt;Each hidden unit can affect many output units. Thus, we&#39;ll have to combine many separate effects on the error in an informative way. Our strategy will be one of dynamic programming. Once we have the error derivatives for one layer of hidden units, we&#39;ll use them to compute the error derivatives for the activites of the layer below. And once we find the error derivatives for the activities of the hidden units, it&#39;s quite easy to get the error derivatives for the weights leading into a hidden unit. We&#39;ll redefine some notation for ease of discussion and refer to the following diagram:&lt;/p&gt;
+&lt;p&gt;Each hidden unit can affect many output units. Thus, we'll have to combine many separate effects on the error in an informative way. Our strategy will be one of dynamic programming. Once we have the error derivatives for one layer of hidden units, we'll use them to compute the error derivatives for the activites of the layer below. And once we find the error derivatives for the activities of the hidden units, it's quite easy to get the error derivatives for the weights leading into a hidden unit. We'll redefine some notation for ease of discussion and refer to the following diagram:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/backprop.png&quot; title=&quot;Backpropagation Diagram&quot; alt=&quot;Backpropagation Diagram&quot; /&gt;&lt;/p&gt;
 
@@ -462,7 +416,7 @@
 &lt;/script&gt;
 
 
-&lt;p&gt;Now we tackle the inductive step. Let&#39;s presume we have the error derivatives for layer &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt;. We now aim to calculate the error derivatives for the layer below it, layer &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;. To do so, we must accumulate information for how the output of a neuron in layer &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; affects the logits of every neuron in layer &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt;. This can be done as follows, using the fact that the partial derivative of the logit with respect to the incoming output data from the layer beneath is merely the weight of the connection &lt;script type=&quot;math/tex&quot;&gt;w_{ij}&lt;/script&gt;:&lt;/p&gt;
+&lt;p&gt;Now we tackle the inductive step. Let's presume we have the error derivatives for layer &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt;. We now aim to calculate the error derivatives for the layer below it, layer &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;. To do so, we must accumulate information for how the output of a neuron in layer &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; affects the logits of every neuron in layer &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt;. This can be done as follows, using the fact that the partial derivative of the logit with respect to the incoming output data from the layer beneath is merely the weight of the connection &lt;script type=&quot;math/tex&quot;&gt;w_{ij}&lt;/script&gt;:&lt;/p&gt;
 
 &lt;script type=&quot;math/tex;mode=display&quot;&gt;
     \frac{\partial E}{\partial y_i} = \sum_j \frac{dz_j}{dy_i} \frac{\partial E}{\partial z_j} = \sum_j w_{ij} \frac{\partial E}{\partial z_j}
@@ -485,7 +439,7 @@
 &lt;/script&gt;
 
 
-&lt;p&gt;Then once we&#39;ve gone through the whole dynamic programming routine, having filled up the table appropriately with all of our partial derivatives (of the error function with respect to the hidden unit activities), we can then determine how the error changes with respect to the weights. This gives us how to modify the weights after each training example:&lt;/p&gt;
+&lt;p&gt;Then once we've gone through the whole dynamic programming routine, having filled up the table appropriately with all of our partial derivatives (of the error function with respect to the hidden unit activities), we can then determine how the error changes with respect to the weights. This gives us how to modify the weights after each training example:&lt;/p&gt;
 
 &lt;script type=&quot;math/tex;mode=display&quot;&gt;
     \frac{\partial E}{\partial w_{ij}} = \frac{\partial z_j}{\partial w_{ij}} \frac{\partial E}{\partial z_j} = y_iy_j(1-y_j)\frac{\partial E}{\partial y_j}
@@ -503,19 +457,19 @@
 
 &lt;h3&gt;The Problem of Overfitting&lt;/h3&gt;
 
-&lt;p&gt;Now let&#39;s say you decide you&#39;re very excited about deep learning and so you want to try to train a neural network of your own to identify objects in an image. You know this is a complicated problem so you use a huge neural network (let&#39;s say 20 layers) and you have 1,000 training examples. You train your neural network using the algorithm we describe, but something&#39;s clearly wrong. Your neural net performs virtually perfectly on your training examples, but when you put it in practice, it performs very poorly! What&#39;s going on here?&lt;/p&gt;
+&lt;p&gt;Now let's say you decide you're very excited about deep learning and so you want to try to train a neural network of your own to identify objects in an image. You know this is a complicated problem so you use a huge neural network (let's say 20 layers) and you have 1,000 training examples. You train your neural network using the algorithm we describe, but something's clearly wrong. Your neural net performs virtually perfectly on your training examples, but when you put it in practice, it performs very poorly! What's going on here?&lt;/p&gt;
 
-&lt;p&gt;The problem we&#39;ve encountered is called &lt;em&gt;overfitting&lt;/em&gt;, and it happens when you have way too many parameters in your model and not enough training data. To visualize this, let&#39;s consider the figure below, where you want to fit a model to the data points:&lt;/p&gt;
+&lt;p&gt;The problem we've encountered is called &lt;em&gt;overfitting&lt;/em&gt;, and it happens when you have way too many parameters in your model and not enough training data. To visualize this, let's consider the figure below, where you want to fit a model to the data points:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/overfitting.png&quot; title=&quot;Overfitting&quot; alt=&quot;Overfitting&quot; /&gt;&lt;/p&gt;
 
 &lt;h6&gt;An example that illustrates the concept of overfitting&lt;/h6&gt;
 
-&lt;p&gt;Which curve would you trust? The line which gets almost no training example exactly? Or the complicated curve that hits every single point in the training set? Most likely you would trust the linear fit instead of the complicated curve because it seems less contrived. This situation is analagous to the neural network we trained. We have way too many parameters, over 100 trillion trillion (or 100 septillion) parameters. It&#39;s no wonder that we&#39;re overfitting!&lt;/p&gt;
+&lt;p&gt;Which curve would you trust? The line which gets almost no training example exactly? Or the complicated curve that hits every single point in the training set? Most likely you would trust the linear fit instead of the complicated curve because it seems less contrived. This situation is analagous to the neural network we trained. We have way too many parameters, over 100 trillion trillion (or 100 septillion) parameters. It's no wonder that we're overfitting!&lt;/p&gt;
 
 &lt;p&gt;So how do we prevent overfitting? The two simplest ways are:&lt;/p&gt;
 
-&lt;p&gt;1) Limit the connectivities of neurons in your model. Architecting a good neural network requires a lot of experience and intuition, and it boils down to giving your model freedom to discover relationships while also constraining it so it doesn&#39;t overfit.&lt;/p&gt;
+&lt;p&gt;1) Limit the connectivities of neurons in your model. Architecting a good neural network requires a lot of experience and intuition, and it boils down to giving your model freedom to discover relationships while also constraining it so it doesn't overfit.&lt;/p&gt;
 
 &lt;p&gt;2) Adding more training examples! Often times you can cleverly add amplify your existing training set (changing illumination, applying shifts and other transformations, etc.).&lt;/p&gt;
 
@@ -523,11 +477,11 @@
 
 &lt;h3&gt;Conclusions&lt;/h3&gt;
 
-&lt;p&gt;We&#39;ve covered a lot of ground, but there&#39;s still a lot more that&#39;s going on in deep learning research. In future articles, I will probably talk more about different kinds of neural architectures (convolutional networks, soft max layers, etc.). I&#39;ll probably also write an article about how to train your own neural network using some of the awesome open source libraries out there, such as Caffe (which allows you to GPU accelerate the training of neural networks). Those of you who are interested in pursuing deep learning further, please get in touch! I love talking about new ideas and projects ❤&lt;/p&gt;
+&lt;p&gt;We've covered a lot of ground, but there's still a lot more that's going on in deep learning research. In future articles, I will probably talk more about different kinds of neural architectures (convolutional networks, soft max layers, etc.). I'll probably also write an article about how to train your own neural network using some of the awesome open source libraries out there, such as Caffe (which allows you to GPU accelerate the training of neural networks). Those of you who are interested in pursuing deep learning further, please get in touch! I love talking about new ideas and projects ❤&lt;/p&gt;
 </description>
-        <pubDate>Mon, 29 Dec 2014 00:00:00 -0500</pubDate>
-        <link>http://nikhilbuduma.com//2014/12/29/deep-learning-in-a-nutshell/</link>
-        <guid isPermaLink="true">http://nikhilbuduma.com//2014/12/29/deep-learning-in-a-nutshell/</guid>
+        <pubDate>Mon, 29 Dec 2014 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000//2014/12/29/deep-learning-in-a-nutshell/</link>
+        <guid isPermaLink="true">http://localhost:4000//2014/12/29/deep-learning-in-a-nutshell/</guid>
       </item>
     
       <item>
@@ -616,28 +570,28 @@
 
 &lt;div style=&quot;text-align: center;font-family:lato,san serif&quot;&gt;
 &lt;br/&gt;
-&lt;span style=&#39;font-size:12px&#39;&gt;&lt;i&gt;This article is cross-posted on Medium &lt;a href=&#39;https://medium.com/@nikhilbuduma/the-cell-reimagined-474e53460d6f&#39; target=&#39;_blank&#39;&gt;here&lt;/a&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;span style='font-size:12px'&gt;&lt;i&gt;This article is cross-posted on Medium &lt;a href='https://medium.com/@nikhilbuduma/the-cell-reimagined-474e53460d6f' target='_blank'&gt;here&lt;/a&gt;&lt;/i&gt;&lt;/span&gt;
 &lt;/div&gt;
 
 </description>
-        <pubDate>Sat, 27 Dec 2014 00:00:00 -0500</pubDate>
-        <link>http://nikhilbuduma.com//2014/12/27/the-cell-reimagined/</link>
-        <guid isPermaLink="true">http://nikhilbuduma.com//2014/12/27/the-cell-reimagined/</guid>
+        <pubDate>Sat, 27 Dec 2014 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000//2014/12/27/the-cell-reimagined/</link>
+        <guid isPermaLink="true">http://localhost:4000//2014/12/27/the-cell-reimagined/</guid>
       </item>
     
       <item>
         <title>Hacking the North</title>
-        <description>&lt;p&gt;When I first heard about Hack the North at the University of Waterloo, I was immediately on board. Basically free flights to and from Canada, a roof over my head while I&#39;m there, unlimited free food (including poutine), and 36 hours of high energy hacking. It was an irresistable opportunity.&lt;/p&gt;
+        <description>&lt;p&gt;When I first heard about Hack the North at the University of Waterloo, I was immediately on board. Basically free flights to and from Canada, a roof over my head while I'm there, unlimited free food (including poutine), and 36 hours of high energy hacking. It was an irresistable opportunity.&lt;/p&gt;
 
 &lt;h3&gt;The Rejection Letter&lt;/h3&gt;
 
-&lt;p&gt;I decided to apply as a team with two of my close friends from MIT, Anish and Shelby. The three of us were now addicted to the high-octane energy of the hackathon scene. We even had an idea for a project. We were going to build a Google glass application that would take live video feed and create a searchable archive of your life experiences. You&#39;d never have to worry about seeing a flyer in the hallway and then forgetting the phone number or email. Or you could quickly find and extract your friend&#39;s great joke from lunch for your Medium post. It was going to be awesome!&lt;/p&gt;
+&lt;p&gt;I decided to apply as a team with two of my close friends from MIT, Anish and Shelby. The three of us were now addicted to the high-octane energy of the hackathon scene. We even had an idea for a project. We were going to build a Google glass application that would take live video feed and create a searchable archive of your life experiences. You'd never have to worry about seeing a flyer in the hallway and then forgetting the phone number or email. Or you could quickly find and extract your friend's great joke from lunch for your Medium post. It was going to be awesome!&lt;/p&gt;
 
 &lt;p&gt;But then decision emails trickled out, and my excitement slowly faded into dejection:&lt;/p&gt;
 
-&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;Hold on a little longer… You’ve been waitlisted! We received an overwhelming 2500+ applicants this year and unfortunately due to our venue&#39;s space limitations, we are unable to offer you an immediate spot at the event...&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;Hold on a little longer… You’ve been waitlisted! We received an overwhelming 2500+ applicants this year and unfortunately due to our venue's space limitations, we are unable to offer you an immediate spot at the event...&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
 
-&lt;p&gt;Darn. Well that&#39;s a bummer. The three of us were really looking forward to flying up to Canada. And I had never been before either.&lt;/p&gt;
+&lt;p&gt;Darn. Well that's a bummer. The three of us were really looking forward to flying up to Canada. And I had never been before either.&lt;/p&gt;
 
 &lt;p&gt;Then something strange happened. Anish pinged the group chat on Facebook, excited about being accepted to the hackathon. Shelby was in too. Confused, I sent an email to the organizing team about the situation, and by the next day, I received a reply. There had been a mix-up due to the volume of people who had applied.&lt;/p&gt;
 
@@ -649,33 +603,33 @@
 
 &lt;p&gt;My itinerary from Boston to Waterloo seemed like nothing out of the ordinary. A connection through LaGuardia Airport in New York en route to Toronto, followed by a bus organized by Hack the North down to the UWaterloo campus.&lt;/p&gt;
 
-&lt;p&gt;But then things started to get interesting in New York. I located the gate of my connected flight immediately after landing, even though I was starving from not having eaten at all that day, set my stuff down, and got my passport cleared. And then, after doing what any responsible traveler ought to do, I bought a meal at from the restaurant closest to the gate. As I&#39;m finishing up my meal and it&#39;s just about time to board, a United Airways representative announces, &quot;This flight has been cancelled due to mechanical problems.&quot;&lt;/p&gt;
+&lt;p&gt;But then things started to get interesting in New York. I located the gate of my connected flight immediately after landing, even though I was starving from not having eaten at all that day, set my stuff down, and got my passport cleared. And then, after doing what any responsible traveler ought to do, I bought a meal at from the restaurant closest to the gate. As I'm finishing up my meal and it's just about time to board, a United Airways representative announces, &quot;This flight has been cancelled due to mechanical problems.&quot;&lt;/p&gt;
 
 &lt;p&gt;Wait what?&lt;/p&gt;
 
-&lt;p&gt;Immediately people begin to line up to get their flights rescheduled, but I knew that I&#39;d be late if I waited and would most definitely get stranded at the Toronto airport if I didn&#39;t play this smart. I needed to get on the next flight to Toronto.&lt;/p&gt;
+&lt;p&gt;Immediately people begin to line up to get their flights rescheduled, but I knew that I'd be late if I waited and would most definitely get stranded at the Toronto airport if I didn't play this smart. I needed to get on the next flight to Toronto.&lt;/p&gt;
 
-&lt;p&gt;I intercepted one of the United representatives and asked him to put me on the next flight that left the airport, whether it was a United flight or some other carrier. He resisted, but after arguing for 5 minutes, he finally gave in. He printed a new ticket and handed it to me. The flight was scheduled to board in 10 minutes, and to depart in 25. It was also in a different terminal, approximately a mile away, so I&#39;d have to go through security again.&lt;/p&gt;
+&lt;p&gt;I intercepted one of the United representatives and asked him to put me on the next flight that left the airport, whether it was a United flight or some other carrier. He resisted, but after arguing for 5 minutes, he finally gave in. He printed a new ticket and handed it to me. The flight was scheduled to board in 10 minutes, and to depart in 25. It was also in a different terminal, approximately a mile away, so I'd have to go through security again.&lt;/p&gt;
 
-&lt;p&gt;The shuttle wasn&#39;t going to get me there on time, so I grabbed my stuff and bolted. Pretty sure that was the fastest mile I&#39;ve ever run in my life.&lt;/p&gt;
+&lt;p&gt;The shuttle wasn't going to get me there on time, so I grabbed my stuff and bolted. Pretty sure that was the fastest mile I've ever run in my life.&lt;/p&gt;
 
-&lt;p&gt;(As a sidenote, the way back was also one hell of a trip. Anish and I got stranded in Philadelphia because our first leg was so delayed that we missed our connection. We spent the night at some substandard hotel, struggling to find something to eat. They didn&#39;t even give us meal vouchers. Never flying United again.)&lt;/p&gt;
+&lt;p&gt;(As a sidenote, the way back was also one hell of a trip. Anish and I got stranded in Philadelphia because our first leg was so delayed that we missed our connection. We spent the night at some substandard hotel, struggling to find something to eat. They didn't even give us meal vouchers. Never flying United again.)&lt;/p&gt;
 
 &lt;h3&gt;In Canada at Last&lt;/h3&gt;
 
-&lt;p&gt;Right before I boarded my plane, I shot off an email to the Hack the North team letting them know my situation, and asking them to wait for me just in case something went wrong. Thankfully, they got the memo, so someone was waiting for me when I arrived at the airport in Toronto at the wrong terminal. We were both relieved that the bus hadn&#39;t yet arrived before we got to the right spot. And what do you know? There was Shelby!&lt;/p&gt;
+&lt;p&gt;Right before I boarded my plane, I shot off an email to the Hack the North team letting them know my situation, and asking them to wait for me just in case something went wrong. Thankfully, they got the memo, so someone was waiting for me when I arrived at the airport in Toronto at the wrong terminal. We were both relieved that the bus hadn't yet arrived before we got to the right spot. And what do you know? There was Shelby!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/timhortons.jpg&quot; title=&quot;Tim Hortons&quot; alt=&quot;Tim Hortons&quot; /&gt;&lt;/p&gt;
 
 &lt;h6&gt;Shameless selfies at the airport Tim Hortons&lt;/h6&gt;
 
-&lt;p&gt;Intrigued by the lengendary stories of the coffee shop chain Tim Hortons, we decided to give the place a try. We got a maple flavored donut from the little shop in the terminal, which turned out to be pretty darn good. Finally, after waiting for another hour (I guess traffic&#39;s pretty bad in Canada?), the bus finally arrived!&lt;/p&gt;
+&lt;p&gt;Intrigued by the lengendary stories of the coffee shop chain Tim Hortons, we decided to give the place a try. We got a maple flavored donut from the little shop in the terminal, which turned out to be pretty darn good. Finally, after waiting for another hour (I guess traffic's pretty bad in Canada?), the bus finally arrived!&lt;/p&gt;
 
 &lt;h3&gt;Rounding out the Remembrall Team&lt;/h3&gt;
 
-&lt;p&gt;We all realized that the scope of Remembrall (what we decided to call our project) was probably going to be beyond what the three of us could handle on our own. We&#39;d have to put together a Google glass application, a nontrivial server-side infrastructure for audio and video processing, and a web interface that allowed you to perform some pretty sophisticated search operations to select video clips and compose journal entries. So we found Moaaz from UWaterloo through the Hack the North Facebook group to join our team.&lt;/p&gt;
+&lt;p&gt;We all realized that the scope of Remembrall (what we decided to call our project) was probably going to be beyond what the three of us could handle on our own. We'd have to put together a Google glass application, a nontrivial server-side infrastructure for audio and video processing, and a web interface that allowed you to perform some pretty sophisticated search operations to select video clips and compose journal entries. So we found Moaaz from UWaterloo through the Hack the North Facebook group to join our team.&lt;/p&gt;
 
-&lt;p&gt;After the four of us finally found each other on campus and met up with one of my good old friends from the biology Olympiad (we both competed in Singapore in 2012, except she was on Team Canada), we scoped out a hacker space for ourselves on the second floor of the engineering building. We filled it up with sofa chairs that we found scattered across the floor. It even had this great adjoining empty hallway where my teammates could sleep if they were ever tired. I, of course, wouldn&#39;t need it. As they say, sleep is for the weak.&lt;/p&gt;
+&lt;p&gt;After the four of us finally found each other on campus and met up with one of my good old friends from the biology Olympiad (we both competed in Singapore in 2012, except she was on Team Canada), we scoped out a hacker space for ourselves on the second floor of the engineering building. We filled it up with sofa chairs that we found scattered across the floor. It even had this great adjoining empty hallway where my teammates could sleep if they were ever tired. I, of course, wouldn't need it. As they say, sleep is for the weak.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/sleeping.jpg&quot; title=&quot;Sleeping&quot; alt=&quot;Sleeping&quot; /&gt;&lt;/p&gt;
 
@@ -685,11 +639,11 @@
 
 &lt;h3&gt;Rekognize the Opportunity and Hustle&lt;/h3&gt;
 
-&lt;p&gt;Over the course of 36 hours, we slowly built our project from the ground up. But one of the roadblocks we hit early on during the weekend seemed like it was going to spell the end for Remembrall. One of the major components of the project was analyzing the video feed streamed from our Google glass and performing image recognition on a per frame basis. We quickly realized that implementing our own recognition system was probably going to be too time consuming, so I spent some time scouring the web for an API we could leverage. It wasn&#39;t too long before I found Rekognition, which gave us exactly what we were looking for. Excitedly, I showed this to my team.&lt;/p&gt;
+&lt;p&gt;Over the course of 36 hours, we slowly built our project from the ground up. But one of the roadblocks we hit early on during the weekend seemed like it was going to spell the end for Remembrall. One of the major components of the project was analyzing the video feed streamed from our Google glass and performing image recognition on a per frame basis. We quickly realized that implementing our own recognition system was probably going to be too time consuming, so I spent some time scouring the web for an API we could leverage. It wasn't too long before I found Rekognition, which gave us exactly what we were looking for. Excitedly, I showed this to my team.&lt;/p&gt;
 
-&lt;p&gt;But then the harsh reality of economics hit me. If we were going to do real time video processing, even at a measly rate of a single frame per second, we&#39;d have to make over 3,000 API calls just to analyze an hour of video. That was (at the time) beyond what we could get out of the free tier of the service, so we needed another plan of action.&lt;/p&gt;
+&lt;p&gt;But then the harsh reality of economics hit me. If we were going to do real time video processing, even at a measly rate of a single frame per second, we'd have to make over 3,000 API calls just to analyze an hour of video. That was (at the time) beyond what we could get out of the free tier of the service, so we needed another plan of action.&lt;/p&gt;
 
-&lt;p&gt;Out of desperation, I decided to try the &quot;Chat with us!&quot; feature on the Rekognition website. I don&#39;t know what I was thinking. It was 3 AM, and no sane person would expect a reply from a startup&#39;s customer service at such a late hour. And even if they did see the message, there was a slim chance we&#39;d get what we wanted.&lt;/p&gt;
+&lt;p&gt;Out of desperation, I decided to try the &quot;Chat with us!&quot; feature on the Rekognition website. I don't know what I was thinking. It was 3 AM, and no sane person would expect a reply from a startup's customer service at such a late hour. And even if they did see the message, there was a slim chance we'd get what we wanted.&lt;/p&gt;
 
 &lt;p&gt;But by some miracle, someone did respond, and they also upgraded my account to the pro service free of charge. I chucked a Hail Mary, and the unthinkable happened. I guess the moral of the story is to never be afraid to pick up the darn phone, because you never know what will happen unless you try.&lt;/p&gt;
 
@@ -703,7 +657,7 @@
 
 &lt;h3&gt;The Closing&lt;/h3&gt;
 
-&lt;p&gt;We ended up being selected as one of the top 10 teams of the hackathon and presented our demo on stage! If you&#39;d like to watch our presentation, you can find it right here! We also have a &lt;a target=&quot;_blank&quot; href=&quot;http://remembrall.me&quot;&gt;website&lt;/a&gt; for the project, which is still a work in progress.&lt;/p&gt;
+&lt;p&gt;We ended up being selected as one of the top 10 teams of the hackathon and presented our demo on stage! If you'd like to watch our presentation, you can find it right here! We also have a &lt;a target=&quot;_blank&quot; href=&quot;http://remembrall.me&quot;&gt;website&lt;/a&gt; for the project, which is still a work in progress.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;
 &lt;br/&gt;
@@ -716,21 +670,21 @@
 
 &lt;p&gt;&lt;img src=&quot;/img/oculus.jpg&quot; title=&quot;Oculus&quot; alt=&quot;Oculus&quot; /&gt;&lt;/p&gt;
 
-&lt;h6&gt;New Oculus Rift DK2&#39;s!&lt;/h6&gt;
+&lt;h6&gt;New Oculus Rift DK2's!&lt;/h6&gt;
 
-&lt;p&gt;The weekend was over, but we left in high spirits. Thank you for throwing this hackathon, Hack the North. I know when I look back on my college experience later in life, this is one of the things I&#39;ll fondly remember.&lt;/p&gt;
+&lt;p&gt;The weekend was over, but we left in high spirits. Thank you for throwing this hackathon, Hack the North. I know when I look back on my college experience later in life, this is one of the things I'll fondly remember.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center;font-family:lato,san serif&quot;&gt;
 &lt;br/&gt;
-&lt;span style=&#39;font-size:12px&#39;&gt;&lt;i&gt;Thanks to &lt;a href=&#39;https://medium.com/@davefontenot&#39; target=&#39;_blank&#39;&gt;Dave Fontenot&lt;/a&gt; for encouraging me to finish this!&lt;/i&gt;&lt;/span&gt;
+&lt;span style='font-size:12px'&gt;&lt;i&gt;Thanks to &lt;a href='https://medium.com/@davefontenot' target='_blank'&gt;Dave Fontenot&lt;/a&gt; for encouraging me to finish this!&lt;/i&gt;&lt;/span&gt;
 &lt;/div&gt;
 
 
 
 </description>
-        <pubDate>Mon, 22 Sep 2014 00:00:00 -0400</pubDate>
-        <link>http://nikhilbuduma.com//2014/09/22/Hacking-the-North/</link>
-        <guid isPermaLink="true">http://nikhilbuduma.com//2014/09/22/Hacking-the-North/</guid>
+        <pubDate>Mon, 22 Sep 2014 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000//2014/09/22/Hacking-the-North/</link>
+        <guid isPermaLink="true">http://localhost:4000//2014/09/22/Hacking-the-North/</guid>
       </item>
     
       <item>
@@ -788,7 +742,7 @@ By the way, I also find it kind of amusing that I’m making my first post on Me
 
 &lt;p&gt;We made the top 10 with a nonexistent demo. It was just unreal.&lt;/p&gt;
 
-&lt;p&gt;I quickly ran over to Julie and asked if our presentation could be delayed until later so that we could wait for Kevin to come back. And as soon as he did, we decided to record ourselves performing a demo in our room just in case the WiFi hated us again. I&#39;ve linked the video here, but there&#39;s no sound:&lt;/p&gt;
+&lt;p&gt;I quickly ran over to Julie and asked if our presentation could be delayed until later so that we could wait for Kevin to come back. And as soon as he did, we decided to record ourselves performing a demo in our room just in case the WiFi hated us again. I've linked the video here, but there's no sound:&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;
 &lt;br/&gt;
@@ -813,44 +767,13 @@ By the way, I also find it kind of amusing that I’m making my first post on Me
 
 &lt;div style=&quot;text-align: center;font-family:lato,san serif&quot;&gt;
 &lt;br/&gt;
-&lt;span style=&#39;font-size:12px&#39;&gt;&lt;i&gt;This article is cross-posted on Medium &lt;a href=&#39;https://medium.com/hackathon-adventures/greylock-hackfest-medium-e9b6cc2e82a4&#39; target=&#39;_blank&#39;&gt;here&lt;/a&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;span style='font-size:12px'&gt;&lt;i&gt;This article is cross-posted on Medium &lt;a href='https://medium.com/hackathon-adventures/greylock-hackfest-medium-e9b6cc2e82a4' target='_blank'&gt;here&lt;/a&gt;&lt;/i&gt;&lt;/span&gt;
 &lt;/div&gt;
 
 </description>
-        <pubDate>Mon, 21 Jul 2014 00:00:00 -0400</pubDate>
-        <link>http://nikhilbuduma.com//2014/07/21/greylock-hackfest-medium/</link>
-        <guid isPermaLink="true">http://nikhilbuduma.com//2014/07/21/greylock-hackfest-medium/</guid>
-      </item>
-    
-      <item>
-        <title>CEE Capitol Hill Luncheon Remarks</title>
-        <description>&lt;p&gt;Probably one of the most formative experiences of my time in high school was participating in the USA Biology Olympiad, a contest sponsored by the Center for Excellence and Education. For those who may not be familiar with the format of the competition, the Olympiad is a series of examinations that culminates in a 2-week National Finals camp held at Purdue University where, the U.S. team for the international competition is decided. Every single year, approximately 10,000 students participate nationwide, and only 4 are lucky enough to move onto the International Biology Olympiad.&lt;/p&gt;
-
-&lt;p&gt;I participated in the Biology Olympiad during all four years of my high school career. My sophomore year, I qualified to the National Finals. And during my my junior and senior years, I had the honor of attending the international Olympiad in Singapore (2012) and Switzerland (2013). After working with the program for over 5 years, I can say without hesitation that being able to interact with world class mentors and some of the smartest students in the world has been an amazing experience.&lt;/p&gt;
-
-&lt;p&gt;As a result, when I was asked to speak in Washington, D.C., about the program and it&#39;s impact on high school education, I was ecstatic. There were over a hundred people attendance - donors, CEE staff, and politicians (including Rep. Mike Honda!) - and I was humbled to be presenting alongside people as impressive as Jud Bowman, the CEO of Appia, and Dr. Nancy Hsia Akerman from the Stratospheric Protection Division of the EPA.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/Honda_Buduma_Chaskin.jpg&quot; title=&quot;Picture with Rep. Mike Honda and Mel Chaskin&quot; alt=&quot;Picture with Rep. Mike Honda and Mel Chaskin&quot; /&gt;&lt;/p&gt;
-
-&lt;h6&gt;Hanging out with Rep. Mike Honda and Mel Chaskin, CEO of Vangaurd Research&lt;/h6&gt;
-
-&lt;p&gt;If you&#39;re interested in the content of the luncheon, the CEE published a newsletter about the event &lt;a href=&#39;http://www.cee.org/sites/default/files/newsletters/cee_fall_2014.pdf&#39; target=&#39;_blank&#39;&gt;here&lt;/a&gt;. I wanted to take this opportunity to share my remarks at the luncheon:&lt;/p&gt;
-
-&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;Almost precisely 3 years ago, I opened up an email that would completely change my life. That email was an invitation to participate in the 2011 USA Biology Olympiad National Finals, a 2 week long camp where the top 20 high school students in the nation come together to explore the life sciences on an unbelievably deep level and compete for a spot on the 4-person Team USA at the International Olympiad. Now, if someone had told me back then that this would be the single most important email I would open during my high school career, my younger self probably would have dismissed them in disbelief. But in retrospect, being invited to the National Finals for the first time my sophomore year opened so many doors that it’s impossible for me to imagine what the past three years of my life would’ve been like otherwise.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;I think one of the most valuable aspects of the biology Olympiad is the community built around it. Learning is never a purely individual pursuit, it’s highly cooperative, dynamic, and inter-disciplinary. At the national level, the Olympiad brings together people who are deeply passionate about biology, but at the same time come from vastly different cultural and academic backgrounds.  Surrounded by a team of world class peers, researchers, and mentors, I’ve learned more over the cumulative 6 weeks I spent at the National Finals than I learned in 4 years of school.  I can confidently say that the rigor of the Olympiad is unmatched by any other high school program in the country. And the fact that the U.S. team has brought home 4 gold medals not one, not two, but three years in a row is a testament to that fact. But, in addition to just helping me build a strong knowledge base, the program has also taught me to ask insightful questions and empowered me with the toolset necessary to design my own experiments and discover the answers. In fact, using everything I’ve learned through the Olympiad, I’ve been able to conduct independent research projects on topics ranging from low cost screening techniques for pharmaceutical products to improving the composition of the whooping cough vaccine.  And the beneficial effects of the Olympiad don’t just stop at the highest level of competition. Through my personal experiences, I’ve found that the community spirit trickles all the way down to the school level. After bringing the biology Olympiad to my high school, more and more people interested in biology began to study together, and as a result, the science program at my high school has strengthened significantly.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;On an even broader level, participating at the International level gave me an eye-opening glimpse of the world beyond my immediate community. I will never forget learning some basic Arabic from a boy representing the United Arab Emirates, discussing the issues of segregation and racial discrimination with the team from South Africa, and hearing the life story of a budding biologist from Iran, who had kept her love of science a secret from her family in fear that they would not accept her. I will never forget the nights we spent in the common area, passing around a Tupperware container of exotic plant specimen most of us had never seen before. And of course, I will never forget standing in front a huge crowd to announce my teammate&#39;s birthday the night after the practical exam and hearing the room burst into a surprisingly harmonious ensemble of the song &quot;Happy Birthday&quot; sung simultaneously in at least twenty different languages.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;You see, for me, and for tens of thousands of students all over the nation, the U.S.A Biology Olympiad has been a life-changing experience. It’s programs like these that inspire students to take their education to the next level, tackle some of the society’s most important problems, and engage the world in ways as citizens of a global community. None of this would be possible without the Center for Excellence and Education, who have organized such an amazing program, Ms. Kathy Frame and Dr. Clark Gedney, who have made the USA Biology Olympiad the spectacular success it is today, and all of you whose support is crucial to the success of the Olympiad and its ability to foster the education of future generations of students.  Thank you.&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;For anybody in high school looking to learn more biology, I&#39;d highly recommend participating in the USA Biology Olympiad. It&#39;s had a hugely positive impact on my life and the lives of all my friends who have gone through the program. I hope the donors in the audience got the message and continue to support the USA Biology Olympiad. I know Rep. Mike Honda gets it ;)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/fistbump.jpg&quot; title=&quot;Fist Bump&quot; alt=&quot;Fist Bump&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 01 May 2014 00:00:00 -0400</pubDate>
-        <link>http://nikhilbuduma.com//2014/05/01/speaking-at-the-cee-congressional-luncheon/</link>
-        <guid isPermaLink="true">http://nikhilbuduma.com//2014/05/01/speaking-at-the-cee-congressional-luncheon/</guid>
+        <pubDate>Mon, 21 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000//2014/07/21/greylock-hackfest-medium/</link>
+        <guid isPermaLink="true">http://localhost:4000//2014/07/21/greylock-hackfest-medium/</guid>
       </item>
     
   </channel>

@@ -10,3 +10,4 @@ permalink: pretty
 highlighter: pygments
 gems:
     - jekyll-redirect-from
+    - jekyll-paginate
